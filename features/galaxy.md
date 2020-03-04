@@ -30,15 +30,15 @@ TKEStack使用Galaxy网络组件，支持四种网络模式，并且可以为工
 
    利用k8s中的hostNetwork配置，直接使用宿主机的网络环境，最大的好处是其性能优势，但是需要处理端口冲突问题，并且也有安全隐患。
 
-##Galaxy架构
+## Galaxy架构
 
 Galaxy在架构上由三部分组成：
 
 1. Galaxy:  以DaemonSet方式运行在每个节点上，通过调用各种CNI插件来配置k8s容器网络
-1. CNI plugins: 符合CNI标准的二进制文件，用于网络资源的配置和管理
+1. CNI plugins: 符合CNI标准的二进制文件，用于网络资源的配置和管理, 支持CNI插件[Supported CNI plugins](https://github.com/tkestack/galaxy/blob/master/doc/supported-cnis.md)
 1. Galaxy IPAM: K8S调度插件，用于Float IP的配置和管理
 
-###Galaxy Overlay 网络
+### Galaxy Overlay 网络
 
 ![Galaxy Overlay Networks](image/galaxy.png)
 
@@ -50,7 +50,7 @@ Galaxy在架构上由三部分组成：
 1. Galaxy调用FlannelCNI来解析来自/run/flannel/subnet.env的子网信息
 1. Flannel CNI调用Bridge CNI或Veth CNI来为POD配置网络
 
-###Galaxy Underlay 网络
+### Galaxy Underlay 网络
 
 ![Galaxy Underlay Networks](image/galaxy-ipam.png)
 
@@ -61,14 +61,14 @@ Galaxy在架构上由三部分组成：
 1. Galaxy-ipam检查POD是否配置了reserved IP，如果是，则Galaxy-ipam仅将此IP所在的可用子网的节点标记为有效节点，否则所有都将被标记为有效节点。在POD绑定IP期间，Galaxy-ipam分配一个IP并将其写入到POD annotations中
 1. Galaxy从POD annotations获得IP，并将其作为参数传递给CNI，通过CNI配置POD IP
 
-##Galaxy配置
+## Galaxy配置
 
 - [Galaxy configuration](https://github.com/tkestack/galaxy/blob/master/doc/galaxy-config.md)
 - [Galaxy-ipam configuration](https://github.com/tkestack/galaxy/blob/master/doc/galaxy-ipam-config.md)
 - [Float IP usage](https://github.com/tkestack/galaxy/blob/master/doc/float-ip.md)
 
 
-##常见问题
+## 常见问题
 
 1. 为pod配置float ip失败
     1. 检查ipam扩展组件是否已正确安装
