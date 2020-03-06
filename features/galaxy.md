@@ -70,7 +70,7 @@ Galaxy在架构上由三部分组成：
 
 ## 常见问题
 
-1. 为pod配置float ip失败
+1. 为pod配置float ip网络模式失败
     1. 检查ipam扩展组件是否已正确安装
     1. 检查kube-scheduler是否正确配置scheduler-policy
     1. 检查floatingip-config ConfigMap是否配置正确
@@ -79,6 +79,10 @@ Galaxy在架构上由三部分组成：
         1. 容器annotation中配置 k8s.v1.cni.cncf.io/networks=galaxy-k8s-vlan
     
     如果上述配置都正确，pod会被成功创建并运行，galaxy-ipam会自动为pod分配指定的Float IP
+
+1. 为pod配置float ip网络模式后，如何与其他pod和主机通信
+
+   Galaxy为pod配置float ip网络模式，pod的nic和ip由宿主机网络提供，此pod的就加入了underlay的网络，因此pod间的通信以及pod与主机的通信就需要网络管理员在相应的交换机和路由器上配置对应的路由。
 
 ##参考配置
 
