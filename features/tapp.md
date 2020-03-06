@@ -120,7 +120,7 @@ type TAppStatus struct {
 }
 ```
 
-## TAPP 参考用例
+## 使用示例
 
 本节以一个TApp应用部署，配置，升级，扩容以及杀死删除的操作步骤来说明TApp的使用。
 

@@ -54,7 +54,7 @@ type CronHPAList struct {
 }
 ```
 
-## CronHPA 参考用例
+## 使用示例
 
 ### 指定deployment每周五20点扩容到60个实例，周日23点缩容到30个实例
 

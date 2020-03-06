@@ -1,10 +1,10 @@
-## LBCF说明
+# LBCF说明
 
-### 组件介绍 : Load Balancer Controlling Framework (LBCF)
+## 组件介绍 : Load Balancer Controlling Framework (LBCF)
 
 LBCF是一款部署在Kubernetes内的通用负载均衡控制面框架，旨在降低容器对接负载均衡的实现难度，并提供强大的扩展能力以满足业务方在使用负载均衡时的个性化需求。
 
-### 部署在集群内kubernetes对象
+## 部署在集群内kubernetes对象
 
 在集群内部署LBCF Add-on , 将在集群内部署以下kubernetes对象
 
@@ -23,7 +23,7 @@ LBCF是一款部署在Kubernetes内的通用负载均衡控制面框架，旨在
 | lbcf-mutate                                    | MutatingWebhookConfiguration   | /      | /            |
 | lbcf-validate                                  | ValidatingWebhookConfiguration | /      | /            |
 
-### LBCF使用场景
+## LBCF使用场景
 
 LBCF对K8S内部晦涩的运行机制进行了封装并以Webhook的形式对外暴露，在容器的全生命周期中提供了多达8种Webhook。通过实现这些Webhook，开发人员可以轻松实现下述功能：
 
@@ -32,60 +32,17 @@ LBCF对K8S内部晦涩的运行机制进行了封装并以Webhook的形式对外
 - 容器环境与其他环境共享同一个负载均衡
 - 解耦负载均衡数据面与控制面
 
-
 ## LBCF使用方法
 
 1. 通过扩展组件安装LBCF
+1. 开发或选择安装LBCF Webhook规范的要求实现Webhook服务器
+1. 以下按腾讯云CLB开发的webhook服务器为例
 
-2. 开发或选择安装LBCF Webhook规范的要求实现Webhook服务器
+详细的使用方法和帮助文档，请参考[lb-controlling-framework](https://github.com/tkestack/lb-controlling-framework)文档
 
-3. 以下按腾讯云CLB开发的webhook服务器为例
+## 使用示例
 
-#### LBCF CLB driver
-
-##### 功能列表
-
-- 使用已有负载均衡
-- 创建新的负载均衡（四层/七层）
-- 绑定Service NodePort
-- CLB直通POD(直接绑定Pod至CLB，不通过Service）
-- 权重调整
-- 能够校验并拒绝非法参数
-
-##### 部署LBCF CLB driver
-
-部署前需修改YAML（文中附录已提供yaml文件，需要向deploy.yaml中填入以下信息
-
-- 镜像信息
-- 所在地域
-- 所在vpcID （绑定service NodePort时用来查找节点对应的instanceID）
-- secret-id
-- secret-key
-
-```
-    spec:
-      priorityClassName: "system-node-critical"
-      containers:
-        - name: driver
-          image: ${image-name}
-          args:
-            - "--region=${your-region}"
-            - "--vpc-id=${your-vpc-id}"
-            - "--secret-id=${your-account-secret-id}"
-            - "--secret-key=${your-account-secret-key}"
-```
-
-登陆集群，使用以下命令安装YAML
-
-```
-kubectl apply -f configmap.yaml
-kubectl apply -f deploy.yaml
-kubectl apply -f service.yaml
-```
-
-##### 使用示例
-
-**使用已有四层CLB**
+### 使用已有四层CLB
 
 本例中使用了id为`lb-7wf394rv`的负载均衡实例，监听器为四层监听器，端口号为20000，协议类型TCP。
 
@@ -107,7 +64,7 @@ spec:
     policy: Always
 ```
 
-**创建新的七层CLB**
+### 创建新的七层CLB
 
 本例在vpc  `vpc-b5hcoxj4`中创建了公网(OPEN)负载均衡实例，并为之创建了端口号为9999的HTTP监听器，最后会在监听器中创建`mytest.com/index.html`的转发规则
 
@@ -130,7 +87,7 @@ spec:
     policy: Always
 ```
 
-**设定backend权重**
+### 设定backend权重
 
 本例展示了Service NodePort的绑定。被绑定Service的名称为svc-test，service port为80（TCP)，绑定到CLB的每个`Node:NodePort`的权重都是66
 
@@ -150,9 +107,9 @@ spec:
     weight: "66"
 ```
 
-### 附录
+## 附录
 
-#### 腾讯云CLB LBCF driver
+### 腾讯云CLB LBCF driver
 
 ConfigMap：
 
