@@ -152,32 +152,9 @@ metadata:
 # kubectl get deploy nnn -o yaml
 apiVersion: apps/v1
 kind: Deployment
-metadata:
-  annotations:
-    deployment.kubernetes.io/revision: "2"
-  creationTimestamp: "2020-03-04T08:07:25Z"
-  generation: 4
-  labels:
-    k8s-app: nnn
-    qcloud-app: nnn
-  name: nnn
-  namespace: default
-  resourceVersion: "2745023"
-  selfLink: /apis/apps/v1/namespaces/default/deployments/nnn
-  uid: 9614aeda-1672-485e-b8db-0c941c94e9c0
+...
 spec:
-  progressDeadlineSeconds: 600
-  replicas: 1
-  revisionHistoryLimit: 10
-  selector:
-    matchLabels:
-      k8s-app: nnn
-      qcloud-app: nnn
-  strategy:
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
-    type: RollingUpdate
+  ...
   template:
     metadata:
       annotations:
@@ -188,7 +165,6 @@ spec:
         k8s-app: nnn
         qcloud-app: nnn
     spec:
-      affinity:
       containers:
       - image: nginx
         imagePullPolicy: Always
@@ -202,32 +178,6 @@ spec:
             cpu: 250m
             memory: 256Mi
             tke.cloud.tencent.com/eni-ip: "1"
-        terminationMessagePath: /dev/termination-log
-        terminationMessagePolicy: File
-      dnsPolicy: ClusterFirst
-      restartPolicy: Always
-      schedulerName: default-scheduler
-      securityContext: {}
-      terminationGracePeriodSeconds: 30
-status:
-  availableReplicas: 1
-  conditions:
-  - lastTransitionTime: "2020-03-04T08:07:25Z"
-    lastUpdateTime: "2020-03-04T08:09:59Z"
-    message: ReplicaSet "nnn-7df5984746" has successfully progressed.
-    reason: NewReplicaSetAvailable
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2020-03-04T08:28:32Z"
-    lastUpdateTime: "2020-03-04T08:28:32Z"
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
-    type: Available
-  observedGeneration: 4
-  readyReplicas: 1
-  replicas: 1
-  updatedReplicas: 1
 ```
 
 ### 查看生成的pod带有float-ip的annotations
@@ -241,106 +191,17 @@ metadata:
     k8s.v1.cni.cncf.io/networks: galaxy-k8s-vlan
     k8s.v1.cni.galaxy.io/args: '{"common":{"ipinfos":[{"ip":"192.168.64.202/24","vlan":0,"gateway":"192.168.64.1","routable_subnet":"172.21.64.0/20"}]}}'
     k8s.v1.cni.galaxy.io/release-policy: immutable
-  creationTimestamp: "2020-03-04T08:23:22Z"
-  generateName: nnn-7df5984746-
-  labels:
-    k8s-app: nnn
-    pod-template-hash: 7df5984746
-    qcloud-app: nnn
-  name: nnn-7df5984746-58hjm
-  namespace: default
-  ownerReferences:
-  - apiVersion: apps/v1
-    blockOwnerDeletion: true
-    controller: true
-    kind: ReplicaSet
-    name: nnn-7df5984746
-    uid: 74aa5e5e-208a-496a-8c34-7570014ca1ac
-  resourceVersion: "2745021"
-  selfLink: /api/v1/namespaces/default/pods/nnn-7df5984746-58hjm
-  uid: 6479abfa-4eb7-4918-838d-4973a8a48a0a
+...
 spec:
-  affinity:
-  containers:
-  - image: nginx
-    imagePullPolicy: Always
-    name: nnn
-    resources:
-      limits:
-        cpu: 500m
-        memory: 1Gi
-        tke.cloud.tencent.com/eni-ip: "1"
-      requests:
-        cpu: 250m
-        memory: 256Mi
-        tke.cloud.tencent.com/eni-ip: "1"
-    terminationMessagePath: /dev/termination-log
-    terminationMessagePolicy: File
-    volumeMounts:
-    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-      name: default-token-4ksgn
-      readOnly: true
-  dnsPolicy: ClusterFirst
-  enableServiceLinks: true
-  nodeName: 172.21.64.15
-  priority: 0
-  restartPolicy: Always
-  schedulerName: default-scheduler
-  securityContext: {}
-  serviceAccount: default
-  serviceAccountName: default
-  terminationGracePeriodSeconds: 30
-  tolerations:
-  - effect: NoExecute
-    key: node.kubernetes.io/not-ready
-    operator: Exists
-    tolerationSeconds: 300
-  - effect: NoExecute
-    key: node.kubernetes.io/unreachable
-    operator: Exists
-    tolerationSeconds: 300
-  volumes:
-  - name: default-token-4ksgn
-    secret:
-      defaultMode: 420
-      secretName: default-token-4ksgn
+...
 status:
-  conditions:
-  - lastProbeTime: null
-    lastTransitionTime: "2020-03-04T08:28:15Z"
-    status: "True"
-    type: Initialized
-  - lastProbeTime: null
-    lastTransitionTime: "2020-03-04T08:28:32Z"
-    status: "True"
-    type: Ready
-  - lastProbeTime: null
-    lastTransitionTime: "2020-03-04T08:28:32Z"
-    status: "True"
-    type: ContainersReady
-  - lastProbeTime: null
-    lastTransitionTime: "2020-03-04T08:28:15Z"
-    status: "True"
-    type: PodScheduled
-  containerStatuses:
-  - containerID: docker://65980ec4073870dc369eb37217e6aeb7ea30e0a2c53193bbdad3c210ff11d2b6
-    image: nginx:latest
-    imageID: docker-pullable://nginx@sha256:380eb808e2a3b0dd954f92c1cae2f845e6558a15037efefcabc5b4e03d666d03
-    lastState: {}
-    name: nnn
-    ready: true
-    restartCount: 0
-    started: true
-    state:
-      running:
-        startedAt: "2020-03-04T08:28:31Z"
+...
   hostIP: 172.21.64.15
   phase: Running
   podIP: 192.168.64.202
   podIPs:
   - ip: 192.168.64.202
-  qosClass: Burstable
-  startTime: "2020-03-04T08:28:15Z"
+
 ```
 
 ### 查看crd中保存的floatingips绑定信息
@@ -374,28 +235,7 @@ default via 172.21.64.1 dev eth0
 169.254.0.0/16 dev eth0 scope link metric 1002
 172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1
 172.21.64.0/20 dev eth0 proto kernel scope link src 172.21.64.15
-192.168.0.68 dev v-h9ca25c437 scope link
-192.168.0.69 dev v-h1ddf31527 scope link
-192.168.0.70 dev v-hd29d20f12 scope link
-192.168.0.71 dev v-h1128f1ba5 scope link
-192.168.0.72 dev v-hd1f2026e0 scope link
-192.168.0.73 dev v-hb3b861bf1 scope link
-192.168.0.74 dev v-he57af25b9 scope link
-192.168.0.75 dev v-h1ba83c41b scope link
-192.168.0.76 dev v-hfd9a2059c scope link
-192.168.0.77 dev v-hb146b4478 scope link
-192.168.0.78 dev v-h02a346500 scope link
-192.168.0.79 dev v-he304d55dc scope link
-192.168.0.80 dev v-he9df6d2b6 scope link
-192.168.0.81 dev v-h63df5b99c scope link
-192.168.0.82 dev v-haf0e51d8f scope link
-192.168.0.83 dev v-ha6e2c4169 scope link
-192.168.0.84 dev v-hd995bb928 scope link
-192.168.0.85 dev v-h34af6a817 scope link
-192.168.0.86 dev v-hdcd62a768 scope link
-192.168.0.87 dev v-ha257e8e04 scope link
-192.168.1.0/24 via 192.168.1.0 dev flannel.1 onlink
-192.168.2.0/24 via 192.168.2.0 dev flannel.1 onlink
+...
 192.168.64.202 dev v-hb21e7165d 
 ```
 

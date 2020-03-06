@@ -108,14 +108,7 @@ example-cron-hpa   104s
 # kubectl get cronhpa example-cron-hpa -o yaml
 apiVersion: extensions.tkestack.io/v1
 kind: CronHPA
-metadata:
-  creationTimestamp: "2020-03-06T10:53:02Z"
-  generation: 1
-  name: example-cron-hpa
-  namespace: default
-  resourceVersion: "3929268"
-  selfLink: /apis/extensions.tkestack.io/v1/namespaces/default/cronhpas/example-cron-hpa
-  uid: 47378fa1-e01f-47be-a580-a81a75276f4f
+...
 spec:
   crons:
   - schedule: 0 20 * * 5

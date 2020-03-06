@@ -161,30 +161,9 @@ Labels:       app=example-tapp
 Annotations:  <none>
 API Version:  apps.tkestack.io/v1
 Kind:         TApp
-Metadata:
-  Creation Timestamp:  2020-03-06T02:40:37Z
-  Generation:          2
-  Resource Version:    3739472
-  Self Link:           /apis/apps.tkestack.io/v1/namespaces/default/tapps/example-tapp
-  UID:                 a54d2b91-0a6a-4a7a-9d4b-ed6a386107d6
+...
 Spec:
-  Replicas:  3
-  Selector:
-    Match Labels:
-      App:  example-tapp
-  Template:
-    Metadata:
-      Creation Timestamp:  <nil>
-      Labels:
-        App:                     example-tapp
-        tapp_template_hash_key:  8024642477066914886
-        tapp_uniq_hash_key:      12437731092839424597
-    Spec:
-      Containers:
-        Image:  nginx:1.7.9
-        Name:   nginx
-        Resources:
-  Update Strategy:
+...
 Status:
   App Status:            Running
   Observed Generation:   2
@@ -247,42 +226,9 @@ Annotations:  kubectl.kubernetes.io/last-applied-configuration:
                 {"apiVersion":"apps.tkestack.io/v1","kind":"TApp","metadata":{"annotations":{},"name":"example-tapp","namespace":"default"},"spec":{"repli...
 API Version:  apps.tkestack.io/v1
 Kind:         TApp
-Metadata:
-  Creation Timestamp:  2020-03-06T02:40:37Z
-  Generation:          4
-  Resource Version:    3741973
-  Self Link:           /apis/apps.tkestack.io/v1/namespaces/default/tapps/example-tapp
-  UID:                 a54d2b91-0a6a-4a7a-9d4b-ed6a386107d6
+...
 Spec:
-  Replicas:  3
-  Selector:
-    Match Labels:
-      App:  example-tapp
-  Template:
-    Metadata:
-      Creation Timestamp:  <nil>
-      Labels:
-        App:                     example-tapp
-        tapp_template_hash_key:  8024642477066914886
-        tapp_uniq_hash_key:      12437731092839424597
-    Spec:
-      Containers:
-        Image:  nginx:1.7.9
-        Name:   nginx
-        Resources:
-  Template Pool:
-    Test:
-      Metadata:
-        Creation Timestamp:  <nil>
-        Labels:
-          App:                     example-tapp
-          tapp_template_hash_key:  1930704208313663087
-          tapp_uniq_hash_key:      12437731092839424597
-      Spec:
-        Containers:
-          Image:  nginx
-          Name:   nginx
-          Resources:
+...
   Templates:
     1:  test
   Update Strategy:
