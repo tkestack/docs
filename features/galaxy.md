@@ -84,7 +84,11 @@ Galaxy在架构上由三部分组成：
 
    Galaxy为pod配置float ip网络模式，pod的nic和ip由宿主机网络提供，此pod的就加入了underlay的网络，因此pod间的通信以及pod与主机的通信就需要网络管理员在相应的交换机和路由器上配置对应的路由。
 
-##参考配置
+## 参考配置
+
+本节展示了在一个正确配置了float-ip的deployment工作负载。
+
+### 查看kube-scheduler的policy配置文件是否配置正确
 
 ```yaml
 # cat /etc/kubernetes/scheduler-policy-config.json
@@ -125,6 +129,8 @@ Galaxy在架构上由三部分组成：
 
 ```
 
+### 查看floatingip-config配置
+
 ```yaml
 # kubectl get cm -n kube-system floatingip-config -o yaml
 apiVersion: v1
@@ -139,6 +145,9 @@ metadata:
   selfLink: /api/v1/namespaces/kube-system/configmaps/floatingip-config
   uid: 62524e92-f37b-4db2-8ec0-b01d7a90d1a1
 ```
+
+### 查看deployment配置float-ip
+
 ```yaml
 # kubectl get deploy nnn -o yaml
 apiVersion: apps/v1
@@ -220,6 +229,8 @@ status:
   replicas: 1
   updatedReplicas: 1
 ```
+
+### 查看生成的pod带有float-ip的annotations
 
 ```yaml
 # kubectl get pod nnn-7df5984746-58hjm -o yaml
@@ -332,6 +343,8 @@ status:
   startTime: "2020-03-04T08:28:15Z"
 ```
 
+### 查看crd中保存的floatingips绑定信息
+
 ```yaml
 # kubectl get  floatingips.galaxy.k8s.io 192.168.64.202 -o yaml
 apiVersion: galaxy.k8s.io/v1alpha1
@@ -352,6 +365,8 @@ spec:
   subnet: 172.21.64.0/20
   updateTime: "2020-03-04T08:28:15Z"
 ```
+
+### 查看所在主机上生成了对应的nic和ip
 
 ```shell script
 # ip route

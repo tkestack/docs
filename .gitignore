@@ -1,0 +1,7 @@
+# Jetbrains IDE
+.idea
+# VSCode
+.vscode
+# LiteIDE
+*.out
+

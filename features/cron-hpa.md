@@ -1,6 +1,8 @@
-#CronHPA
+# CronHPA
 
 Cron Horizontal Pod Autoscaler(CronHPA)使我们能够使用[crontab](https://en.wikipedia.org/wiki/Cron)模式定期自动扩容工作负载(那些支持扩展子资源的负载，例如deployment、statefulset)。
+
+CronHPA使用[Cron](https://en.wikipedia.org/wiki/Cron)格式进行编写，周期性地在给定的调度时间对工作负载进行扩缩容。
 
 ## CronHPA 资源结构
 
@@ -54,7 +56,7 @@ type CronHPAList struct {
 
 ## CronHPA 参考用例
 
-1. 指定deployment每周五20点扩容到60个实例，周日23点缩容到30个实例
+### 指定deployment每周五20点扩容到60个实例，周日23点缩容到30个实例
 
 ```yaml
 apiVersion: extensions.tkestack.io/v1
@@ -67,13 +69,13 @@ spec:
     kind: Deployment
     name: demo-deployment
   crons:
-    - schedule: "0 23 * * 5"  // Set replicas to 60 every Friday 23:00
+    - schedule: "0 20 * * 5"
       targetReplicas: 60
-    - schedule: "0 23 * * 7"  // Set replicas to 30 every Sunday 23:00
+    - schedule: "0 23 * * 7"
       targetReplicas: 30
 ```
 
-2. 指定deployment每天8点到9点，19点到21点扩容到60，其他时间点恢复到10
+### 指定deployment每天8点到9点，19点到21点扩容到60，其他时间点恢复到10
 
 ```yaml
 apiVersion: extensions.tkestack.io/v1
@@ -86,12 +88,49 @@ spec:
     kind: Deployment
     name: web-servers
   crons:
-    - schedule: "0 8 * * *"  // Set replicas to 60 every day 8:00
+    - schedule: "0 8 * * *"
       targetReplicas: 60
-    - schedule: "0 9 * * *"  // Set replicas to 10 every day 9:00
+    - schedule: "0 9 * * *"
       targetReplicas: 10
-    - schedule: "0 19 * * *"  // Set replicas to 60 every day 19:00
+    - schedule: "0 19 * * *"
       targetReplicas: 60
-    - schedule: "0 21 * * *"  // Set replicas to 10 every day 21:00
+    - schedule: "0 21 * * *"
       targetReplicas: 10
+```
+
+### 查看cronhpa
+
+```shell script
+# kubectl get cronhpa
+NAME               AGE
+example-cron-hpa   104s
+
+# kubectl get cronhpa example-cron-hpa -o yaml
+apiVersion: extensions.tkestack.io/v1
+kind: CronHPA
+metadata:
+  creationTimestamp: "2020-03-06T10:53:02Z"
+  generation: 1
+  name: example-cron-hpa
+  namespace: default
+  resourceVersion: "3929268"
+  selfLink: /apis/extensions.tkestack.io/v1/namespaces/default/cronhpas/example-cron-hpa
+  uid: 47378fa1-e01f-47be-a580-a81a75276f4f
+spec:
+  crons:
+  - schedule: 0 20 * * 5
+    targetReplicas: 60
+  - schedule: 0 23 * * 7
+    targetReplicas: 30
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: demo-deployment
+
+```
+
+### 删除cronhpa
+
+```shell script
+kubectl delete cronhpa example-cron-hpa
 ```

@@ -7,8 +7,6 @@
 
 ## TAPP 特点
 
-如果用Kubernetes的应用类型类比，TAPP ≈ Deployment + StatefulSet + Job ，它包含了Deployment、StatefulSet、Job的绝大部分功能，同时也有自己的特性，并且和原生Kubernetes相同的使用方式完全一致。
-
 功能点 | Deployment | StatefulSet | TAPP
 ---------------|-------|--------|--------
 Pod唯一性 | 无 | 每个Pod有唯一标识 | 每个Pod有唯一标识
@@ -20,7 +18,8 @@ Pod存储独占 | 仅支持单容器 | 支持 | 支持
 自动迁移问题节点 | 支持 | 不支持 | 支持
 多版本管理 | 同时只有1个版本 | 可保持2个版本 | 可保持多个版本
 Pod原地升级 | 不支持 | 不支持 | 支持
-IP随Pod迁移 | 不支持 | 支持 | 支持
+
+如果用Kubernetes的应用类型类比，TAPP ≈ Deployment + StatefulSet + Job ，它包含了Deployment、StatefulSet、Job的绝大部分功能，同时也有自己的特性，并且和原生Kubernetes相同的使用方式完全一致。
 
 
 1. 实例具有可以标识的id
@@ -46,7 +45,7 @@ IP随Pod迁移 | 不支持 | 支持 | 支持
 
 ## TAPP 资源结构
 
-TApp是一种用户自定义资源（CRD），TAPP controller是TAPP对应的controller/operator，它通过kube-apiserver监听TApp、Pod相关的事件，根据TApp spec和status进行相应的操作：创建、删除pod等。
+TApp定义了一种用户自定义资源（CRD），TAPP controller是TAPP对应的controller/operator，它通过kube-apiserver监听TApp、Pod相关的事件，根据TApp spec和status进行相应的操作：创建、删除pod等。
 
 ```go
 // TApp represents a set of pods with consistent identities.
