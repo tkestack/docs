@@ -1,10 +1,10 @@
-# docs
+# TKEStack 产品手册
 
 * [产品部署](https://github.com/tkestack/docs/tree/master/installation)
   * [部署架构](https://github.com/tkestack/docs/blob/master/installation/installation-architecture.md)
   * [部署环境要求](https://github.com/tkestack/docs/blob/master/installation/installation-requirement.md)
   * [安装步骤](https://github.com/tkestack/docs/blob/master/installation/installation-procedures.md)
-* [产品使用手册](https://github.com/tkestack/docs/tree/master/products)
+* [产品使用指南](https://github.com/tkestack/docs/tree/master/products)
   * [集群管理](https://github.com/tkestack/docs/blob/master/products/platform/cluster.md)
   * [业务管理](https://github.com/tkestack/docs/blob/master/products/platform/business.md)
   * [切换控制台](https://github.com/tkestack/docs/blob/master/products/platform/controlpannel.md)
