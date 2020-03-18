@@ -23,7 +23,7 @@
   * [部署类](https://github.com/tkestack/docs/blob/master/features/galaxy.md)
     * [如何规划部署资源](https://github.com/tkestack/docs/blob/master/FAQ/installation.md#如何规划部署资源)
     * [如何使用存储](https://github.com/tkestack/docs/blob/master/FAQ/installation.md#如何使用存储)
-    * [常见报错解决方案](https://github.com/tkestack/docs/blob/master/features/lbcf.md)
+    * [常见报错解决方案](https://github.com/tkestack/docs/blob/master/FAQ/installation.md#常见报错解决方案)
     * [如何重新部署集群](https://github.com/tkestack/docs/blob/master/FAQ/installation.md#如何重新部署集群)
   * [功能类](https://github.com/tkestack/docs/blob/master/FAQ/features.md)
     * [如何接入LDAP、OIDC](https://github.com/tkestack/docs/blob/master/FAQ/features.md#如何接入LDAP、OIDC)
