@@ -6,6 +6,8 @@
 
 [如何使用存储  ](#如何使用存储)  
 
+[常见报错解决方案  ](#常见报错解决方案)  
+
 [如何重新部署集群  ](#如何重新部署集群)  
 
 ### 如何规划部署资源
@@ -24,17 +26,19 @@ Global server，若干台，用以部署global集群，常见的部署模式分�
 
 集群节点主机配置，请参考[资源需求](../安装部署/资源需求.md)。
 
-
-
-
-
 ### 如何使用存储
 
 TKEStack 没有提供存储服务，Global集群中的镜像仓库、ETCD、InfluxDB等数据组件，均使用本地磁盘存储数据。如果您需要使用存储服务，建议使用[ROOK](https://rook.io/)或者[chubaoFS](https://chubao.io/)，部署一套容器化的分布式存储服务。
 
+### 常见报错解决方案
 
+#### 1.密码安装报错
 
+错误情况：使用密码安装Global集群报 ssh:unable to authenticate 错误。
 
+解决方案：将Global集群节点/etc/ssh/sshd_config配置文件中的PasswordAuthentication设为yes，重启sshd服务。
+
+注：建议配置SSH key的方式安装Global集群。
 
 ### 如何重新部署集群
 
