@@ -1,6 +1,6 @@
 # TKEStack 产品手册
 
-* [产品部署](https://github.com/tkestack/docs/tree/master/installation)
+* [产品部署指南](https://github.com/tkestack/docs/tree/master/installation)
   * [部署架构](https://github.com/tkestack/docs/blob/master/installation/installation-architecture.md)
   * [部署环境要求](https://github.com/tkestack/docs/blob/master/installation/installation-requirement.md)
   * [安装步骤](https://github.com/tkestack/docs/blob/master/installation/installation-procedures.md)
