@@ -13,7 +13,7 @@
   * [访问管理](https://github.com/tkestack/docs/blob/master/products/platform/access.md)
   * [监控&告警](https://github.com/tkestack/docs/blob/master/products/platform/monitor%26alert.md)
   * [运维中心](https://github.com/tkestack/docs/blob/master/products/platform/operation.md)
-* [产品特性](https://github.com/tkestack/docs/tree/master/features)
+* [产品特色功能](https://github.com/tkestack/docs/tree/master/features)
   * [Galaxy](https://github.com/tkestack/docs/blob/master/features/galaxy.md)
   * [TAPP](https://github.com/tkestack/docs/blob/master/features/tapp.md)
   * [GPUManager](https://github.com/tkestack/docs/blob/master/features/gpumanager.md)
