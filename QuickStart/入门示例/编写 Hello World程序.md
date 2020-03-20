@@ -141,5 +141,5 @@ sudo sudo docker push default.registry.tke.com/命名空间/helloworld:v1
 ### 验证 Hello World 服务
 访问服务时显示如下，则 Hello World 服务创建成功。
 ![](../Images/Hello-World/helloworld-2.png)
-若容器创建失败，可查看 [事件常见问题](https://github.com/tkestack/docs/blob/master/FAQ/events.md)。
+
 
