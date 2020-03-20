@@ -116,7 +116,7 @@ sudo sudo docker push default.registry.tke.com/命名空间/helloworld:v1
  - **类型**：根据实际需求进行选择。
  - **数据卷**：根据实需求设置工作负载的挂载卷。
 ![](../Images/Hello-World/helloworld-8.png)
-5. 设置**实例内容器**，输入实例内容器名称为 helloworld。镜像为helloworld:v1。
+5. 设置**实例内容器**，输入实例内容器名称为 helloworld。镜像为hello-node:v1。
    ![](../Images/Hello-World/helloworld-7.png)
 7. 设置实例数量，如下图所示：
  - **手动调节**：设定实例数量，本文实例数量设置为1。可单击“+”或“-”控制实例数量。
