@@ -1,5 +1,5 @@
 ## 操作场景
-本文档旨在帮助大家了解如何快速创建一个容器集群内的 Hello World 的 Node.js 版的服务。更多关于如何构建 Docker 镜像的教程可参阅 [如何构建 Docker镜像](/doc/product/457/9115) 。
+本文档旨在帮助大家了解如何快速创建一个容器集群内的 Hello World 的 Node.js 版的服务。更多关于如何构建 Docker 镜像的教程可参阅 [如何构建 Docker镜像](https://github.com/tkestack/docs/blob/master/QuickStart/%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BAdocker%E9%95%9C%E5%83%8F.md) 。
 
 ## 前提条件
 
@@ -141,5 +141,5 @@ sudo sudo docker push default.registry.tke.com/命名空间/helloworld:v1
 ### 验证 Hello World 服务
 访问服务时显示如下，则 Hello World 服务创建成功。
 ![](../Images/Hello-World/helloworld-2.png)
-若容器创建失败，可查看 [事件常见问题](../)。
+若容器创建失败，可查看 [事件常见问题](https://github.com/tkestack/docs/blob/master/FAQ/events.md)。
 
