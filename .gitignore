@@ -4,4 +4,4 @@
 .vscode
 # LiteIDE
 *.out
-
+.DS_Store
