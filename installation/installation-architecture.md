@@ -19,7 +19,7 @@ TKEStack产品架构如下图所示：
 
 ## 模块说明
 
-* Installer: 运行 tke-installer 安装器的节点，用于提供 Web UI 指导用户在 Global 集群部署TKEStacl控制台；
+* Installer: 运行 tke-installer 安装器的节点，用于提供 Web UI 指导用户在 Global 集群部署TKEStack控制台；
 * Global Cluster: 运行的 TKEStack 控制台的 Kubernetes 集群；
 * Cluster: 运行业务的 Kubernetes 集群，可以通过 TKEStack 控制台创建或导入；
 * Dashboard: 运行 TKEStack 控制台 Web 服务；
