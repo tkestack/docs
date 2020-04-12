@@ -2,125 +2,121 @@
 
 
 
-## 安装tke-installer
+## 平台安装
 
-#### 在线环境：
+为了简化平台安装过程，容器服务开源版基于 tke-installer 安装器提供了一个向导式的图形化安装指引界面。
 
-登录到您的 Linux 主机，然后通过以下命令安装 tke-installer：
-
-```
-version=v1.1.0 && wget https://tke-release-1251707795.cos.ap-guangzhou.myqcloud.com/tke-installer-x86_64-$version.run{,.sha256} && sha256sum --check --status tke-installer-x86_64-$version.run.sha256 && chmod +x tke-installer-x86_64-$version.run && ./tke-installer-x86_64-$version.run
-```
-
-注：此命令可以在 [TKEStack版本详情 ](https://github.com/tkestack/tke/releases)中找到，您可以按需选择版本进行安装，我们建议您安装最新版本。
-
-注：tke-installer 约为 3GB，包含安装所需的所有资源。
-
-
-
-#### 离线环境：
-
-1.在一台可以联网的主机上通过以下命令下载tke-installer安装包：
+1. 登录到您的 Installer 节点，下载 tke-installer 安装器本到 /data 目录下：
 
 ```
- version=v1.1.0 && wget https://tke-release-1251707795.cos.ap-guangzhou.myqcloud.com/tke-installer-x86_64-$version.run{,.sha256}
+version=v1.2.3 && wget https://tke-release-1251707795.cos.ap-guangzhou.myqcloud.com/tke-installer-x86_64-$version.run{,.sha256} && sha256sum --check --status tke-installer-x86_64-$version.run.sha256 && chmod +x tke-installer-x86_64-$version.run
 ```
 
-2.将安装包使用 rz 或 scp 工具传入离线目标主机。
+> 注：您可以查看 TKEStack [Release](https://github.com/tkestack/tke/releases) 按需选择版本进行安装，建议您安装最新版本。
+>
 
-3.在离线目标主机通过以下命令安装 tke-installer：
+> 注：tke-installer 约为 5GB，包含安装所需的所有资源。
+>
+
+2. 开始安装：在 Installer 节点上通过以下命令安装 tke-installer ：
 
 ```
- version=v1.1.0 && sha256sum --check --status tke-installer-x86_64-$version.run.sha256 && chmod +x tke-installer-x86_64-$version.run && ./tke-installer-x86_64-$version.run
+./tke-installer-x86_64-$version.run
 ```
 
-
-
-## 登录控制台安装界面
-
-访问 http:[tke-installer-IP]:8080/index.html 访问控制台，开始安装。
+3. 访问 http:[tke-installer-IP]:8080/index.html，按照指引开始安装控制台。
 
 
 
-## 安装TKEStack控制台
+## 控制台安装
 
-#### 1.**基本设置**：
+1. 填写 TKEStack 控制台基本配置信息。
 
-配置 TKEStack 控制台的账户信息及 APIServer 高可用类型。
+* 用户名：TKEStack 控制台管理员名称
+* 密码：TKEStack 控制台管理员密码
+* 高可用设置
+  * TKE提供：在所有 master 节点额外安装 Keepalived 完成 VIP 的配置与连接
+  * 使用已有：对接配置好的外部 LB 实例
+  * 不设置：访问第一台 master 节点 APIServer
 
-注：高可用设置为” TKE 提供“，会为您在 master 节点额外安装 Keepalived 完成 VIP 配置，需要配置一个内网可用IP；高可用设置为”使用已有“，需要您手动对接负载均衡器的 VIP 实例。
+![](../Images/Installration/step-1.png)
 
-![](https://github.com/tkestack/docs/blob/master/Images/Installration/step-1.png?raw=true)
+2. 填写 TKEStack 控制台集群设置信息。
 
+* 网卡名称：集群使用的网卡，如无特殊情况，一般为eth0
 
+* GPU 类型：
 
-#### 2.**集群设置**：
+  * 不使用：不安装 Nvidia GPU 驱动。
+  * Virtual：安装  Nvidia GPU 驱动。
+  * Physical：安装 Nvidia GPU 驱动。
 
-填写Global集群的信息，包括网卡名称、节点 GPU 类型、容器网络、master 节点信息以及高射设置。
+* 容器网络： 将为集群内容器分配在容器网络地址范围内的 IP 地址，您可以自定义三大私有网段作为容器网络， 根据您选择的集群内服务数量的上限，自动分配适当大小的 CIDR 段用于 Kubernetes service；根据您选择 Pod 数量上限/节点，自动为集群内每台服务器分配一个适当大小的网段用于该主机分配 Pod 的 IP 地址。
 
-注：请填写master节点内网IP。
+  + CIDR： 集群内 Sevice、 Pod 等资源所在网段。
 
-![](https://github.com/tkestack/docs/blob/master/Images/Installration/step-2.png?raw=true)
+  + Pod数量上限/节点： 决定分配给每个 Node 的 CIDR 的大小。
+
+  * Service数量上限/集群：决定分配给 Sevice 的 CIDR 大小。
+
+* master 节点： 输入目标机器信息后单击保存，若保存按钮是灰色，单击边上空白处即可变蓝
+
+  +  访问地址： Master 节点内网 IP，请配置至少 8 Cores & 16G 及以上的机型。
+  +  SSH 端口：请确保目标机器安全组开放 SSH 端口和 ICMP 协议，否则无法远程登录和 PING 服务器。
+
+![](../Images/Installration/step-2.png)
 
 高级设置处可以自定义 Global 集群的 Docker、kube-apiserver、kube-controller-manager、kube-scheduler、kubelet 运行参数。
 
 ![](https://github.com/interstallers/docs/blob/master/Images/Installration/step-3-2.png?raw=true)
 
+3. 填写 TKEStack 控制台认证信息。
 
+* 镜像仓库类型
+  * TKE提供：使用 TKE 自带的认证方式。
+  * OIDC：使用 OIDC 认证方式，详见[OIDC](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#openid-connect-tokens)。
 
-#### 3.**认证设置**：
+![](../Images/Installration/step-3-1.png)
 
-填写 TKEStack 控制台的认证信息，可以选择使用 TKE 提供的认证方式或对接 OIDC 认证授权系统。
+4. 填写 TKEStack 控制台镜像仓库信息。
 
-![](https://github.com/tkestack/docs/blob/master/Images/Installration/step-3-1.png?raw=true)
+* 镜像仓库类型
+  * TKE提供：使用 TKE 自带的镜像仓库。
+  * 第三方仓库：对接配置好的外部 LB 实例。此时，TKEStack 将不会再安装镜像仓库，而是使用您提供的镜像仓库作为默认镜像仓库服务。
 
-
-
-#### 4.**镜像仓库设置**：
-
-配置 TKEStack 的镜像仓库，它是集群初始化的源镜像仓库，支持本地和远程仓库。
-
-注：如果选择第三方仓库 TKE 将不会安装镜像仓库服务，而是使用您提供的镜像仓库作为默认镜像仓库服务。
-
-![](https://github.com/tkestack/docs/blob/master/Images/Installration/step-4.png?raw=true)
-
-
-
-#### 5.**业务设置**：
-
-确认是否开启业务模块，建议开启。
+![](../Images/Installration/step-4.pnge)5. 确认是否开启 TKEStack 控制台业务模块，建议开启。
 
 ![](https://github.com/tkestack/docs/blob/master/Images/Installration/step-5.png?raw=true)
 
+6. 选择 TKEStack 控制台监控存储类型
 
+* 监控存储类型
+  * TKE提供：使用 TKE 自带的 influxdb 作为存储。
+  * 外部 influxdb：对接外部的 influxdb 作为存储。
+  * 外部 ES：对接外语的 Elasticsearch作为存储。
+  * 不使用：不使用监控
 
-#### 6.**监控设置**：
+![](../Images/Installration/step-6.png)
 
-选择监控的存储类型，可选 TKE 提供的 influxDB，或者选择对接外部 influxDB、ES。
+7. 确认是否开启 TKEStack 控制台，选择开启则需要填写控制台域名及证书。
 
-![](https://github.com/tkestack/docs/blob/master/Images/Installration/step-6.png?raw=true)
+* 监控存储类型
+  * 自签名证书：使用 TKE 带有的自签名证书
+  * 指定服务器证书：填写已备案域名的服务器证书
 
+![](../Images/Installration/step-7.png)
 
+8. 确认 TKEStack 控制台所有配置是否正确。
 
-#### 7.**控制台设置**：
+![](../Images/Installration/step-8.png)
 
-确认是否开启集群控制台，确认开启则填写控制台的已备案域名并填写服务器证书。建议开启。
+9. 开始安装 TKEStack 控制台，安装成功后界面如下
 
-![](https://github.com/tkestack/docs/blob/master/Images/Installration/step-7.png?raw=true)
+   ![](../Images/Installration/step-9.png)
 
+10. 按照指引配置域名访问 TKEStack 控制台。
 
-
-#### 8.**配置预览**：
-
-确认配置是否正确。
-
-![](https://github.com/tkestack/docs/blob/master/Images/Installration/step-8.png?raw=true)
-
-
-
-#### 9.**开始安装**
-
-
+    ![](../Images/Installration/step-10.png)
 
 ## 安装常见问题
 
@@ -136,13 +132,13 @@ version=v1.1.0 && wget https://tke-release-1251707795.cos.ap-guangzhou.myqcloud.
 
 #### 2.初始化Installer控制台信息
 
-安装报错后，清先将问题解决，再登录到Installer节点执行如下命令开始重新安装：
+安装报错后，请先排障，再登录到Installer节点执行如下命令开始重新安装：
 
 ```
 rm -rf /opt/tke-installer/data && docker restart tke-installer
 ```
 
-注：想要彻底清理installer节点，请执行下方脚本。
+注：想要彻底清理 installer 节点，请执行下方脚本。
 
 
 
