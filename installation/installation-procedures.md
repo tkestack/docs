@@ -84,7 +84,9 @@ version=v1.2.3 && wget https://tke-release-1251707795.cos.ap-guangzhou.myqcloud.
   * TKE提供：使用 TKE 自带的镜像仓库。
   * 第三方仓库：对接配置好的外部 LB 实例。此时，TKEStack 将不会再安装镜像仓库，而是使用您提供的镜像仓库作为默认镜像仓库服务。
 
-![](../Images/Installration/step-4.pnge)5. 确认是否开启 TKEStack 控制台业务模块，建议开启。
+![](../Images/Installration/step-4.png)
+
+5. 确认是否开启 TKEStack 控制台业务模块，建议开启。
 
 ![](https://github.com/tkestack/docs/blob/master/Images/Installration/step-5.png?raw=true)
 
