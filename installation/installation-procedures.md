@@ -64,7 +64,7 @@ version=v1.2.3 && wget https://tke-release-1251707795.cos.ap-guangzhou.myqcloud.
 
 ![img](Images/step-3-2.png)
 
-**高级设置**：可以自定义 Global 集群的 Docker、kube-apiserver、kube-controller-manager、kube-scheduler、kubelet 运行参数
+* **高级设置**：可以自定义 Global 集群的 Docker、kube-apiserver、kube-controller-manager、kube-scheduler、kubelet 运行参数
 
 3. 填写 TKEStack 控制台认证信息。
 
@@ -138,7 +138,7 @@ version=v1.2.3 && wget https://tke-release-1251707795.cos.ap-guangzhou.myqcloud.
 docker restart tke-installer
 ```
 
-2.2 从头暗黄
+2.2 从头安装
 
 安装报错后，请先排障，再登录到 Installer 节点执行如下命令开始从头开始安装：
 
