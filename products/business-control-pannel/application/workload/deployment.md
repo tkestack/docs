@@ -19,9 +19,9 @@ Deployment 声明了 Pod 的模板和控制 Pod 的运行策略，适用于部�
    - **临时目录**：主机上的一个临时目录，生命周期和Pod一致
    - **主机路径**：主机上的真实路径，可以重复使用，不会随Pod一起销毁
    - **NFS盘**：挂载外部NFS到Pod，用户需要指定相应NFS地址，格式：127.0.0.1:/data
-   - **ConfigMap**：用户在业务Namespace下创建的[ConfigMap](#ConfigMap)
-   - **Secret**：用户在业务namespace下创建的[Secret](#Secret)
-   - **PVC**：用户在业务namespace下创建的[PVC](#PVC)
+   - **ConfigMap**：用户在业务Namespace下创建的[ConfigMap](../configurations/ConfigMap.md)
+   - **Secret**：用户在业务namespace下创建的[Secret](../configurations/Secret.md)
+   - **PVC**：用户在业务namespace下创建的[PVC](../storage/persistent-volume-claim.md)
  - **实例内容器**：根据实际需求，为 Deployment 的一个 Pod 设置一个或多个不同的容器。
     - **名称**：自定义。
     - **镜像**：根据实际需求进行选择。
@@ -41,7 +41,11 @@ Deployment 声明了 Pod 的模板和控制 Pod 的运行策略，适用于部�
  - **imagePullSecrets**：镜像拉取密钥，用于拉取用户的私有镜像
  - **节点调度策略**：根据配置的调度规则，将Pod调度到预期的节点。支持指定节点调度和条件选择调度
  - **注释（Annotations）**：给Pod添加相应Annotation，如用户信息等
- - **网络模式**：选择Pod网络模式，目前支持【OverLay（虚拟网络）】、【FloatingIP（浮动ip）】、【NAT（端口映射）】和【Host（主机网络）】
+ - **网络模式**：选择Pod网络模式
+    * **OverLay（虚拟网络）**：基于 IPIP 和 Host Gateway 的 Overlay 网络方案
+    * **FloatingIP（浮动 IP）**：支持容器、物理机和虚拟机在同一个扁平面中直接通过IP进行通信的 Underlay 网络方案。提供了 IP 漂移能力，支持 Pod 重启或迁移时 IP 不变
+    * **NAT（端口映射）**：Kubernetes 原生 NAT 网络方案
+    * **Host（主机网络）**：Kubernetes 原生 Host 网络方案
  - **访问设置（Service）**：勾选【启用】按钮，配置负载端口访问
    - **服务访问方式**：选择是在集群内部访问该负载还是集群外部访问负载
      - **Headless Service**：解析域名时返回相应Pod IP而不是Cluster IP
@@ -49,7 +53,7 @@ Deployment 声明了 Pod 的模板和控制 Pod 的运行策略，适用于部�
    - **Session Affinity**：会话保持，设置会话保持后，会根据请求IP把请求转发给这个IP之前访问过的Pod。
 4. 单击【创建Workload】，完成创建。如下图所示：
 当运行数量=期望数量时，即表示 Deployment 下的所有 Pod 已创建完成。
-  ![](images/podnum.png)
+    ![](images/podnum.png)
 
 ### 更新 Deployment
 
@@ -63,28 +67,28 @@ Deployment 声明了 Pod 的模板和控制 Pod 的运行策略，适用于部�
 ![更新YAML](https://main.qcloudimg.com/raw/ddc23ea3fc49bdb05e35c59b67a577ac.png)
 
 ### 回滚 Deployment
-1. 登录TKEStack，切换到业务管理控制台，选择左侧导航栏中的【应用管理】。
-2. 选择要变更的业务下相应的命名空间，展开工作负载列表，进入Deployment管理页面，点击进入要回滚的Deployment详情页面。如下图所示：
+1. 登录 TKEStack，切换到业务管理控制台，选择左侧导航栏中的【应用管理】。
+2. 选择要变更的业务下相应的命名空间，展开工作负载列表，进入 Deployment 管理页面，点击进入要回滚的 Deployment 详情页面。如下图所示：
    ![](images/podManagement.png)
 3. 单击【修订历史】页面，选择合适版本进行回顾。
 4. 在弹出的 “回滚资源” 提示框中，单击【确定】即可完成回滚。
 
 ### 调整 Pod 数量
-1. 登录TKEStack，切换到业务管理控制台，选择左侧导航栏中的【应用管理】。
-2. 选择要变更的业务下相应的命名空间，展开工作负载列表，进入Deployment管理页面。
-3. 点击Deployment列表操作栏的【更新实例数量】按钮。如下图所示：
+1. 登录 TKEStack，切换到业务管理控制台，选择左侧导航栏中的【应用管理】。
+2. 选择要变更的业务下相应的命名空间，展开工作负载列表，进入 Deployment 管理页面。
+3. 点击 Deployment 列表操作栏的【更新实例数量】按钮。如下图所示：
    ![](images/updateNum.png)
 4. 根据实际需求调整 Pod 数量，单击【更新实例数目】即可完成调整。
 
 ### 查看Deployment监控数据
-1. 登录TKEStack，切换到业务管理控制台，选择左侧导航栏中的【应用管理】，。
-2. 选择要变更的业务下相应的命名空间，进入Deployment管理页面。
+1. 登录 TKEStack，切换到业务管理控制台，选择左侧导航栏中的【应用管理】，。
+2. 选择要变更的业务下相应的命名空间，进入 Deployment 管理页面。
 3. 单击【监控】按钮，在弹出的工作负载监控页面选择工作负载查看监控信息。如下图所示：
    ![](images/workloaddata.png)
 
 ## Kubectl 操作 Deployment 指引
 
-### YAML 示例<span id="YAMLSample"></span>
+### YAML 示例
 ```Yaml
 apiVersion: apps/v1beta2
 kind: Deployment
@@ -143,7 +147,7 @@ ng               1         1         1            1           42m
 
 ### Kubectl 更新 Deployment
 
-通过 Kubectl 更新 Deployment 有以下三种方法。其中，[方法一](#Method1) 和 [方法二](#Method2) 均支持 **Recreate** 和 **RollingUpdate** 两种更新策略。
+通过 Kubectl 更新 Deployment 有以下三种方法。其中，[方法一](#方法一) 和 [方法二](#方法二) 均支持 **Recreate** 和 **RollingUpdate** 两种更新策略。
 - Recreate 更新策略为先销毁全部 Pod，再重新创建 Deployment。
 - RollingUpdate 更新策略为滚动更新策略，逐个更新 Deployment 的 Pod。RollingUpdate 还支持暂停、设置更新时间间隔等。
 
@@ -201,7 +205,7 @@ kubectl rollout undo deployment/[name] --to-revision=[REVISION]
 ```
 kubectl scale deployment [NAME] --replicas=[NUMBER]
 ```
-	 
+
 #### 自动更新 Pod 数量
 
 **前提条件**

@@ -1,4 +1,4 @@
-## 简介<span id="Introduction"></span>
+## 简介
 Service 定义访问后端 Pod 的访问方式，并提供固定的虚拟访问 IP。您可以在 Service 中通过设置来访问后端的 Pod，不同访问方式的服务可提供不同网络能力。
 腾讯云容器服务（TKE）提供以下四种服务访问方式：
 
@@ -36,31 +36,20 @@ Service 定义访问后端 Pod 的访问方式，并提供固定的虚拟访问 
 两种访问方式均支持Session Affinity，设置会话保持后，会根据请求IP把请求转发给这个IP之前访问过的Pod.
 
 
-## 注意事项<span id="annotations"></span>
-- 确保您的容器业务不和 CVM 业务共用一个 CLB。
-- 不支持您在 CLB 控制台操作 TKE 管理的 CLB 的监听器和后端绑定的服务器，您的更改会被 TKE 自动覆盖。
-- 使用已有的 CLB 时：
-  - 只能使用通过 CLB 控制台创建的负载均衡器，不支持复用由 TKE 自动创建的 CLB。
-  - 复用 CLB 的 Service 端口不能冲突
-  - 不支持跨集群 Service 复用 CLB
-  - 复用 CLB 的 Service 不支持开启 local 访问。
-  - 删除 Service，复用 CLB 绑定的后端云服务器需要自行解绑，同时会保留一个 tag tke-clusterId: cls-xxxx，需自行清理。
-
-
 ## Service 控制台操作指引
 
 
 
 ### 创建 Service
 
-1. 登录TKEStack，切换到业务管理控制台，选择左侧导航栏中的【应用管理】。
-2. 选择需要创建Service的业务下相应的命名空间，展开服务列表，进入Service管理页面。
-3. 单击【新建】，进入 “新建Service” 页面。如下图所示：
+1. 登录TKEStack，切换到业务管理控制台，选择左侧导航栏中的【应用管理】。 
+2. 选择需要创建 Service 的业务下相应的命名空间，展开服务列表，进入Service管理页面。
+3. 单击【新建】，进入 “新建 Service” 页面。如下图所示：
 ![](images/new-service.png)
 4. 根据实际需求，设置 Service 参数。关键参数信息如下：
    - 服务名称：自定义。
    - 命名空间：根据实际需求进行选择。
-   - 访问设置：请参考 [简介](#Introduction) 并根据实际需求进行设置。
+   - 访问设置：请参考 [简介](#简介) 并根据实际需求进行设置。
 5. 单击【创建服务】，完成创建。
 
 ### 更新 Service
@@ -80,8 +69,6 @@ Service 定义访问后端 Pod 的访问方式，并提供固定的虚拟访问 
 kind: Service
 apiVersion: v1
 metadata:
-  ## annotations:
-  ##   service.kubernetes.io/qcloud-loadbalancer-internal-subnetid: subnet-xxxxxxxx ##若是创建内网访问的 Service 需指定该条 annotation
   name: my-service
 spec:
   selector:
@@ -95,58 +82,11 @@ spec:
 
 - kind：标识 Service 资源类型。
 - metadata：Service 的名称、Label等基本信息。
-- metadata.annotations: Service 的额外说明，可通过该参数设置腾讯云 TKE 的额外增强能力。
 - spec.type：标识 Service 的被访问形式
   - ClusterIP：在集群内部公开服务，可用于集群内部访问。
   - NodePort：使用节点的端口映射到后端 Service，集群外可以通过节点 IP:NodePort 访问。
   - LoadBalancer：使用腾讯云提供的负载均衡器公开服务，默认创建公网 CLB， 指定 annotations 可创建内网 CLB。
   - ExternalName：将服务映射到 DNS，仅适用于 kube-dns1.7及更高版本。
-
-#### annotations: 使用已有负载均衡器创建公网/内网访问的 Service
-
-如果您已有的应用型 CLB 为空闲状态，需要提供给 TKE 创建的 Service 使用，或期望在集群内使用相同的CLB，您可以通过以下 annotations 进行设置：
->?请了解 [注意事项](#annotations) 后开始使用。
->
-```Yaml
-metadata:
-  annotations:
-    service.kubernetes.io/tke-existed-lbid: lb-6swtxxxx
-```
-
-#### annotations: 指定节点绑定 Loadbalancer
-
-如果您的集群规模较大，入口类型的应用需设置亲和性调度到部分节点， 您可以通过配置 Service 的 Loadbalancer，只绑定指定节点， annotations 如下：
-
-```yaml
-metadata:
-  annotations:
-    service.kubernetes.io/qcloud-loadbalancer-backends-label: `key in (value1, value2) ` ## LabelSelector格式
-```
-
-- 建议配合服务的亲和性调度使用。
-- 前提条件是 Node 已根据业务需求设置 Label。
-- 采用原生 LabelSelector 格式如：
-  - service.kubernetes.io/qcloud-loadbalancer-backends-label: key1=values1, key2=values2
-  - service.kubernetes.io/qcloud-loadbalancer-backends-label: key1 in (value1),key2 in (value2)
-  - service.kubernetes.io/qcloud-loadbalancer-backends-label: key in (value1, value2)
-  - service.kubernetes.io/qcloud-loadbalancer-backends-label: key1, key2 notin (value2)
-- 增量的节点若匹配，将自动绑定到该 Loadbalance。
-- 修改存量节点的 Label， 根据匹配规则将动态绑定和解绑 Loadbalancer。
-
-#### 说明事项
-如果您使用的是 **IP 带宽包** 账号，在创建公网访问方式的服务时需要指定以下两个 annotations 项：
-- `service.kubernetes.io/qcloud-loadbalancer-internet-charge-type` 公网带宽计费方式，可选值有：   
- -  TRAFFIC_POSTPAID_BY_HOUR（按使用流量计费）
- -  BANDWIDTH_POSTPAID_BY_HOUR（按带宽计费）
-- `service.kubernetes.io/qcloud-loadbalancer-internet-max-bandwidth-out` 带宽上限，范围：[1,2000] Mbps。
-   例如：
-```Yaml
-  metadata:
-  annotations:
-  service.kubernetes.io/qcloud-loadbalancer-internet-charge-type: TRAFFIC_POSTPAID_BY_HOUR
-  service.kubernetes.io/qcloud-loadbalancer-internet-max-bandwidth-out: "10"
-```
-关于 **IP 带宽包** 的更多详细信息，欢迎查看文档 [共享带宽包产品类别](https://cloud.tencent.com/document/product/684/15246)。
 
 ### 创建 Service
 

@@ -4,11 +4,13 @@
 
 [如何设置自定义策略](#如何设置自定义策略 )  
 
+[Docker login 权限错误](#Docker login 权限错误 )  
+
 ### 业务管理、平台管理的区别
 
 TKEStack的权限体系分为业务使用者和平台管理员两种角色，平台管理员可以管理平台所有功能，业务使用者可以访问自己有权限的业务或者namespace下的资源。同时平台管理员可以通过自定义策略，定义不同的策略类型。
 
-### 如何设置自定义策略
+### Docker login 权限错误如何设置自定义策略
 
 TKEStack 策略（policy）用来描述授权的具体信息。核心元素包括操作（action）、资源（resource）以及效力（effect）。
 
@@ -45,3 +47,24 @@ TKEStack 策略（policy）用来描述授权的具体信息。核心元素包�
 
 ```
 
+### Docker login 权限错误
+
+在Tkestack选用用了自建证书，需要用户在客户端手动导入，docker login 权限报错：certificate signed by unknown authority。
+
+##### 方法一
+
+在 Global 集群上执行 kubectl get cm certs -n tke -o yaml
+将 ca.crt 内容保存到客户端节点的/etc/docker/certs.d/******/ca.crt ( 为镜像仓库地址)
+重启docker即可
+
+##### 方法二：
+
+  在/etc/docker/daemon.json文件里添加insecure-registries，如下：
+  {
+        "insecure-registries": [
+         "xxx","xxx"
+        ]
+  }
+（*** 为镜像仓库地址）
+
+  重启docker即可

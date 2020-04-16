@@ -22,9 +22,9 @@ DaemonSet 主要用于部署常驻集群内的后台程序，例如节点的日�
    - **临时目录**：主机上的一个临时目录，生命周期和Pod一致
    - **主机路径**：主机上的真实路径，可以重复使用，不会随Pod一起销毁
    - **NFS盘**：挂载外部NFS到Pod，用户需要指定相应NFS地址，格式：127.0.0.1:/data
-   - **ConfigMap**：用户在业务Namespace下创建的[ConfigMap](#ConfigMap)
-   - **Secret**：用户在业务namespace下创建的[Secret](#Secret)
-   - **PVC**：用户在业务namespace下创建的[PVC](#PVC)
+   - **ConfigMap**：用户在业务Namespace下创建的[ConfigMap](../configurations/ConfigMap.md)
+   - **Secret**：用户在业务namespace下创建的[Secret](../configurations/Secret.md)
+   - **PVC**：用户在业务namespace下创建的[PVC](../storage/persistent-volume-claim.md)
  - **实例内容器**：根据实际需求，为 DaemonSet 的一个 Pod 设置一个或多个不同的容器。
     - **名称**：自定义。
     - **镜像**：根据实际需求进行选择。
@@ -40,7 +40,11 @@ DaemonSet 主要用于部署常驻集群内的后台程序，例如节点的日�
  - **imagePullSecrets**：镜像拉取密钥，用于拉取用户的私有镜像
  - **节点调度策略**：根据配置的调度规则，将Pod调度到预期的节点。支持指定节点调度和条件选择调度
  - **注释（Annotations）**：给Pod添加相应Annotation，如用户信息等
- - **网络模式**：选择Pod网络模式，目前支持【OverLay（虚拟网络）】、【FloatingIP（浮动ip）】、【NAT（端口映射）】和【Host（主机网络）】
+ - **网络模式**：选择Pod网络模式
+    * **OverLay（虚拟网络）**：基于 IPIP 和 Host Gateway 的 Overlay 网络方案
+    * **FloatingIP（浮动 IP）**：支持容器、物理机和虚拟机在同一个扁平面中直接通过IP进行通信的 Underlay 网络方案。提供了 IP 漂移能力，支持 Pod 重启或迁移时 IP 不变
+    * **NAT（端口映射）**：Kubernetes 原生 NAT 网络方案
+    * **Host（主机网络）**：Kubernetes 原生 Host 网络方案
 4. 单击【创建Workload】，完成创建。
 
 ### 更新 DaemonSet
