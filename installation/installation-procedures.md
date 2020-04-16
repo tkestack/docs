@@ -138,7 +138,7 @@ version=v1.2.3 && wget https://tke-release-1251707795.cos.ap-guangzhou.myqcloud.
 docker restart tke-installer
 ```
 
-2.2 从头安装
+2.2 重新安装
 
 安装报错后，请先排障，再登录到 Installer 节点执行如下命令开始从头开始安装：
 
@@ -158,4 +158,4 @@ rm -rf /opt/tke-installer/data && docker restart tke-installer
 curl -s https://tke-release-1251707795.cos.ap-guangzhou.myqcloud.com/tools/clean.sh | sh
 ```
 
-注：该脚本仅适用于Global集群专用节点，如有混合部署其他业务，请基于实际情况评估目录内数据是否可删除。
+注：该脚本仅适用于 Global 集群专用节点，如有混合部署其他业务，请基于实际情况评估目录内数据是否可删除。
