@@ -12,9 +12,9 @@
     * Node 节点：CPU：8核，内存：16G ，系统盘：100G，3台
 * **推荐配置：**
   * Installer 节点：CPU：1核，内存：2G ，系统盘：50G，1台
-  * Global 集群：CPU：8核，内存：16G ，系统盘：100G，3台
+  * Global 集群：CPU：8核，内存：16G ，系统盘：100G SSD，3台
   * 业务集群：
-    * Master & etcd 节点：CPU：16核，内存：32G ，系统盘：100G，数据盘：300G SSD（/var/lib/docker），3台
+    * Master & etcd 节点：CPU：16核，内存：32G ，系统盘：300G SSD，3台
     * Node 节点：CPU：16核，内存：32G ，系统盘：100G，数据盘：300G （/var/lib/docker），>3台（基于业务量添加）
 
 
