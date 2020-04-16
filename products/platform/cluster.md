@@ -10,10 +10,10 @@
 1. 登录 TKEStack。
 2. 切换至 平台管理控制台。
 3. 在集群管理页面中，单击 【新建独立集群】。如下图所示：
-   ![新建独立集群](images/新建独立集群0.png)
+   ![](images/新建独立集群0.png)
 
 4. 在 新建独立集群 页面，填写集群的基本信息。如下图所示：
-   ![集群基本信息0.png](/Users/lvxiangkun/Documents/容器文档/qcloud-documents/product/计算与网络/容器服务开源版/Images/Using/importCluster-2.png)
+   ![](images/集群基本信息0.png)
 
 - **集群名称：** 支持**中文**，小于60字符
 
