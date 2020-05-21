@@ -98,5 +98,5 @@ TKEStack 提供了的默认监控内容为工作负载的资源监控，监控�
 
 ### 如何做日志分析
 
-可在扩展组件中部署Logcollector组件收集日志，在运维中心中配置日志采集，讲日志输出到用户自己的日志存储服务，也可以通过Helm部署[elasticsearch](https://hub.helm.sh/charts/elastic/elasticsearch)或[kafka](https://hub.helm.sh/charts/incubator/kafka)，以及[kibana](https://hub.helm.sh/charts/elastic/kibana)，自行搭建容器化的日志分析工具平台。
+可在扩展组件中部署Logcollector组件收集日志，在运维中心中配置日志采集，将日志输出到用户自己的日志存储服务，也可以通过Helm部署[elasticsearch](https://hub.helm.sh/charts/elastic/elasticsearch)或[kafka](https://hub.helm.sh/charts/incubator/kafka)，以及[kibana](https://hub.helm.sh/charts/elastic/kibana)，自行搭建容器化的日志分析工具平台。
 
