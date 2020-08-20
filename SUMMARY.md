@@ -2,31 +2,31 @@
 
 * [Introduction](README.md)
 
-## 產品部署指南
+## 产品部署指南
 
 <!-- * [产品部署指南](installation) -->
 * [部署架构](zh/installation/installation-architecture.md)
 * [部署环境要求](zh/installation/installation-requirement.md)
 * [安装步骤](zh/installation/installation-procedures.md)
   
-## 產品快速入門
+## 产品快速入门
 <!-- * [产品快速入门](QuickStart) -->
 * [快速入门](zh/QuickStart/快速入门.md)
 
-## 入門示例
+## 入门示例
 <!-- * [入门示例](zh/QuickStart/examples) -->
 * [创建简单的 Nginx 服务](zh/QuickStart/examples/创建简单nginx服务.md)
 * [编写 Hello World 程序](zh/QuickStart/examples/编写Hello-World程序.md)
 * [如何构建 Docker 镜像](zh/QuickStart/examples/如何构建Docker镜像.md)
   
 <!-- * [产品使用指南](products) -->
-## 產品使用指南
+## 产品使用指南
 
 * [切换控制台](zh/products/controlpannel.md)
 
   <!-- * [平台侧](products/platform) -->
 
-## 平台側
+## 平台侧
 
 * [集群管理](zh/products/platform/cluster.md)
 * [业务管理](zh/products/platform/business.md)
@@ -36,7 +36,7 @@
 * [监控&告警](zh/products/platform/monitor&alert.md)
 * [运维中心](zh/products/platform/operation.md)
 
-## 業務側
+## 业务侧
 
 * [命名空间](zh/products/business-control-pannel/application/namespace.md)
 * [日志](zh/products/business-control-pannel/application/log.md)
@@ -44,7 +44,7 @@
 * [Helm 应用](zh/products/business-control-pannel/helm/helm.md)
 * [业务管理](zh/products/business-control-pannel/business-manage.md)
 
-## 工作負載
+## 工作负载
 
 * [Deployment](zh/products/business-control-pannel/application/workload/deployment.md)
 * [StatefulSet](zh/products/business-control-pannel/application/workload/stateful-set.md)
@@ -54,7 +54,7 @@
 * [TApp](zh/products/business-control-pannel/application/workload/tapp.md)
 * [设置工作负载的资源限制](zh/products/business-control-pannel/application/workload/resource-limit.md)
 
-## 服務
+## 服务
 
 * [Service](zh/products/business-control-pannel/application/services/service.md)
 * [Ingress](zh/products/business-control-pannel/application/services/ingress.md)
@@ -64,7 +64,7 @@
 * [ConfigMap](zh/products/business-control-pannel/application/configurations/ConfigMap.md)
 * [Secret](zh/products/business-control-pannel/application/configurations/secret.md)
 
-## 存儲
+## 存储
 
 * [PV和PVC](zh/products/business-control-pannel/application/storage/persistent-volume-claim.md)
 * [StorageClass](zh/products/business-control-pannel/application/storage/storave-class.md)
@@ -74,16 +74,16 @@
 * [仓库管理](zh/products/business-control-pannel/resource/registry.md)
 * [访问凭证](zh/products/business-control-pannel/resource/credentials.md)
 
-## 監控與告警
+## 监控与告警
 
 * [设置告警](zh/products/business-control-pannel/monitor-alert/alert.md)
 * [通知管理](zh/products/business-control-pannel/monitor-alert/notifition.md)
 
-## 運維中心
+## 运维中心
 
 * [日志采集](zh/products/business-control-pannel/operation/logcollect.md)
 
-## 產品特色功能
+## 产品特色功能
 
 * [Galaxy](zh/features/galaxy.md)
 * [TAPP](zh/features/tapp.md)
