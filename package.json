@@ -1,0 +1,25 @@
+{
+	"name": "docs",
+	"version": "1.0.0",
+	"description": "* [产品部署指南](installation)   * [部署架构](installation/installation-architecture.md)   * [部署环境要求](installation/installation-requirement.md)   * [安装步骤](installation/installation-procedures.md)",
+	"main": "index.js",
+	"scripts": {
+		"init": "gitbook init",
+		"dev": "gitbook serve",
+    "build": "gitbook build",
+    "install": "gitbook install"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/tkestack/docs.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/tkestack/docs/issues"
+	},
+	"homepage": "https://github.com/tkestack/docs#readme",
+	"dependencies": {
+		"gitbook-cli": "^2.3.2"
+	}
+}
