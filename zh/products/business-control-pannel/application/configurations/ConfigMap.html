@@ -1,0 +1,1149 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ConfigMap · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="secret.html" />
+    
+    
+    <link rel="prev" href="../services/ingress.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../../../">
+            
+                <a href="../../../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">產品部署指南</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../../installation/installation-architecture.html">
+            
+                <a href="../../../../installation/installation-architecture.html">
+            
+                    
+                    部署架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../../../installation/installation-requirement.html">
+            
+                <a href="../../../../installation/installation-requirement.html">
+            
+                    
+                    部署环境要求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../../../installation/installation-procedures.html">
+            
+                <a href="../../../../installation/installation-procedures.html">
+            
+                    
+                    安装步骤
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">產品快速入門</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../../../QuickStart/快速入门.html">
+            
+                <a href="../../../../QuickStart/快速入门.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">入門示例</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../../../QuickStart/examples/创建简单nginx服务.html">
+            
+                <a href="../../../../QuickStart/examples/创建简单nginx服务.html">
+            
+                    
+                    创建简单的 Nginx 服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../../../QuickStart/examples/编写Hello-World程序.html">
+            
+                <a href="../../../../QuickStart/examples/编写Hello-World程序.html">
+            
+                    
+                    编写 Hello World 程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../../../QuickStart/examples/如何构建Docker镜像.html">
+            
+                <a href="../../../../QuickStart/examples/如何构建Docker镜像.html">
+            
+                    
+                    如何构建 Docker 镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">產品使用指南</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../../controlpannel.html">
+            
+                <a href="../../../controlpannel.html">
+            
+                    
+                    切换控制台
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">平台側</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../../platform/cluster.html">
+            
+                <a href="../../../platform/cluster.html">
+            
+                    
+                    集群管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../../platform/business.html">
+            
+                <a href="../../../platform/business.html">
+            
+                    
+                    业务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../../platform/extender.html">
+            
+                <a href="../../../platform/extender.html">
+            
+                    
+                    扩展组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../../platform/resource.html">
+            
+                <a href="../../../platform/resource.html">
+            
+                    
+                    组织资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../../../platform/access.html">
+            
+                <a href="../../../platform/access.html">
+            
+                    
+                    访问管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../../../platform/monitor&alert.html">
+            
+                <a href="../../../platform/monitor&alert.html">
+            
+                    
+                    监控&告警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../../../platform/operation.html">
+            
+                <a href="../../../platform/operation.html">
+            
+                    
+                    运维中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">業務側</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../namespace.html">
+            
+                <a href="../namespace.html">
+            
+                    
+                    命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../log.html">
+            
+                <a href="../log.html">
+            
+                    
+                    日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../events.html">
+            
+                <a href="../events.html">
+            
+                    
+                    事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../../helm/helm.html">
+            
+                <a href="../../helm/helm.html">
+            
+                    
+                    Helm 应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../../business-manage.html">
+            
+                <a href="../../business-manage.html">
+            
+                    
+                    业务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">工作負載</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../workload/deployment.html">
+            
+                <a href="../workload/deployment.html">
+            
+                    
+                    Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../workload/stateful-set.html">
+            
+                <a href="../workload/stateful-set.html">
+            
+                    
+                    StatefulSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../workload/daemon-set.html">
+            
+                <a href="../workload/daemon-set.html">
+            
+                    
+                    DaemonSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../workload/job.html">
+            
+                <a href="../workload/job.html">
+            
+                    
+                    Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../workload/cron-job.html">
+            
+                <a href="../workload/cron-job.html">
+            
+                    
+                    CronJob
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../workload/tapp.html">
+            
+                <a href="../workload/tapp.html">
+            
+                    
+                    TApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="../workload/resource-limit.html">
+            
+                <a href="../workload/resource-limit.html">
+            
+                    
+                    设置工作负载的资源限制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">服務</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../services/service.html">
+            
+                <a href="../services/service.html">
+            
+                    
+                    Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../services/ingress.html">
+            
+                <a href="../services/ingress.html">
+            
+                    
+                    Ingress
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">配置管理</li>
+        
+        
+    
+        <li class="chapter active" data-level="10.1" data-path="ConfigMap.html">
+            
+                <a href="ConfigMap.html">
+            
+                    
+                    ConfigMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="secret.html">
+            
+                <a href="secret.html">
+            
+                    
+                    Secret
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">存儲</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../storage/persistent-volume-claim.html">
+            
+                <a href="../storage/persistent-volume-claim.html">
+            
+                    
+                    PV和PVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../storage/storave-class.html">
+            
+                <a href="../storage/storave-class.html">
+            
+                    
+                    StorageClass
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">组织资源</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../../resource/registry.html">
+            
+                <a href="../../resource/registry.html">
+            
+                    
+                    仓库管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="../../resource/credentials.html">
+            
+                <a href="../../resource/credentials.html">
+            
+                    
+                    访问凭证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">監控與告警</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../../monitor-alert/alert.html">
+            
+                <a href="../../monitor-alert/alert.html">
+            
+                    
+                    设置告警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="../../monitor-alert/notifition.html">
+            
+                <a href="../../monitor-alert/notifition.html">
+            
+                    
+                    通知管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">運維中心</li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../../operation/logcollect.html">
+            
+                <a href="../../operation/logcollect.html">
+            
+                    
+                    日志采集
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">產品特色功能</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../../../../features/galaxy.html">
+            
+                <a href="../../../../features/galaxy.html">
+            
+                    
+                    Galaxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" data-path="../../../../features/tapp.html">
+            
+                <a href="../../../../features/tapp.html">
+            
+                    
+                    TAPP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.3" data-path="../../../../features/gpumanager.html">
+            
+                <a href="../../../../features/gpumanager.html">
+            
+                    
+                    GPUManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.4" data-path="../../../../features/cron-hpa.html">
+            
+                <a href="../../../../features/cron-hpa.html">
+            
+                    
+                    CronHPA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.5" data-path="../../../../features/lbcf.html">
+            
+                <a href="../../../../features/lbcf.html">
+            
+                    
+                    LBCF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">FAQ</li>
+        
+        
+    
+        <li class="chapter " data-level="16.1" data-path="../../../../FAQ/Installation/规划部署资源.html">
+            
+                <a href="../../../../FAQ/Installation/规划部署资源.html">
+            
+                    
+                    如何规划部署资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.2" data-path="../../../../FAQ/Installation/如何使用存储.html">
+            
+                <a href="../../../../FAQ/Installation/如何使用存储.html">
+            
+                    
+                    如何使用存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.3" data-path="../../../../FAQ/Installation/如何重新部署.html">
+            
+                <a href="../../../../FAQ/Installation/如何重新部署.html">
+            
+                    
+                    如何重新部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.4" data-path="../../../../FAQ/Feature/如何接入LDAP&OIDC.html">
+            
+                <a href="../../../../FAQ/Feature/如何接入LDAP&OIDC.html">
+            
+                    
+                    如何接入LDAP&OIDC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.5" data-path="../../../../FAQ/Feature/如何实现自定义监控.html">
+            
+                <a href="../../../../FAQ/Feature/如何实现自定义监控.html">
+            
+                    
+                    如何实现自定义监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.6" data-path="../../../../FAQ/Feature/如何做日志分析.html">
+            
+                <a href="../../../../FAQ/Feature/如何做日志分析.html">
+            
+                    
+                    如何做日志分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.7" data-path="../../../../FAQ/Authority/业务管理与平台管理的区别.html">
+            
+                <a href="../../../../FAQ/Authority/业务管理与平台管理的区别.html">
+            
+                    
+                    业务管理与平台管理的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.8" data-path="../../../../FAQ/Authority/如何设置自定义策略.html">
+            
+                <a href="../../../../FAQ/Authority/如何设置自定义策略.html">
+            
+                    
+                    如何设置自定义策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.9" data-path="../../../../FAQ/Authority/Docker-login权限错误.html">
+            
+                <a href="../../../../FAQ/Authority/Docker-login权限错误.html">
+            
+                    
+                    Docker-login权限错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.10" data-path="../../../../FAQ/Events/常见错误事件.html">
+            
+                <a href="../../../../FAQ/Events/常见错误事件.html">
+            
+                    
+                    常见错误事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.11" data-path="../../../../FAQ/Platform/平台使用常见问题.html">
+            
+                <a href="../../../../FAQ/Platform/平台使用常见问题.html">
+            
+                    
+                    平台使用常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../../.." >ConfigMap</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><span id="ConfigMap"></span></p>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>&#x901A;&#x8FC7; ConfigMap &#x60A8;&#x53EF;&#x4EE5;&#x5C06;&#x914D;&#x7F6E;&#x548C;&#x8FD0;&#x884C;&#x7684;&#x955C;&#x50CF;&#x8FDB;&#x884C;&#x89E3;&#x8026;&#xFF0C;&#x4F7F;&#x5F97;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6709;&#x66F4;&#x5F3A;&#x7684;&#x79FB;&#x690D;&#x6027;&#x3002;ConfigMap &#x662F;&#x6709; key-value &#x7C7B;&#x578B;&#x7684;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x63A7;&#x5236;&#x53F0;&#x7684; Kubectl &#x5DE5;&#x5177;&#x521B;&#x5EFA;&#x5BF9;&#x5E94;&#x7684; ConfigMap &#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6302;&#x8F7D;&#x6570;&#x636E;&#x5377;&#x3001;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6216;&#x5728;&#x5BB9;&#x5668;&#x7684;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#x4E2D;&#x4F7F;&#x7528; ConfigMap&#x3002;
+ConfigMap &#x6709;&#x4E24;&#x79CD;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#xFF0C;&#x521B;&#x5EFA;&#x8D1F;&#x8F7D;&#x65F6;&#x505A;&#x4E3A;&#x6570;&#x636E;&#x5377;&#x6302;&#x8F7D;&#x5230;&#x5BB9;&#x5668;&#x548C;&#x4F5C;&#x4E3A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6620;&#x5C04;&#x5230;&#x5BB9;&#x5668;&#x3002;</p>
+<h2 id="configmap-&#x63A7;&#x5236;&#x53F0;&#x64CD;&#x4F5C;&#x6307;&#x5F15;">ConfigMap &#x63A7;&#x5236;&#x53F0;&#x64CD;&#x4F5C;&#x6307;&#x5F15;</h2>
+<h3 id="&#x521B;&#x5EFA;-configmap">&#x521B;&#x5EFA; ConfigMap</h3>
+<ol>
+<li>&#x767B;&#x5F55;TKEStack&#xFF0C;&#x5207;&#x6362;&#x5230;&#x3010;&#x4E1A;&#x52A1;&#x7BA1;&#x7406;&#x3011;&#x63A7;&#x5236;&#x53F0;&#xFF0C;&#x9009;&#x62E9;&#x5DE6;&#x4FA7;&#x5BFC;&#x822A;&#x680F;&#x4E2D;&#x7684;&#x3010;&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x3011;&#x3002;</li>
+<li>&#x9009;&#x62E9;&#x9700;&#x8981;&#x521B;&#x5EFA;ConfigMap&#x7684;&#x3010;&#x4E1A;&#x52A1;&#x3011;&#x4E0B;&#x76F8;&#x5E94;&#x7684;&#x3010;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x3011;&#xFF0C;&#x5C55;&#x5F00;&#x3010;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x3011;&#x5217;&#x8868;&#xFF0C;&#x8FDB;&#x5165;ConfigMap&#x7BA1;&#x7406;&#x9875;&#x9762;&#x3002; </li>
+<li>&#x5355;&#x51FB;&#x3010;&#x65B0;&#x5EFA;&#x3011;&#xFF0C;&#x8FDB;&#x5165; &#x201C;&#x65B0;&#x5EFA;ConfigMap&#x201D; &#x9875;&#x9762;&#x3002;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;
+<img src="https://github.com/tkestack/tke/blob/master/docs/images/new-config-map.png?raw=true" alt="&#x65B0;&#x5EFA;ConfigMap"></li>
+<li>&#x6839;&#x636E;&#x5B9E;&#x9645;&#x9700;&#x6C42;&#xFF0C;&#x8BBE;&#x7F6E; ConfigMap &#x53C2;&#x6570;&#x3002;&#x5173;&#x952E;&#x53C2;&#x6570;&#x4FE1;&#x606F;&#x5982;&#x4E0B;&#xFF1A;<ul>
+<li>&#x540D;&#x79F0;&#xFF1A;&#x81EA;&#x5B9A;&#x4E49;&#x3002;</li>
+<li>&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF1A;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x9700;&#x6C42;&#x8FDB;&#x884C;&#x9009;&#x62E9;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7C7B;&#x578B;</li>
+<li>&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#x540D;&#x548C;&#x53D8;&#x91CF;&#x503C;&#x3002;</li>
+</ul>
+</li>
+<li>&#x5355;&#x51FB;&#x3010;&#x521B;&#x5EFA;ConfigMap&#x3011;&#xFF0C;&#x5B8C;&#x6210;&#x521B;&#x5EFA;&#x3002;</li>
+</ol>
+<h3 id="&#x66F4;&#x65B0;-configmap">&#x66F4;&#x65B0; ConfigMap</h3>
+<ol>
+<li>&#x767B;&#x5F55;TKEStack&#xFF0C;&#x5207;&#x6362;&#x5230;&#x4E1A;&#x52A1;&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#xFF0C;&#x9009;&#x62E9;&#x5DE6;&#x4FA7;&#x5BFC;&#x822A;&#x680F;&#x4E2D;&#x7684;&#x3010;&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x3011;&#x3002;</li>
+<li>&#x9009;&#x62E9;&#x9700;&#x8981;&#x521B;&#x5EFA;ConfigMap&#x7684;&#x4E1A;&#x52A1;&#x4E0B;&#x76F8;&#x5E94;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x5C55;&#x5F00;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x5217;&#x8868;&#xFF0C;&#x8FDB;&#x5165;ConfigMap&#x7BA1;&#x7406;&#x9875;&#x9762;&#x3002; </li>
+<li>&#x5728;&#x9700;&#x8981;&#x66F4;&#x65B0; YAML &#x7684; ConfigMap &#x884C;&#x4E2D;&#xFF0C;&#x5355;&#x51FB;&#x3010;&#x7F16;&#x8F91;YAML&#x3011;&#xFF0C;&#x8FDB;&#x5165;&#x66F4;&#x65B0; ConfigMap &#x9875;&#x9762;&#x3002;</li>
+<li>&#x5728; &#x201C;&#x66F4;&#x65B0;ConfigMap&#x201D; &#x9875;&#x9762;&#xFF0C;&#x7F16;&#x8F91; YAML&#xFF0C;&#x5355;&#x51FB;&#x3010;&#x5B8C;&#x6210;&#x3011;&#xFF0C;&#x5373;&#x53EF;&#x66F4;&#x65B0; YAML&#x3002;<blockquote>
+<p>&#x5982;&#x9700;&#x4FEE;&#x6539; key-values&#xFF0C;&#x7F16;&#x8F91; YAML &#x4E2D; data &#x7684;&#x53C2;&#x6570;&#x503C;&#xFF0C;&#x5355;&#x51FB;&#x3010;&#x5B8C;&#x6210;&#x3011;&#xFF0C;&#x5373;&#x53EF;&#x5B8C;&#x6210;&#x66F4;&#x65B0;&#x3002;</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="kubectl-&#x64CD;&#x4F5C;-configmap-&#x6307;&#x5F15;">Kubectl &#x64CD;&#x4F5C; ConfigMap &#x6307;&#x5F15;</h2>
+<h3 id="yaml-&#x793A;&#x4F8B;">YAML &#x793A;&#x4F8B;</h3>
+<pre><code class="lang-Yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">data:</span>
+<span class="hljs-attr">  key1:</span> value1
+<span class="hljs-attr">  key2:</span> value2
+<span class="hljs-attr">  key3:</span> value3
+<span class="hljs-attr">kind:</span> ConfigMap
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> test-config
+<span class="hljs-attr">  namespace:</span> default
+</code></pre>
+<ul>
+<li>data&#xFF1A;ConfigMap &#x7684;&#x6570;&#x636E;&#xFF0C;&#x4EE5; key-value &#x5F62;&#x5F0F;&#x5448;&#x73B0;&#x3002;</li>
+<li>kind&#xFF1A;&#x6807;&#x8BC6; ConfigMap &#x8D44;&#x6E90;&#x7C7B;&#x578B;&#x3002;</li>
+<li>metadata&#xFF1A;ConfigMap &#x7684;&#x540D;&#x79F0;&#x3001;Label&#x7B49;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x3002;</li>
+<li>metadata.annotations&#xFF1A;ConfigMap &#x7684;&#x989D;&#x5916;&#x8BF4;&#x660E;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;&#x8BE5;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x817E;&#x8BAF;&#x4E91; TKE &#x7684;&#x989D;&#x5916;&#x589E;&#x5F3A;&#x80FD;&#x529B;&#x3002;</li>
+</ul>
+<h3 id="&#x521B;&#x5EFA;-configmap">&#x521B;&#x5EFA; ConfigMap</h3>
+<h4 id="&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x901A;&#x8FC7;-yaml-&#x793A;&#x4F8B;&#x6587;&#x4EF6;&#x65B9;&#x5F0F;&#x521B;&#x5EFA;">&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x901A;&#x8FC7; YAML &#x793A;&#x4F8B;&#x6587;&#x4EF6;&#x65B9;&#x5F0F;&#x521B;&#x5EFA;</h4>
+<ol>
+<li>&#x53C2;&#x8003; <a href="#YAMLSample">YAML &#x793A;&#x4F8B;</a>&#xFF0C;&#x51C6;&#x5907; ConfigMap YAML &#x6587;&#x4EF6;&#x3002;</li>
+<li>&#x5B89;&#x88C5; Kubectl&#xFF0C;&#x5E76;&#x8FDE;&#x63A5;&#x96C6;&#x7FA4;&#x3002;&#x64CD;&#x4F5C;&#x8BE6;&#x60C5;&#x8BF7;&#x53C2;&#x8003; <a href="https://cloud.tencent.com/document/product/457/8438" target="_blank">&#x901A;&#x8FC7; Kubectl &#x8FDE;&#x63A5;&#x96C6;&#x7FA4;</a>&#x3002;</li>
+<li>&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x521B;&#x5EFA; ConfigMap YAML &#x6587;&#x4EF6;&#x3002;<pre><code class="lang-shell">kubectl create -f ConfigMap YAML &#x6587;&#x4EF6;&#x540D;&#x79F0;
+</code></pre>
+&#x4F8B;&#x5982;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x540D;&#x4E3A; web.yaml &#x7684; ConfigMap YAML &#x6587;&#x4EF6;&#xFF0C;&#x5219;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;<pre><code class="lang-shell">kubectl create -f web.yaml
+</code></pre>
+</li>
+<li>&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x9A8C;&#x8BC1;&#x521B;&#x5EFA;&#x662F;&#x5426;&#x6210;&#x529F;&#x3002;<pre><code class="lang-shell">kubectl get configmap
+</code></pre>
+&#x8FD4;&#x56DE;&#x7C7B;&#x4F3C;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF0C;&#x5373;&#x8868;&#x793A;&#x521B;&#x5EFA;&#x6210;&#x529F;&#x3002;<pre><code>NAME          DATA      AGE
+test          2         39d
+test-config   3         18d
+</code></pre></li>
+</ol>
+<h4 id="&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x901A;&#x8FC7;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x65B9;&#x5F0F;&#x521B;&#x5EFA;">&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x901A;&#x8FC7;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x65B9;&#x5F0F;&#x521B;&#x5EFA;</h4>
+<p>&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x5728;&#x76EE;&#x5F55;&#x4E2D;&#x521B;&#x5EFA; ConfigMap&#x3002;</p>
+<pre><code>kubectl create configmap &lt;map-name&gt; &lt;data-source&gt;
+</code></pre><ul>
+<li>&lt;map-name&gt;&#xFF1A;&#x8868;&#x793A; ConfigMap &#x7684;&#x540D;&#x5B57;&#x3002;</li>
+<li>&lt;data-source&gt;&#xFF1A;&#x8868;&#x793A;&#x76EE;&#x5F55;&#x3001;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x5B57;&#x9762;&#x503C;&#x3002;</li>
+</ul>
+<p>&#x66F4;&#x591A;&#x53C2;&#x6570;&#x8BE6;&#x60C5;&#x53EF;&#x53C2;&#x89C1; <a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#create-a-configmap" target="_blank">Kubernetes configMap &#x5B98;&#x65B9;&#x6587;&#x6863;</a>&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;-configmap">&#x4F7F;&#x7528; ConfigMap</h3>
+<h4 id="&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x6570;&#x636E;&#x5377;&#x4F7F;&#x7528;-configmap-&#x7C7B;&#x578B;">&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x6570;&#x636E;&#x5377;&#x4F7F;&#x7528; ConfigMap &#x7C7B;&#x578B;</h4>
+<p>YAML &#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-Yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr"> kind:</span> Pod
+<span class="hljs-attr"> metadata:</span>
+<span class="hljs-attr">   name:</span> nginx
+<span class="hljs-attr"> spec:</span>
+<span class="hljs-attr">   containers:</span>
+<span class="hljs-attr">     - name:</span> nginx
+<span class="hljs-attr">       image:</span> nginx:latest
+<span class="hljs-attr">       volumeMounts:</span>
+<span class="hljs-attr">        name:</span> config-volume
+<span class="hljs-attr">        mountPath:</span> /etc/config
+<span class="hljs-attr">   volumes:</span>
+<span class="hljs-attr">        name:</span> config-volume
+<span class="hljs-attr">        configMap:</span>
+<span class="hljs-attr">          name:</span> test-config <span class="hljs-comment">## &#x8BBE;&#x7F6E; ConfigMap &#x6765;&#x6E90;</span>
+          <span class="hljs-comment">## items:  ## &#x8BBE;&#x7F6E;&#x6307;&#x5B9A; ConfigMap &#x7684; Key &#x6302;&#x8F7D;</span>
+          <span class="hljs-comment">##   key: key1  ## &#x9009;&#x62E9;&#x6307;&#x5B9A; Key</span>
+          <span class="hljs-comment">##   path: keys ## &#x6302;&#x8F7D;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x5B50;&#x8DEF;&#x5F84;</span>
+<span class="hljs-attr">   restartPolicy:</span> Never
+</code></pre>
+<h4 id="&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;&#x4F7F;&#x7528;-configmap-&#x7C7B;&#x578B;">&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;&#x4F7F;&#x7528; ConfigMap &#x7C7B;&#x578B;</h4>
+<p>YAML &#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-Yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr"> kind:</span> Pod
+<span class="hljs-attr"> metadata:</span>
+<span class="hljs-attr">   name:</span> nginx
+<span class="hljs-attr"> spec:</span>
+<span class="hljs-attr">   containers:</span>
+<span class="hljs-attr">     - name:</span> nginx
+<span class="hljs-attr">       image:</span> nginx:latest
+<span class="hljs-attr">       env:</span>
+<span class="hljs-attr">         - name:</span> key1
+<span class="hljs-attr">           valueFrom:</span>
+<span class="hljs-attr">             configMapKeyRef:</span>
+<span class="hljs-attr">               name:</span> test-config <span class="hljs-comment">## &#x8BBE;&#x7F6E;&#x6765;&#x6E90; ConfigMap &#x6587;&#x4EF6;&#x540D;</span>
+<span class="hljs-attr">               key:</span> test-config.key1  <span class="hljs-comment">## &#x8BBE;&#x7F6E;&#x8BE5;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684; Value &#x6765;&#x6E90;&#x9879;</span>
+<span class="hljs-attr">   restartPolicy:</span> Never
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../services/ingress.html" class="navigation navigation-prev " aria-label="Previous page: Ingress">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="secret.html" class="navigation navigation-next " aria-label="Next page: Secret">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ConfigMap","level":"10.1","depth":1,"next":{"title":"Secret","level":"10.2","depth":1,"path":"zh/products/business-control-pannel/application/configurations/secret.md","ref":"zh/products/business-control-pannel/application/configurations/secret.md","articles":[]},"previous":{"title":"Ingress","level":"9.2","depth":1,"path":"zh/products/business-control-pannel/application/services/ingress.md","ref":"zh/products/business-control-pannel/application/services/ingress.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"zh/products/business-control-pannel/application/configurations/ConfigMap.md","mtime":"2020-08-20T07:33:35.757Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-20T07:33:43.596Z"},"basePath":"../../../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
