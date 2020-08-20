@@ -1,9 +1,0 @@
----
-# handlers file for business
-
-# restart salt-minion
-- name: restart salt-minion
-  systemd:
-    name: salt-minion
-    state: restarted
-  become: yes

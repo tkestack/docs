@@ -1,5 +1,0 @@
-{{- if hasKey .Values "service" }}
-{{- template "common.service" (list . "mychart.service") -}}
-{{- end }}
-{{- define "mychart.service" -}}
-{{- end -}}
