@@ -1,5 +1,0 @@
-{{- if hasKey .Values "ingress" }}
-{{- template "common.ingress" (list . "mychart.ingress") -}}
-{{- end }}
-{{- define "mychart.ingress" -}}
-{{- end -}}

@@ -1,3 +1,0 @@
----
-# vars file for tke-mgr
-ansible_ssh_pass_base64: {}
