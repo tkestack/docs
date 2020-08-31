@@ -1,5 +1,5 @@
 {
-	"root":"docs",
+	"root": "docs",
 	"pluginsConfig": {
 		"lightbox": {
 			"options": {
@@ -69,7 +69,6 @@
 		"sharing-plus",
 		"insert-logo",
 		"lightbox",
-		"github",
-		""
+		"github"
 	]
 }
