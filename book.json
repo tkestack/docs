@@ -1,0 +1,74 @@
+{
+	"root": "docs",
+	"pluginsConfig": {
+		"lightbox": {
+			"options": {
+				"resizeDuration": 200,
+				"wrapAround": true
+			}
+		},
+		"github": {
+			"url": "https://github.com/tkestack/tke"
+		},
+		"fontsettings": {
+			"theme": "white",
+			"family": "sans",
+			"size": 2
+		},
+		"hide-element": {
+			"elements": [".gitbook-link"]
+		},
+		"tbfed-pagefooter": {
+			"copyright": "TKEStack 2020",
+			"modify_label": "该文章修订时间：",
+			"modify_format": "YYYY-MM-DD HH:mm:ss"
+		},
+		"insert-logo": {
+			"url": "https://avatars0.githubusercontent.com/u/57258287?s=200&v=4",
+			"style": "background: none; max-height: 30px; min-height: 30px"
+		},
+		"sharing": {
+			"douban": false,
+			"facebook": false,
+			"google": false,
+			"pocket": false,
+			"qq": false,
+			"qzone": false,
+			"twitter": false,
+			"weibo": false,
+			"all": [
+				"douban",
+				"facebook",
+				"google",
+				"instapaper",
+				"linkedin",
+				"twitter",
+				"weibo",
+				"messenger",
+				"qq",
+				"qzone",
+				"viber",
+				"whatsapp"
+			]
+		},
+		"theme-default": {
+			"showLevel": true
+		}
+	},
+
+	"plugins": [
+		"back-to-top-button",
+		"hide-element",
+		"expandable-chapters-small",
+		"code",
+		"-lunr",
+		"-search",
+		"search-pro",
+		"tbfed-pagefooter",
+		"-sharing",
+		"sharing-plus",
+		"insert-logo",
+		"lightbox",
+		"github"
+	]
+}
