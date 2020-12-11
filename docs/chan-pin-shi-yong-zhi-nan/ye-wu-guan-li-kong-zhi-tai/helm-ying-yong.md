@@ -11,12 +11,9 @@
 1. 登录 TKEStack。
 2. 切换至 【业务管理】控制台，选择【 Helm应用】。
 3. 选择相应【业务】和【namespace】，单击【新建】按钮。如下图所示：
-
-    ![&#x65B0;&#x5EFA;Helm](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/新建Helm.png)
-
 4. 在“新建Helm应用”页面填写Helm应用信息。如下图所示：
 
-    ![&#x65B0;&#x5EFA;Helm&#x5E94;&#x7528;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/新建Helm应用.png)
+ 
 
    * **应用名：** 输入应用名，1～63字符，只能包含小写字母、数字及分隔符\("-"\)，且必须以小写字母开头，数字或小写字母结尾
    * **命名空间：** 选择该应用运行的命名空间
@@ -29,4 +26,8 @@
    * **Key-Value：** 通过Key-Value替换Chart包中默认配置。
 
 5. 单击【完成】按钮。
+
+![](../../.gitbook/assets/xin-jian-helm.png)
+
+![](../../.gitbook/assets/xin-jian-helm-ying-yong-.png)
 

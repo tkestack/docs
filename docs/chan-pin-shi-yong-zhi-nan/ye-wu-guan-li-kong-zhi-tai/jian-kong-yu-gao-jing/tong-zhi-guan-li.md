@@ -154,9 +154,9 @@
 2. 切换至【业务管理】控制台，选择 【监控&告警】-&gt;【通知设置】-&gt;【接收组】，查看“接收组”列表。
 3. 点击【新建】按钮。如下图所示：
 
-   ![&#x65B0;&#x5EFA;&#x63A5;&#x6536;&#x7EC4;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/新建接收组.png)
+   ![&#x65B0;&#x5EFA;&#x63A5;&#x6536;&#x7EC4;](../../../.gitbook/assets/xin-jian-jie-shou-zu-%20%281%29.png)
 
-4. 在“新建接收组”页面填写模版信息。如下图所示： ![&#x63A5;&#x6536;&#x7EC4;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/接收组.png)
+4. 在“新建接收组”页面填写模版信息。如下图所示： ![&#x63A5;&#x6536;&#x7EC4;](../../../.gitbook/assets/xin-jian-jie-shou-zu-.png)
    * **名称：** 接收组显示名称
    * **接收组：** 从列表里选择接收人。如没有想要的接收人，请在[接收人](tong-zhi-guan-li.md#接收人)里创建。
 5. 单击【保存】按钮。
@@ -167,11 +167,11 @@
 2. 切换至【业务管理】控制台，选择 【监控&告警】-&gt;【通知设置】-&gt;【接收组】，查看“接收组”列表。
 3. 单击接收组名称。如下图所示：
 
-   ![&#x63A5;&#x6536;&#x7EC4;&#x540D;&#x79F0;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/接收组名称.png)
+   ![&#x63A5;&#x6536;&#x7EC4;&#x540D;&#x79F0;](../../../.gitbook/assets/jie-shou-zu-ming-cheng-.png)
 
 4. 在“基本信息”页面，单击【基本信息】右侧的【编辑】按钮。如下图所示：
 
-   ![&#x63A5;&#x6536;&#x7EC4;&#x7F16;&#x8F91;&#x6309;&#x94AE;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/接收组编辑按钮.png)
+   ![&#x63A5;&#x6536;&#x7EC4;&#x7F16;&#x8F91;&#x6309;&#x94AE;](../../../.gitbook/assets/jie-shou-zu-bian-ji-an-niu-.png)
 
 5. 在“更新接收组”页面，编辑接收组信息。
 6. 单击【保存】按钮。
@@ -182,7 +182,7 @@
 2. 切换至【业务管理】控制台，选择 【监控&告警】-&gt;【通知设置】-&gt;【接收组】，查看“接收组”列表。
 3. 选择要删除的接收组，点击【删除】按钮。如下图所示：
 
-   ![&#x5220;&#x9664;&#x63A5;&#x6536;&#x7EC4;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/删除接收组.png)
+   ![&#x5220;&#x9664;&#x63A5;&#x6536;&#x7EC4;](../../../.gitbook/assets/shan-chu-jie-shou-zu-.png)
 
 4. 单击删除窗口的【确定】按钮。
 

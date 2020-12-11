@@ -43,7 +43,7 @@ Galaxy在架构上由三部分组成：
 
 ### Galaxy Overlay 网络
 
-![Galaxy Overlay Networks](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/galaxy.png)
+![](../.gitbook/assets/galaxy.png)
 
 [tke-installer](https://github.com/tkestack/tke/blob/master/docs/user/tke-installer/README.md)安装tkestack并自动配置galaxy为overlay网络模式，在该模式下：
 
@@ -57,7 +57,7 @@ Galaxy在架构上由三部分组成：
 
 ### Galaxy Underlay 网络
 
-![Galaxy Underlay Networks](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/galaxy-ipam.png)
+![](../.gitbook/assets/galaxy-ipam.png)
 
 如需配置underlay网络，需要启用Galaxy-ipam组件，Galaxy-ipam根据配置为POD分配或释放IP：
 

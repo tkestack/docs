@@ -4,7 +4,7 @@ Kubernetes现有应用类型（如：Deployment、StatefulSet等）无法满足�
 
 为解决上述复杂应用管理场景，基于Kubernetes CRD开发了一种新的应用类型TAPP，它是一种通用类型的workload，同时支持service和batch类型作业，满足绝大部分应用场景，它能让用户更好的将应用迁移到Kubernetes集群。
 
-![tapp picture](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/tapp.png)
+![](../.gitbook/assets/tapp.png)
 
 ## TAPP 特点
 

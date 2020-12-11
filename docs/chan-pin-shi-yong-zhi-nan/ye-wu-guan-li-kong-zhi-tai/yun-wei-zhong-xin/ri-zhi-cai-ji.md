@@ -7,11 +7,9 @@
    2. 切换至【业务管理】控制台，选择 【运维中心】-&gt;【日志采集】。
    3. 选择相应【业务】和【命名空间】，单击【新建】按钮。如下图所示：
 
-      ![&#x65B0;&#x5EFA;&#x65E5;&#x5FD7;&#x91C7;&#x96C6;&#x6309;&#x94AE;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/docs/zh/images/logcollector.png)
-
    4. 在“新建日志采集”页面填写日志采集信息。如下图所示：
 
-      ![&#x65B0;&#x5EFA;&#x65E5;&#x5FD7;&#x91C7;&#x96C6;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/docs/zh/images/lognew.png)
+
 
       * **收集规则名称：** 输入规则名，1～63字符，只能包含小写字母、数字及分隔符\("-"\)，且必须以小写字母开头，数字或小写字母结尾
       * **业务：** 选择所属业务员
@@ -37,4 +35,8 @@
           * **索引：** ES索引，最长60个字符，只能包含小写字母、数字及分隔符\("-"、"\_"、"+"\)，且必须以小写字母开头
 
    5. 单击【完成】按钮。
+
+![](../../../.gitbook/assets/logcollector.png)
+
+![](../../../.gitbook/assets/lognew.png)
 
