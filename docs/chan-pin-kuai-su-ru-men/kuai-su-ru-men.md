@@ -107,53 +107,81 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
 
 2. 在【平台管理】控制台的【业务管理】中，单击 【新建业务】。如下图所示：
 
+![](../.gitbook/assets/createbusiness.png)
 
+3. 在“新建业务”页面，填写业务信息。如下图所示： 
 
-1. 在“新建业务”页面，填写业务信息。如下图所示： ![&#x4E1A;&#x52A1;&#x4FE1;&#x606F;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/createbusiness.png)
-2. **业务名称**：不能超过 63 个字符，这里以`my-business`为例
-3. **业务成员**： [【访问管理】](../chan-pin-shi-yong-zhi-nan/ping-tai-guan-li-kong-zhi-tai/fang-wen-guan-li.md)中【用户管理】中的用户，这里以`admin`例，即这该用户可以访问这个业务。
-4. **集群**：
-   * 【集群管理】中的集群，这里以`gobal`集群为例
-   * 【填写资源限制】可以设置当前业务使用该集群的资源上限（可不限制）
-   * 【新增集群】可以添加多个集群，此业务可以使用多个集群的资源（按需添加）
-5. **上级业务**：支持多级业务管理，按需选择（可不选）
-6. 单击最下方 【完成】 按钮即可创建业务。
+![](../.gitbook/assets/createbusiness.png)
+
+4. 业务名称：不能超过 63 个字符，这里以`my-business`为例
+
+5. 业务成员： [【访问管理】](../chan-pin-shi-yong-zhi-nan/ping-tai-guan-li-kong-zhi-tai/fang-wen-guan-li.md)中【用户管理】中的用户，这里以`admin`例，即这该用户可以访问这个业务。
+
+6. 集群：
+
+* 【集群管理】中的集群，这里以`gobal`集群为例
+* 【填写资源限制】可以设置当前业务使用该集群的资源上限（可不限制）
+* 【新增集群】可以添加多个集群，此业务可以使用多个集群的资源（按需添加）
+
+7. 上级业务：支持多级业务管理，按需选择（可不选）
+
+8 .单击最下方 【完成】 按钮即可创建业务。
 
 ### 创建业务下的命名空间
 
 1. 登录 TKEStack。
-2. 在【平台管理】控制台的【业务管理】中，单击【业务 id】。如下图所示： ![&#x4E1A;&#x52A1;id](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/businessid.png)
+
+2. 在【平台管理】控制台的【业务管理】中，单击【业务 id】。如下图所示：
+
+ 
+
+![](../.gitbook/assets/businessid.png)
+
 3. 单击【Namespace 列表】。如下图标签 1 所示：
 
-   > 该页面可以更改业务名称、成员、以及业务下集群资源的限制。
+> 该页面可以更改业务名称、成员、以及业务下集群资源的限制。
 
-   ![&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x5217;&#x8868;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/businessns.png)
+![](../.gitbook/assets/businessns.png)
 
-4. 单击【新建 Namespace】。如下图所示： ![&#x65B0;&#x5EFA;&#x7A7A;&#x95F4;&#x5217;&#x8868;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/newns.png)
-5. 在“新建 Namespace”页面中，填写相关信息。如下图所示： ![&#x65B0;&#x5EFA;&#x7A7A;&#x95F4;&#x5217;&#x8868;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/my-ns.png)
-6. **名称**：不能超过 63 个字符，这里以`new-ns`为例
-7. **集群**：`my-business`业务中的集群，这里以`global`集群为例
-8. **资源限制**：这里可以限制当前命名空间下各种资源的使用量，可以不设置。
+4. 单击【新建 Namespace】。如下图所示： 
+
+![](../.gitbook/assets/newns.png)
+
+5. 在“新建 Namespace”页面中，填写相关信息。如下图所示： 
+
+![](../.gitbook/assets/my-ns.png)
+
+6. 名称：不能超过 63 个字符，这里以`new-ns`为例
+
+7. 集群：`my-business`业务中的集群，这里以`global`集群为例
+
+8. 资源限制：这里可以限制当前命名空间下各种资源的使用量，可以不设置。
 
 ### 创建业务下的 Deployment
 
 1. 登录 TKEStack，点击【平台管理】选项旁边的切换按钮，可以切换到【业务管理】控制台。
 
-   > 注意：因为当前登录的是 admin 用户，【业务管理】控制台只包含在[创建业务](kuai-su-ru-men.md#创建业务)中成员包含 admin 的业务，如果切换到【业务管理】控制台没有看见任何业务，请确认【平台管理】中【业务管理】中的相关业务的成员有没有当前用户，如没有，请添加当前用户。
+> 注意：因为当前登录的是 admin 用户，【业务管理】控制台只包含在[创建业务](kuai-su-ru-men.md#创建业务)中成员包含 admin 的业务，如果切换到【业务管理】控制台没有看见任何业务，请确认【平台管理】中【业务管理】中的相关业务的成员有没有当前用户，如没有，请添加当前用户。
 
 2. 点击左侧导航栏中的【应用管理】，如果当前用户被分配了多个业务，可通过下图中标签 3 的选择框选择合适的业务。
+
 3. 点击【工作负载】，点击下图标签 4 的【Deployment】，此时进入“Deployment”页面，可通过下图中的标签 5 选择 Deployment 的【命名空间】： ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/deployment.png)
+
+![](../.gitbook/assets/deployment.png)
+
 4. 单击上图标签 6【新建】，进入“新建 Workload ”页面。根据实际需求，设置 Deployment 参数。这里参数很多，其中必填信息已用红框标识：
 
-   ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/createDeployment-1.png)
+![](../.gitbook/assets/createdeployment-1.png)
 
-5. **工作负载名**：输入自定义名称，这里以`my-dep`为例
-6. **描述**：给工作负载添加描述，可不填
-7. **标签**：给工作负载添加标签，通过工作负载名默认生成
-8. **命名空间**：根据实际需求进行选择
-9. **类型**：选择【Deployment（可扩展的部署 Pod）】
+5. 工作负载名：输入自定义名称，这里以`my-dep`为例
 
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/docs/zh/images/createDeployment-2.png)
+6. 描述：给工作负载添加描述，可不填
+
+7. 标签：给工作负载添加标签，通过工作负载名默认生成
+
+8. 命名空间：根据实际需求进行选择
+
+9. 类型：选择【Deployment（可扩展的部署 Pod）】
 
 * **数据卷（选填）**：为容器提供存储，目前支持临时路径、主机路径、云硬盘数据卷、文件存储 NFS、配置文件、PVC，还需挂载到容器的指定路径中。如需指定容器挂载至指定路径时，单击【添加数据卷】
   * **临时目录**：主机上的一个临时目录，生命周期和 Pod 一致
@@ -162,7 +190,7 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
   * **ConfigMap**：用户选择在业务 Namespace 下的[ConfigMap](../chan-pin-shi-yong-zhi-nan/ye-wu-guan-li-kong-zhi-tai/ying-yong-guan-li/pei-zhi-guan-li/configmap.md)
   * **Secret**：用户选择在业务 namespace 下的[Secret](../chan-pin-shi-yong-zhi-nan/ye-wu-guan-li-kong-zhi-tai/ying-yong-guan-li/pei-zhi-guan-li/secret.md)
   * **PVC**：用户选择在业务 namespace 下的[PVC](../chan-pin-shi-yong-zhi-nan/ye-wu-guan-li-kong-zhi-tai/ying-yong-guan-li/cun-chu/pv-he-pvc.md)
-* **实例内容器**：根据实际需求，为 Deployment 的一个 Pod 设置一个或多个不同的容器。如下图所示：![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/createDeployment-3.png)
+* **实例内容器**：根据实际需求，为 Deployment 的一个 Pod 设置一个或多个不同的容器。如下图所示：
   * **名称**：自定义，这里以`my-container`为例
   * **镜像**：根据实际需求进行选择，这里以`nginx`为例
     * **镜像版本（Tag）**：根据实际需求进行填写，不填默认为`latest`
@@ -180,14 +208,16 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
         * **IfNotPresent**：默认使用本地镜像，若本地无该镜像则远程拉取该镜像
         * **Never**：只使用本地镜像，若本地没有该镜像将报异常
 
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/createDeployment-4.png)
+![](../.gitbook/assets/businessns%20%281%29.png)
+
+![](../.gitbook/assets/createdeployment-4.png)
 
 * **实例数量**：根据实际需求选择调节方式，设置实例数量。
   * **手动调节**：直接设定实例个数
   * **自动调节**：根据设定的触发条件自动调节实例个数，目前支持根据 CPU、内存利用率和利用量出入带宽等调节实例个数
 * **显示高级设置**
 
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/createDeployment-5.png)
+![](../.gitbook/assets/createdeployment-5.png)
 
 * **imagePullSecrets**：镜像拉取密钥，用于拉取用户的私有镜像，使用私有镜像首先需要新建 Secret
 * **节点调度策略**：根据配置的调度规则，将 Pod 调度到预期的节点。
@@ -202,9 +232,6 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
   * **NAT（端口映射**）：Kubernetes 原生 NAT 网络方案
   * **Host（主机网络）**：Kubernetes 原生 Host 网络方案
 * **创建 Service（可选）**：
-
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/reateDeployment-5.png)
-
 * **Service**：勾选【启用】按钮，配置负载端口访问
 
   > 注意：如果不勾选【启用】则不会创建 Service

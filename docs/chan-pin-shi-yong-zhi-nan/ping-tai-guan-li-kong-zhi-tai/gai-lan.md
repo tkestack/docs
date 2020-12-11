@@ -9,5 +9,5 @@
 3. 快速入口
 4. 实用提示
 
-![image-20200821171320826](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/overview.png)
+![](../../.gitbook/assets/overview.png)
 
