@@ -12,7 +12,9 @@ TKEStack 是一款面向私有化环境的开源容器编排引擎。在本教�
 
 ### 集群
 
-平台安装之后，可在【平台管理】控制台的【集群管理】中看到 global 集群。如下图所示： ![Global&#x96C6;&#x7FA4;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/cluster.png)
+平台安装之后，可在【平台管理】控制台的【集群管理】中看到 global 集群。如下图所示： 
+
+![](../.gitbook/assets/cluster%20%281%29.png)
 
 TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现**多集群的管理**。
 
@@ -21,52 +23,80 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
 #### 新建独立集群
 
 1. 登录 TKEStack，右上角会出现当前登录的用户名，示例为 admin。
+
 2. 切换至【平台管理】控制台。
-3. 在“集群管理”页面中，单击【新建独立集群】。如下图所示： ![&#x65B0;&#x5EFA;&#x72EC;&#x7ACB;&#x96C6;&#x7FA4;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/createCluster.png)
+
+3. 在“集群管理”页面中，单击【新建独立集群】。如下图所示：
+
+![](../.gitbook/assets/createCluster.png)
+
 4. 在“新建独立集群”页面，填写集群的基本信息。新建的集群需满足[installation requirements](../chan-pin-bu-shu-zhi-nan/bu-shu-huan-jing-yao-qiu.md)的需求，在满足需求之后，TKEStack 的集群添加非常便利。如下图所示,只需填写【集群名称】、【目标机器】、【密码】，其他保持默认即可添加新的集群。
 
-   > 注意：若【保存】按钮是灰色，单击附近空白处即可变蓝
+> 注意：若【保存】按钮是灰色，单击附近空白处即可变蓝
 
-   ![&#x96C6;&#x7FA4;&#x57FA;&#x672C;&#x4FE1;&#x606F;0.png](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/ClusterInfo.png)
+![](../.gitbook/assets/ClusterInfo.png)
 
-5. **集群名称：** 支持**中文**，小于 60 字符即可
-6. **Kubernetes 版本：** 选择合适的 kubernetes 版本，各版本特性对比请查看 [Supported Versions of the Kubernetes Documentation](https://kubernetes.io/docs/home/supported-doc-versions/)。（**建议使用默认值**）
-7. **网卡名称：** 最长 63 个字符，只能包含小写字母、数字及分隔符\(' - '\)，且必须以小写字母开头，数字或小写字母结尾。（**建议使用默认值 eth0**）
-8. **VIP** ：高可用 VIP 地址。（**按需使用**）
-9. **GPU**：选择是否安装 GPU 相关依赖。（**按需使用**）
-   * **pGPU**：平台会自动为集群安装 [GPUManager](../chan-pin-te-se-gong-neng/gpumanager.md) 扩展组件
-   * **vGPU**：平台会自动为集群安装 [Nvidia-k8s-device-plugin](https://github.com/NVIDIA/k8s-device-plugin)
-10. **容器网络** ：将为集群内容器分配在容器网络地址范围内的 IP 地址，您可以自定义三大私有网段作为容器网络， 根据您选择的集群内服务数量的上限，自动分配适当大小的 CIDR 段用于 kubernetes service；根据您选择 Pod 数量上限/节点，自动为集群内每台云服务器分配一个适当大小的网段用于该主机分配 Pod 的 IP 地址。（**建议使用默认值**）
-    * **CIDR**： 集群内 Sevice、 Pod 等资源所在网段。
-    * **Pod 数量上限/节点**： 决定分配给每个 Node 的 CIDR 的大小。
-    * **Service 数量上限/集群** ：决定分配给 Sevice 的 CIDR 大小。
-11. **目标机器** ：
-    * **目标机器**：节点的内网地址。（建议: Master&Etcd 节点配置**4 核**及以上的机型）
-    * **SSH 端口**： 请确保目标机器安全组开放 22 端口和 ICMP 协议，否则无法远程登录和 PING 云服务器。（**建议使用默认值 22**）
-    * **主机 label**：给主机设置 Label,可用于指定容器调度。（**按需使用**）
-    * **认证方式**：连接目标机器的方式
-      * **密码认证**：
-        * **密码**：目标机器密码
-      * **密钥认证**：
-        * **私钥**：目标机器秘钥
-        * **私钥密码**：目标机器私钥密码，可选填
-    * **GPU**： 使用 GPU 机器需提前安装驱动和 runtime。（**按需使用**）
+5. 集群名称**：** 支持**中文**，小于 60 字符即可
 
-      > 输入以上信息后单击【保存】后还可**继续添加集群的节点**
-12. **提交**： 集群信息填写完毕后，【提交】按钮变为可提交状态，单击即可提交。
+6. Kubernetes 版本**：** 选择合适的 kubernetes 版本，各版本特性对比请查看 [Supported Versions of the Kubernetes Documentation](https://kubernetes.io/docs/home/supported-doc-versions/)。（**建议使用默认值**）
 
-#### 导入已有集群
+7. 网卡名称： 最长 63 个字符，只能包含小写字母、数字及分隔符\(' - '\)，且必须以小写字母开头，数字或小写字母结尾。（**建议使用默认值 eth0**）
+
+8. VIP ：高可用 VIP 地址。（**按需使用**）
+
+9. GPU：选择是否安装 GPU 相关依赖。（**按需使用**）
+
+* pGPU：平台会自动为集群安装 [GPUManager](../chan-pin-te-se-gong-neng/gpumanager.md) 扩展组件
+* vGPU：平台会自动为集群安装 [Nvidia-k8s-device-plugin](https://github.com/NVIDIA/k8s-device-plugin)
+
+10. 容器网络 ：将为集群内容器分配在容器网络地址范围内的 IP 地址，您可以自定义三大私有网段作为容器网络， 根据您选择的集群内服务数量的上限，自动分配适当大小的 CIDR 段用于 kubernetes service；根据您选择 Pod 数量上限/节点，自动为集群内每台云服务器分配一个适当大小的网段用于该主机分配 Pod 的 IP 地址。（**建议使用默认值**）
+
+* **CIDR**： 集群内 Sevice、 Pod 等资源所在网段。
+* **Pod 数量上限/节点**： 决定分配给每个 Node 的 CIDR 的大小。
+* **Service 数量上限/集群** ：决定分配给 Sevice 的 CIDR 大小。
+
+11. 目标机器 ：
+
+* **目标机器**：节点的内网地址。（建议: Master&Etcd 节点配置**4 核**及以上的机型）
+* **SSH 端口**： 请确保目标机器安全组开放 22 端口和 ICMP 协议，否则无法远程登录和 PING 云服务器。（**建议使用默认值 22**）
+* **主机 label**：给主机设置 Label,可用于指定容器调度。（**按需使用**）
+* **认证方式**：连接目标机器的方式
+  * **密码认证**：
+    * **密码**：目标机器密码
+  * **密钥认证**：
+    * **私钥**：目标机器秘钥
+    * **私钥密码**：目标机器私钥密码，可选填
+* **GPU**： 使用 GPU 机器需提前安装驱动和 runtime。（**按需使用**）
+
+  > 输入以上信息后单击【保存】后还可**继续添加集群的节点**
+
+1. **提交**： 集群信息填写完毕后，【提交】按钮变为可提交状态，单击即可提交。
+
+### 导入已有集群
 
 1. 登录 TKEStack。
+
 2. 切换至【平台管理】控制台。
-3. 在“集群管理”页面，单击【导入集群】。如下图所示： ![&#x5BFC;&#x5165;&#x96C6;&#x7FA4;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/importCluster-1.png)
-4. 在“导入集群”页面，填写被导入的集群信息。如下图所示： ![&#x5BFC;&#x5165;&#x96C6;&#x7FA4;&#x4FE1;&#x606F;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/importCluster-2.png)
-5. **名称**： 被导入集群的名称，最长 60 字符
-6. **API Server**：
-   * 被导入集群的 API server 的域名或 IP 地址，注意域名不能加上 https://
-   * 端口，此处用的是 https 协议，端口应填 443。
-7. **CertFile**： 输入被导入集群的 cert 文件内容
-8. **Token**： 输入被导入集群创建时的 token 值
+
+3. 在“集群管理”页面，单击【导入集群】。如下图所示：
+
+![](../.gitbook/assets/importCluster-1.png)
+
+4. 在“导入集群”页面，填写被导入的集群信息。如下图所示：
+
+![](../.gitbook/assets/importCluster-2.png)
+
+5. 名称： 被导入集群的名称，最长 60 字符
+
+6. API Server：
+
+* 被导入集群的 API server 的域名或 IP 地址，注意域名不能加上 https://
+* 端口，此处用的是 https 协议，端口应填 443。
+
+7. CertFile： 输入被导入集群的 cert 文件内容
+
+8. Token： 输入被导入集群创建时的 token 值
+
 9. 单击最下方 【提交】 按钮 。
 
 ### 创建业务
@@ -74,19 +104,20 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
 > 注：业务可以实现跨集群资源的使用
 
 1. 登录 TKEStack。
+
 2. 在【平台管理】控制台的【业务管理】中，单击 【新建业务】。如下图所示：
 
-   ![&#x65B0;&#x5EFA;&#x4E1A;&#x52A1;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/createbusiness.png)
 
-3. 在“新建业务”页面，填写业务信息。如下图所示： ![&#x4E1A;&#x52A1;&#x4FE1;&#x606F;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/createbusiness.png)
-4. **业务名称**：不能超过 63 个字符，这里以`my-business`为例
-5. **业务成员**： [【访问管理】](../chan-pin-shi-yong-zhi-nan/ping-tai-guan-li-kong-zhi-tai/fang-wen-guan-li.md)中【用户管理】中的用户，这里以`admin`例，即这该用户可以访问这个业务。
-6. **集群**：
+
+1. 在“新建业务”页面，填写业务信息。如下图所示： ![&#x4E1A;&#x52A1;&#x4FE1;&#x606F;](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/createbusiness.png)
+2. **业务名称**：不能超过 63 个字符，这里以`my-business`为例
+3. **业务成员**： [【访问管理】](../chan-pin-shi-yong-zhi-nan/ping-tai-guan-li-kong-zhi-tai/fang-wen-guan-li.md)中【用户管理】中的用户，这里以`admin`例，即这该用户可以访问这个业务。
+4. **集群**：
    * 【集群管理】中的集群，这里以`gobal`集群为例
    * 【填写资源限制】可以设置当前业务使用该集群的资源上限（可不限制）
    * 【新增集群】可以添加多个集群，此业务可以使用多个集群的资源（按需添加）
-7. **上级业务**：支持多级业务管理，按需选择（可不选）
-8. 单击最下方 【完成】 按钮即可创建业务。
+5. **上级业务**：支持多级业务管理，按需选择（可不选）
+6. 单击最下方 【完成】 按钮即可创建业务。
 
 ### 创建业务下的命名空间
 

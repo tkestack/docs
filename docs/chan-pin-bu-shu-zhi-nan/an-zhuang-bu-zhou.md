@@ -34,7 +34,7 @@ arch=arm64 version=v1.3.1 && wget https://tke-release-1251707795.cos.ap-guangzho
 
 1. 填写 TKEStack 控制台基本配置信息
 
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/step-1.png)
+![](../.gitbook/assets/step-1.png)
 
 * **用户名**：TKEStack 控制台管理员名称（**例如：admin**）
 * **密码**：TKEStack 控制台管理员密码
@@ -44,7 +44,7 @@ arch=arm64 version=v1.3.1 && wget https://tke-release-1251707795.cos.ap-guangzho
   * **不设置**：访问第一台 master 节点 APIServer
 * 填写 TKEStack 控制台集群设置信息
 
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/step-2.png)
+![](../.gitbook/assets/step-2.png)
 
 * **网卡名称**：集群节点使用的网卡，根据实际环境填写正确的网卡名称，默认为eth0（**建议使用默认值**）
 * **GPU 类型**：（按需使用，可直接选择【**不设置**】）
@@ -61,19 +61,19 @@ arch=arm64 version=v1.3.1 && wget https://tke-release-1251707795.cos.ap-guangzho
   * **用户名和密码：** 均为添加的节点的用户名和密码
   * 可以通过节点下面的【添加机器】蓝色字体增加master节点（**按需添加**）
 
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/step-3-2.png)
+![](../.gitbook/assets/step-3-2.png)
 
 * **高级设置**（非必须）：可以自定义 Global 集群的 Docker、kube-apiserver、kube-controller-manager、kube-scheduler、kubelet 运行参数
 * 填写 TKEStack 控制台认证信息。（建议使用**TKE提供**）
 
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/step-3-1.png)
+![](../.gitbook/assets/step-3-1.png)
 
 * **认证方式：**
   * **TKE提供**：使用 TKE 自带的认证方式
   * **OIDC**：使用 OIDC 认证方式，详见 [OIDC](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#openid-connect-tokens)
 * 填写 TKEStack 控制台镜像仓库信息。（建议使用**TKE提供**）
 
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/step-4.png)
+![](../.gitbook/assets/step-4.png)
 
 * **镜像仓库类型：**
   * **TKE提供**：使用 TKE 自带的镜像仓库
@@ -82,11 +82,11 @@ arch=arm64 version=v1.3.1 && wget https://tke-release-1251707795.cos.ap-guangzho
 * 确认是否开启 TKEStack 控制台业务模块。\(**建议开启**\)
 * 确实是否开启平台审计功能，审计模块为平台提供了操作记录,用户可以在平台管理进行查询，需用用户提供ES资源。（**按需使用，可不开启**）
 
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/step-5.png)
+![](../.gitbook/assets/step-5.png)
 
 1. 选择 TKEStack 控制台监控存储类型。（建议使用**TKE提供**）
 
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/step-6.png)
+![](../.gitbook/assets/step-6.png)
 
 * **监控存储类型**：
   * **TKE提供**：使用 TKE 自带的 Influxdb 作为存储
@@ -95,22 +95,22 @@ arch=arm64 version=v1.3.1 && wget https://tke-release-1251707795.cos.ap-guangzho
   * **不使用**：不使用监控
 * 确认是否开启 TKEStack 控制台，选择开启则需要填写控制台域名及证书。（**建议使用默认值**）
 
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/step-7.png)
+![](../.gitbook/assets/step-7.png)
 
 * **监控存储类型**:
   * **自签名证书**：使用 TKE 带有的自签名证书
   * **指定服务器证书**：填写已备案域名的服务器证书
 * 确认 TKEStack 控制台所有配置是否正确。
 
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/step-8.png)
+![](../.gitbook/assets/step-8.png)
 
 1. 开始安装 TKEStack 控制台，安装成功后界面如下，最下面出现【查看指引】的按钮。
 
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/step-9.png)
+![](../.gitbook/assets/step-9.png)
 
 1. 点击【查看指引】，按照指引，在本地主机上添加域名解析，以访问 TKEStack 控制台。
 
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/step-10.png)
+![](../.gitbook/assets/step-10.png)
 
 * **以Linux/MacOS为例**: 在`/etc/hosts`文件中加入以下两行域名解析
 
