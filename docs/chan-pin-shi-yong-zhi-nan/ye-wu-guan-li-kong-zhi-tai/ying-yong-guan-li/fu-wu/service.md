@@ -149,7 +149,7 @@ kubectl edit service/[name]
 kubectl delete service [NAME]
 ```
 
-  
-    .params{margin-bottom:0px !important;}  
-
+```text
+.params{margin-bottom:0px !important;}  
+```
 

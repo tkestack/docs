@@ -16,11 +16,11 @@
 2. 切换至【平台管理】控制台，选择 【组织资源】-&gt;【镜像仓库管理】。
 3. 点击【新建】按钮。如下图所示：
 
-    ![&#x65B0;&#x5EFA;&#x547D;&#x540D;&#x7A7A;&#x95F4;](../../.gitbook/assets/新建命名空间.png)
+   ![&#x65B0;&#x5EFA;&#x547D;&#x540D;&#x7A7A;&#x95F4;](../../.gitbook/assets/新建命名空间.png)
 
 4. 在弹出的“新建命名空间”页面，填写命名空间信息，如下图所示：
 
-    ![&#x65B0;&#x5EFA;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7A97;&#x53E3;](../../.gitbook/assets/新建命名空间窗口.png)
+   ![&#x65B0;&#x5EFA;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7A97;&#x53E3;](../../.gitbook/assets/新建命名空间窗口.png)
 
    * **名称：** 命名空间名字，不超过63字符
    * **描述：** 命名空间描述信息（可选）
@@ -35,7 +35,7 @@
 6. 登录 TKEStack。
 7. 切换至 【平台管理】控制台，选择 【组织资源】-&gt;【镜像仓库管理】。点击列表最右侧【删除】按钮。如下图所示：
 
-    ![&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x5220;&#x9664;&#x6309;&#x94AE;](../../.gitbook/assets/命名空间删除按钮.png)
+   ![&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x5220;&#x9664;&#x6309;&#x94AE;](../../.gitbook/assets/命名空间删除按钮.png)
 
    **镜像上传**
 
@@ -61,11 +61,11 @@
 2. 切换至 【平台管理】控制台，选择 【组织资源】-&gt;【 Chart 包仓库管理】，查看 “Chart 包命名空间”列表
 3. 点击【新建】按钮。如下图所示：
 
-    ![&#x65B0;&#x5EFA;Chart&#x5305;&#x547D;&#x540D;&#x7A7A;&#x95F4;](../../.gitbook/assets/新建Chart包命名空间.png)
+   ![&#x65B0;&#x5EFA;Chart&#x5305;&#x547D;&#x540D;&#x7A7A;&#x95F4;](../../.gitbook/assets/新建Chart包命名空间.png)
 
 4. 在弹出的新建 ChartGroup 页面，填写 ChartGroup 信息，如下图所示：
 
-    ![&#x65B0;&#x5EFA;ChartGroup&#x7A97;&#x53E3;](../../.gitbook/assets/新建ChartGroup窗口.png)
+   ![&#x65B0;&#x5EFA;ChartGroup&#x7A97;&#x53E3;](../../.gitbook/assets/新建ChartGroup窗口.png)
 
    * **名称：** ChartGroup 名字，不超过63字符
    * **描述：** ChartGroup 描述信息（可选）
@@ -81,7 +81,7 @@
 7. 切换至 【平台管理】控制台，选择 【组织资源】-&gt; 【Chart 包仓库管理】，查看 “Chart 包命名空间”列表。
 8. 点击列表最右侧【删除】按钮。如下图所示：
 
-    ![Chart&#x5305;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x5220;&#x9664;&#x6309;&#x94AE;](../../.gitbook/assets/Chart包命名空间删除按钮.png)
+   ![Chart&#x5305;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x5220;&#x9664;&#x6309;&#x94AE;](../../.gitbook/assets/Chart包命名空间删除按钮.png)
 
    **Chart上传**
 
@@ -89,15 +89,15 @@
 10. 切换至 【平台管理】控制台，选择 【组织资源】-&gt; 【Chart 包仓库管理】，查看 “Chart 包命名空间”列表。
 11. 点击列表中 Chart 包命名空间【名称】。如下图所示：
 
-     ![Chart&#x5305;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x540D;&#x79F0;](../../.gitbook/assets/Chart包命名空间名称.png)
+    ![Chart&#x5305;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x540D;&#x79F0;](../../.gitbook/assets/Chart包命名空间名称.png)
 
 12. 点击命名空间的【Chart上传指引】按钮。如下图所示：
 
-     ![Chart&#x4E0A;&#x4F20;&#x6307;&#x5F15;](../../.gitbook/assets/Chart上传指引.png)
+    ![Chart&#x4E0A;&#x4F20;&#x6307;&#x5F15;](../../.gitbook/assets/Chart上传指引.png)
 
 13. 根据指引内容，在物理节点上执行相应命令。如下图所示：
 
-     ![Chart&#x4E0A;&#x4F20;&#x6307;&#x5F15;&#x5185;&#x5BB9;](../../.gitbook/assets/Chart上传指引内容.png)
+    ![Chart&#x4E0A;&#x4F20;&#x6307;&#x5F15;&#x5185;&#x5BB9;](../../.gitbook/assets/Chart上传指引内容.png)
 
 ## 访问凭证
 
@@ -109,9 +109,6 @@
 
 1. 登录 TKEStack。
 2. 切换至 【平台管理】控制台，选择 【组织资源】下的【访问凭证】，点击【新建】按钮。如下图所示：
-
- 
-
 3. 在弹出创建访问凭证页面，填写凭证信息。如下图所示： 
    * **凭证描述：** 描述当前凭证信息
    * **过期时间：** 填写过期时间，选择小时/分钟为单位

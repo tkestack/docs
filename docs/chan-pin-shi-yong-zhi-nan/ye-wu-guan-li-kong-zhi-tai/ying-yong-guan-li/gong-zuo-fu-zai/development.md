@@ -67,7 +67,7 @@ Deployment 声明了 Pod 的模板和控制 Pod 的运行策略，适用于部�
 
    当“运行/期望Pod数量”相等时，即表示 Deployment 下的所有 Pod 已创建完成。
 
-    ![](../../../../.gitbook/assets/workLoad.png)
+   ![](../../../../.gitbook/assets/workLoad.png)
 
 ### 更新 Deployment
 
