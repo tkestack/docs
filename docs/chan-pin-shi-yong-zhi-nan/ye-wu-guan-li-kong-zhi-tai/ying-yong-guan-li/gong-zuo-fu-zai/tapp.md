@@ -78,7 +78,7 @@ Kubernetes现有应用类型（如：Deployment、StatefulSet等）无法满足�
 
    当“运行/期望Pod数量”相等时，即表示 TApp 下的所有 Pod 已创建完成。
 
-    ![](../../../../.gitbook/assets/tapp-2.png)
+   ![](../../../../.gitbook/assets/tapp-2.png)
 
 ### 更新 TApp
 
