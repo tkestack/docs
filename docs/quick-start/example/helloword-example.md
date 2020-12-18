@@ -102,8 +102,8 @@
 
 #### 上传该镜像到镜像仓库
 
-> * 已在[【组织资源】](../../user-guide/platform-console/registry-mgmt.md)中的【镜像仓库管理】创建命名空间。
-> * 已在[【组织资源】](../../user-guide/platform-console/registry-mgmt.md)中的【访问凭证】创建访问凭证。
+> * 已在[【组织资源】](../../user-guide/platform-console/registry-mgmt/)中的【镜像仓库管理】创建命名空间。
+> * 已在[【组织资源】](../../user-guide/platform-console/registry-mgmt/)中的【访问凭证】创建访问凭证。
 
 依次执行以下命令，上传镜像到 qcloud 仓库。
 
