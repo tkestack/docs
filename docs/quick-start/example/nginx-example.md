@@ -21,11 +21,11 @@
 
 1. 进入【工作负载】的【 Deployment 】中，选择【新建】。如下图所示： 
 
-![](../../.gitbook/assets/nginx-2.png)
+![](../../.gitbook/assets/nginx-2%20%281%29.png)
 
 1. 在“新建Workload”页面，只需输入下图中红框的参数即可。
 
-![](../../.gitbook/assets/nginx-2%20%281%29.png)
+![](../../.gitbook/assets/nginx-2%20%281%29%20%281%29.png)
 
 ![](../../.gitbook/assets/nginx-3.png)
 

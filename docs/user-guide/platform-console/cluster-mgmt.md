@@ -10,7 +10,7 @@
 
 ## 操作步骤
 
-平台安装之后，可在【平台管理】控制台的【集群管理】中看到global集群。如下图所示： ![Global&#x96C6;&#x7FA4;](../../.gitbook/assets/cluster%20%282%29.png)
+平台安装之后，可在【平台管理】控制台的【集群管理】中看到global集群。如下图所示： ![Global&#x96C6;&#x7FA4;](../../.gitbook/assets/cluster%20%282%29%20%282%29.png)
 
 TKEStack还可以另外**新建独立集群**以及**导入已有集群**实现**多集群的管理**。
 
@@ -74,7 +74,7 @@ TKEStack还可以另外**新建独立集群**以及**导入已有集群**实现*
 2. 切换至【平台管理】控制台。
 3. 在“集群管理”页面中，点击要操作的集群ID，如下图“global”所示。
 
-   ![Global&#x96C6;&#x7FA4;](../../.gitbook/assets/cluster.png)
+   ![Global&#x96C6;&#x7FA4;](../../.gitbook/assets/cluster%20%282%29.png)
 
 4. 点击【基本信息】，可查看集群基本信息
 
@@ -96,7 +96,7 @@ TKEStack还可以另外**新建独立集群**以及**导入已有集群**实现*
 2. 切换至【平台管理】控制台。
 3. 在“集群管理”页面中，点击要操作的集群ID，如下图“global”所示。
 
-   ![Global&#x96C6;&#x7FA4;](../../.gitbook/assets/cluster%20%281%29.png)
+   ![Global&#x96C6;&#x7FA4;](../../.gitbook/assets/cluster%20%282%29%20%281%29.png)
 
 4. 点击【节点管理】中的【节点】，可查看当前集群的“节点列表”
 

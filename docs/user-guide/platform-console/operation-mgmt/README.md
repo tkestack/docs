@@ -26,7 +26,7 @@
 
 4. 在“新建Helm应用”页面填写Helm应用信息。如下图所示：
 
-   ![&#x65B0;&#x5EFA;Helm&#x5E94;&#x7528;](../../../.gitbook/assets/新建Helm应用.png)
+   ![&#x65B0;&#x5EFA;Helm&#x5E94;&#x7528;](../../../.gitbook/assets/xin-jian-helm-ying-yong-.png)
 
    * **应用名：** 输入应用名，1～63字符，只能包含小写字母、数字及分隔符\("-"\)，且必须以小写字母开头，数字或小写字母结尾
    * **Chart\_Url：** 输入Chart 文件地址
