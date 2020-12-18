@@ -1,11 +1,5 @@
 # 镜像仓库管理
 
-[Permalink](https://github.com/tkestack/tke/blob/e10470f3d27d3e14b28fdd843165d9090d67f1cf/docs/guide/zh-CN/products/platform/resource/registry.md)
-
-Cannot retrieve contributors at this time
-
- 40 lines \(31 sloc\) 2.18 KB
-
 ## 镜像仓库管理
 
 ### 镜像仓库概述
