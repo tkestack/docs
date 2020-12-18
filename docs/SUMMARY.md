@@ -51,6 +51,7 @@
       * [事件](user-guide/business-console/workload-mgmt/shi-jian.md)
       * [日志](user-guide/business-console/workload-mgmt/ri-zhi.md)
     * [组织资源](user-guide/business-console/registry-mgmt/README.md)
+      * [Helm模板](user-guide/business-console/registry-mgmt/helm-repo.md)
       * [仓库管理](user-guide/business-console/registry-mgmt/repo-mgmt.md)
       * [访问凭证](user-guide/business-console/registry-mgmt/apikey-mgmt.md)
     * [监控与告警](user-guide/business-console/monitor-alert/README.md)
