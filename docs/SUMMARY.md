@@ -19,7 +19,7 @@
     * [业务管理](user-guide/platform-console/business-mgmt.md)
     * [扩展组件](user-guide/platform-console/addon-mgmt.md)
     * [组织资源](user-guide/platform-console/registry-mgmt/README.md)
-      * [Untitled](user-guide/platform-console/registry-mgmt/untitled.md)
+      * [Helm模板](user-guide/platform-console/registry-mgmt/helm-repo.md)
       * [镜像仓库管理](user-guide/platform-console/registry-mgmt/registry.md)
       * [访问凭证](user-guide/platform-console/registry-mgmt/apikey.md)
     * [访问管理](user-guide/platform-console/access-mgmt.md)
