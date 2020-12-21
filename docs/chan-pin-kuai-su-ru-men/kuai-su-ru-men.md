@@ -12,7 +12,7 @@ TKEStack 是一款面向私有化环境的开源容器编排引擎。在本教�
 
 ### 集群
 
-平台安装之后，可在【平台管理】控制台的【集群管理】中看到 global 集群。如下图所示： 
+平台安装之后，可在【平台管理】控制台的【集群管理】中看到 global 集群。如下图所示：
 
 ![](../.gitbook/assets/cluster%20%281%29.png)
 
@@ -23,106 +23,83 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
 #### 新建独立集群
 
 1. 登录 TKEStack，右上角会出现当前登录的用户名，示例为 admin。
-
 2. 切换至【平台管理】控制台。
-
 3. 在“集群管理”页面中，单击【新建独立集群】。如下图所示：
 
 ![](../.gitbook/assets/createCluster.png)
 
-4. 在“新建独立集群”页面，填写集群的基本信息。新建的集群需满足[installation requirements](../chan-pin-bu-shu-zhi-nan/bu-shu-huan-jing-yao-qiu.md)的需求，在满足需求之后，TKEStack 的集群添加非常便利。如下图所示,只需填写【集群名称】、【目标机器】、【密码】，其他保持默认即可添加新的集群。
+1. 在“新建独立集群”页面，填写集群的基本信息。新建的集群需满足[installation requirements](../chan-pin-bu-shu-zhi-nan/bu-shu-huan-jing-yao-qiu.md)的需求，在满足需求之后，TKEStack 的集群添加非常便利。如下图所示,只需填写【集群名称】、【目标机器】、【密码】，其他保持默认即可添加新的集群。
 
 > 注意：若【保存】按钮是灰色，单击附近空白处即可变蓝
 
 ![](../.gitbook/assets/ClusterInfo.png)
 
-5. 集群名称**：** 支持**中文**，小于 60 字符即可
+1. 集群名称**：** 支持**中文**，小于 60 字符即可
+2. Kubernetes 版本**：** 选择合适的 kubernetes 版本，各版本特性对比请查看 [Supported Versions of the Kubernetes Documentation](https://kubernetes.io/docs/home/supported-doc-versions/)。（**建议使用默认值**）
+3. 网卡名称： 最长 63 个字符，只能包含小写字母、数字及分隔符\(' - '\)，且必须以小写字母开头，数字或小写字母结尾。（**建议使用默认值 eth0**）
+4. VIP ：高可用 VIP 地址。（**按需使用**）
+5. GPU：选择是否安装 GPU 相关依赖。（**按需使用**）
+6. pGPU：平台会自动为集群安装 [GPUManager](../chan-pin-te-se-gong-neng/gpumanager.md) 扩展组件
+7. vGPU：平台会自动为集群安装 [Nvidia-k8s-device-plugin](https://github.com/NVIDIA/k8s-device-plugin)
+8. 容器网络 ：将为集群内容器分配在容器网络地址范围内的 IP 地址，您可以自定义三大私有网段作为容器网络， 根据您选择的集群内服务数量的上限，自动分配适当大小的 CIDR 段用于 kubernetes service；根据您选择 Pod 数量上限/节点，自动为集群内每台云服务器分配一个适当大小的网段用于该主机分配 Pod 的 IP 地址。（**建议使用默认值**）
+9. **CIDR**： 集群内 Sevice、 Pod 等资源所在网段。
+10. **Pod 数量上限/节点**： 决定分配给每个 Node 的 CIDR 的大小。
+11. **Service 数量上限/集群** ：决定分配给 Sevice 的 CIDR 大小。
+12. 目标机器 ：
+13. **目标机器**：节点的内网地址。（建议: Master&Etcd 节点配置**4 核**及以上的机型）
+14. **SSH 端口**： 请确保目标机器安全组开放 22 端口和 ICMP 协议，否则无法远程登录和 PING 云服务器。（**建议使用默认值 22**）
+15. **主机 label**：给主机设置 Label,可用于指定容器调度。（**按需使用**）
+16. **认证方式**：连接目标机器的方式
+    * **密码认证**：
+      * **密码**：目标机器密码
+    * **密钥认证**：
+      * **私钥**：目标机器秘钥
+      * **私钥密码**：目标机器私钥密码，可选填
+17. **GPU**： 使用 GPU 机器需提前安装驱动和 runtime。（**按需使用**）
 
-6. Kubernetes 版本**：** 选择合适的 kubernetes 版本，各版本特性对比请查看 [Supported Versions of the Kubernetes Documentation](https://kubernetes.io/docs/home/supported-doc-versions/)。（**建议使用默认值**）
+    > 输入以上信息后单击【保存】后还可**继续添加集群的节点**
 
-7. 网卡名称： 最长 63 个字符，只能包含小写字母、数字及分隔符\(' - '\)，且必须以小写字母开头，数字或小写字母结尾。（**建议使用默认值 eth0**）
-
-8. VIP ：高可用 VIP 地址。（**按需使用**）
-
-9. GPU：选择是否安装 GPU 相关依赖。（**按需使用**）
-
-* pGPU：平台会自动为集群安装 [GPUManager](../chan-pin-te-se-gong-neng/gpumanager.md) 扩展组件
-* vGPU：平台会自动为集群安装 [Nvidia-k8s-device-plugin](https://github.com/NVIDIA/k8s-device-plugin)
-
-10. 容器网络 ：将为集群内容器分配在容器网络地址范围内的 IP 地址，您可以自定义三大私有网段作为容器网络， 根据您选择的集群内服务数量的上限，自动分配适当大小的 CIDR 段用于 kubernetes service；根据您选择 Pod 数量上限/节点，自动为集群内每台云服务器分配一个适当大小的网段用于该主机分配 Pod 的 IP 地址。（**建议使用默认值**）
-
-* **CIDR**： 集群内 Sevice、 Pod 等资源所在网段。
-* **Pod 数量上限/节点**： 决定分配给每个 Node 的 CIDR 的大小。
-* **Service 数量上限/集群** ：决定分配给 Sevice 的 CIDR 大小。
-
-11. 目标机器 ：
-
-* **目标机器**：节点的内网地址。（建议: Master&Etcd 节点配置**4 核**及以上的机型）
-* **SSH 端口**： 请确保目标机器安全组开放 22 端口和 ICMP 协议，否则无法远程登录和 PING 云服务器。（**建议使用默认值 22**）
-* **主机 label**：给主机设置 Label,可用于指定容器调度。（**按需使用**）
-* **认证方式**：连接目标机器的方式
-  * **密码认证**：
-    * **密码**：目标机器密码
-  * **密钥认证**：
-    * **私钥**：目标机器秘钥
-    * **私钥密码**：目标机器私钥密码，可选填
-* **GPU**： 使用 GPU 机器需提前安装驱动和 runtime。（**按需使用**）
-
-  > 输入以上信息后单击【保存】后还可**继续添加集群的节点**
-
-1. **提交**： 集群信息填写完毕后，【提交】按钮变为可提交状态，单击即可提交。
+18. **提交**： 集群信息填写完毕后，【提交】按钮变为可提交状态，单击即可提交。
 
 ### 导入已有集群
 
 1. 登录 TKEStack。
-
 2. 切换至【平台管理】控制台。
-
 3. 在“集群管理”页面，单击【导入集群】。如下图所示：
 
 ![](../.gitbook/assets/importCluster-1.png)
 
-4. 在“导入集群”页面，填写被导入的集群信息。如下图所示：
+1. 在“导入集群”页面，填写被导入的集群信息。如下图所示：
 
 ![](../.gitbook/assets/importCluster-2.png)
 
-5. 名称： 被导入集群的名称，最长 60 字符
-
-6. API Server：
-
-* 被导入集群的 API server 的域名或 IP 地址，注意域名不能加上 https://
-* 端口，此处用的是 https 协议，端口应填 443。
-
-7. CertFile： 输入被导入集群的 cert 文件内容
-
-8. Token： 输入被导入集群创建时的 token 值
-
-9. 单击最下方 【提交】 按钮 。
+1. 名称： 被导入集群的名称，最长 60 字符
+2. API Server：
+3. 被导入集群的 API server 的域名或 IP 地址，注意域名不能加上 https://
+4. 端口，此处用的是 https 协议，端口应填 443。
+5. CertFile： 输入被导入集群的 cert 文件内容
+6. Token： 输入被导入集群创建时的 token 值
+7. 单击最下方 【提交】 按钮 。
 
 ### 创建业务
 
 > 注：业务可以实现跨集群资源的使用
 
 1. 登录 TKEStack。
-
 2. 在【平台管理】控制台的【业务管理】中，单击 【新建业务】。如下图所示：
 
 ![](../.gitbook/assets/createbusiness.png)
 
-3. 在“新建业务”页面，填写业务信息。如下图所示： 
+1. 在“新建业务”页面，填写业务信息。如下图所示： 
 
 ![](../.gitbook/assets/createbusiness.png)
 
-4. 业务名称：不能超过 63 个字符，这里以`my-business`为例
-
-5. 业务成员： [【访问管理】](../chan-pin-shi-yong-zhi-nan/ping-tai-guan-li-kong-zhi-tai/fang-wen-guan-li.md)中【用户管理】中的用户，这里以`admin`例，即这该用户可以访问这个业务。
-
-6. 集群：
-
-* 【集群管理】中的集群，这里以`gobal`集群为例
-* 【填写资源限制】可以设置当前业务使用该集群的资源上限（可不限制）
-* 【新增集群】可以添加多个集群，此业务可以使用多个集群的资源（按需添加）
-
+1. 业务名称：不能超过 63 个字符，这里以`my-business`为例
+2. 业务成员： [【访问管理】](../chan-pin-shi-yong-zhi-nan/ping-tai-guan-li-kong-zhi-tai/fang-wen-guan-li.md)中【用户管理】中的用户，这里以`admin`例，即这该用户可以访问这个业务。
+3. 集群：
+4. 【集群管理】中的集群，这里以`gobal`集群为例
+5. 【填写资源限制】可以设置当前业务使用该集群的资源上限（可不限制）
+6. 【新增集群】可以添加多个集群，此业务可以使用多个集群的资源（按需添加）
 7. 上级业务：支持多级业务管理，按需选择（可不选）
 
 8 .单击最下方 【完成】 按钮即可创建业务。
@@ -130,32 +107,27 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
 ### 创建业务下的命名空间
 
 1. 登录 TKEStack。
-
 2. 在【平台管理】控制台的【业务管理】中，单击【业务 id】。如下图所示：
-
- 
 
 ![](../.gitbook/assets/businessid.png)
 
-3. 单击【Namespace 列表】。如下图标签 1 所示：
+1. 单击【Namespace 列表】。如下图标签 1 所示：
 
 > 该页面可以更改业务名称、成员、以及业务下集群资源的限制。
 
 ![](../.gitbook/assets/businessns.png)
 
-4. 单击【新建 Namespace】。如下图所示： 
+1. 单击【新建 Namespace】。如下图所示： 
 
 ![](../.gitbook/assets/newns.png)
 
-5. 在“新建 Namespace”页面中，填写相关信息。如下图所示： 
+1. 在“新建 Namespace”页面中，填写相关信息。如下图所示： 
 
 ![](../.gitbook/assets/my-ns.png)
 
-6. 名称：不能超过 63 个字符，这里以`new-ns`为例
-
-7. 集群：`my-business`业务中的集群，这里以`global`集群为例
-
-8. 资源限制：这里可以限制当前命名空间下各种资源的使用量，可以不设置。
+1. 名称：不能超过 63 个字符，这里以`new-ns`为例
+2. 集群：`my-business`业务中的集群，这里以`global`集群为例
+3. 资源限制：这里可以限制当前命名空间下各种资源的使用量，可以不设置。
 
 ### 创建业务下的 Deployment
 
@@ -163,50 +135,44 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
 
 > 注意：因为当前登录的是 admin 用户，【业务管理】控制台只包含在[创建业务](kuai-su-ru-men.md#创建业务)中成员包含 admin 的业务，如果切换到【业务管理】控制台没有看见任何业务，请确认【平台管理】中【业务管理】中的相关业务的成员有没有当前用户，如没有，请添加当前用户。
 
-2. 点击左侧导航栏中的【应用管理】，如果当前用户被分配了多个业务，可通过下图中标签 3 的选择框选择合适的业务。
-
-3. 点击【工作负载】，点击下图标签 4 的【Deployment】，此时进入“Deployment”页面，可通过下图中的标签 5 选择 Deployment 的【命名空间】： ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/deployment.png)
+1. 点击左侧导航栏中的【应用管理】，如果当前用户被分配了多个业务，可通过下图中标签 3 的选择框选择合适的业务。
+2. 点击【工作负载】，点击下图标签 4 的【Deployment】，此时进入“Deployment”页面，可通过下图中的标签 5 选择 Deployment 的【命名空间】： ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/deployment.png)
 
 ![](../.gitbook/assets/deployment.png)
 
-4. 单击上图标签 6【新建】，进入“新建 Workload ”页面。根据实际需求，设置 Deployment 参数。这里参数很多，其中必填信息已用红框标识：
+1. 单击上图标签 6【新建】，进入“新建 Workload ”页面。根据实际需求，设置 Deployment 参数。这里参数很多，其中必填信息已用红框标识：
 
 ![](../.gitbook/assets/createdeployment-1.png)
 
-5. 工作负载名：输入自定义名称，这里以`my-dep`为例
+1. 工作负载名：输入自定义名称，这里以`my-dep`为例
+2. 描述：给工作负载添加描述，可不填
+3. 标签：给工作负载添加标签，通过工作负载名默认生成
+4. 命名空间：根据实际需求进行选择
+5. 类型：选择【Deployment（可扩展的部署 Pod）】
+6. **数据卷（选填）**：为容器提供存储，目前支持临时路径、主机路径、云硬盘数据卷、文件存储 NFS、配置文件、PVC，还需挂载到容器的指定路径中。如需指定容器挂载至指定路径时，单击【添加数据卷】
+   * **临时目录**：主机上的一个临时目录，生命周期和 Pod 一致
+   * **主机路径**：主机上的真实路径，可以重复使用，不会随 Pod 一起销毁
+   * **NFS 盘**：挂载外部 NFS 到 Pod，用户需要指定相应 NFS 地址，格式：127.0.0.1:/data
+   * **ConfigMap**：用户选择在业务 Namespace 下的[ConfigMap](../chan-pin-shi-yong-zhi-nan/ye-wu-guan-li-kong-zhi-tai/ying-yong-guan-li/pei-zhi-guan-li/configmap.md)
+   * **Secret**：用户选择在业务 namespace 下的[Secret](../chan-pin-shi-yong-zhi-nan/ye-wu-guan-li-kong-zhi-tai/ying-yong-guan-li/pei-zhi-guan-li/secret.md)
+   * **PVC**：用户选择在业务 namespace 下的[PVC](../chan-pin-shi-yong-zhi-nan/ye-wu-guan-li-kong-zhi-tai/ying-yong-guan-li/cun-chu/pv-he-pvc.md)
+7. **实例内容器**：根据实际需求，为 Deployment 的一个 Pod 设置一个或多个不同的容器。如下图所示：
+   * **名称**：自定义，这里以`my-container`为例
+   * **镜像**：根据实际需求进行选择，这里以`nginx`为例
+     * **镜像版本（Tag）**：根据实际需求进行填写，不填默认为`latest`
+     * **CPU/内存限制**：可根据 [Kubernetes 资源限制](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/) 进行设置 CPU 和内存的限制范围，提高业务的健壮性（**建议使用默认值**）
+     * **GPU 限制**：如容器内需要使用 GPU，此处填 GPU 需求
+     * **环境变量**：用于设置容器内的变量，变量名只能包含大小写字母、数字及下划线，并且不能以数字开头
+       * **新增变量**：自己设定变量键值对
+       * **引用 ConfigMap/Secret**：引用已有键值对
+     * **高级设置**：可设置 “**工作目录**”、“**运行命令**”、“**运行参数**”、“**镜像更新策略**”、“**容器健康检查**”和“**特权级**”等参数。这里介绍一下镜像更新策略。
+       * **镜像更新策略**：提供以下 3 种策略，请按需选择
 
-6. 描述：给工作负载添加描述，可不填
+         若不设置镜像拉取策略，当镜像版本为空或 `latest` 时，使用 Always 策略，否则使用 IfNotPresent 策略
 
-7. 标签：给工作负载添加标签，通过工作负载名默认生成
-
-8. 命名空间：根据实际需求进行选择
-
-9. 类型：选择【Deployment（可扩展的部署 Pod）】
-
-* **数据卷（选填）**：为容器提供存储，目前支持临时路径、主机路径、云硬盘数据卷、文件存储 NFS、配置文件、PVC，还需挂载到容器的指定路径中。如需指定容器挂载至指定路径时，单击【添加数据卷】
-  * **临时目录**：主机上的一个临时目录，生命周期和 Pod 一致
-  * **主机路径**：主机上的真实路径，可以重复使用，不会随 Pod 一起销毁
-  * **NFS 盘**：挂载外部 NFS 到 Pod，用户需要指定相应 NFS 地址，格式：127.0.0.1:/data
-  * **ConfigMap**：用户选择在业务 Namespace 下的[ConfigMap](../chan-pin-shi-yong-zhi-nan/ye-wu-guan-li-kong-zhi-tai/ying-yong-guan-li/pei-zhi-guan-li/configmap.md)
-  * **Secret**：用户选择在业务 namespace 下的[Secret](../chan-pin-shi-yong-zhi-nan/ye-wu-guan-li-kong-zhi-tai/ying-yong-guan-li/pei-zhi-guan-li/secret.md)
-  * **PVC**：用户选择在业务 namespace 下的[PVC](../chan-pin-shi-yong-zhi-nan/ye-wu-guan-li-kong-zhi-tai/ying-yong-guan-li/cun-chu/pv-he-pvc.md)
-* **实例内容器**：根据实际需求，为 Deployment 的一个 Pod 设置一个或多个不同的容器。如下图所示：
-  * **名称**：自定义，这里以`my-container`为例
-  * **镜像**：根据实际需求进行选择，这里以`nginx`为例
-    * **镜像版本（Tag）**：根据实际需求进行填写，不填默认为`latest`
-    * **CPU/内存限制**：可根据 [Kubernetes 资源限制](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/) 进行设置 CPU 和内存的限制范围，提高业务的健壮性（**建议使用默认值**）
-    * **GPU 限制**：如容器内需要使用 GPU，此处填 GPU 需求
-    * **环境变量**：用于设置容器内的变量，变量名只能包含大小写字母、数字及下划线，并且不能以数字开头
-      * **新增变量**：自己设定变量键值对
-      * **引用 ConfigMap/Secret**：引用已有键值对
-    * **高级设置**：可设置 “**工作目录**”、“**运行命令**”、“**运行参数**”、“**镜像更新策略**”、“**容器健康检查**”和“**特权级**”等参数。这里介绍一下镜像更新策略。
-      * **镜像更新策略**：提供以下 3 种策略，请按需选择
-
-        若不设置镜像拉取策略，当镜像版本为空或 `latest` 时，使用 Always 策略，否则使用 IfNotPresent 策略
-
-        * **Always**：总是从远程拉取该镜像
-        * **IfNotPresent**：默认使用本地镜像，若本地无该镜像则远程拉取该镜像
-        * **Never**：只使用本地镜像，若本地没有该镜像将报异常
+         * **Always**：总是从远程拉取该镜像
+         * **IfNotPresent**：默认使用本地镜像，若本地无该镜像则远程拉取该镜像
+         * **Never**：只使用本地镜像，若本地没有该镜像将报异常
 
 ![](../.gitbook/assets/businessns%20%281%29.png)
 
