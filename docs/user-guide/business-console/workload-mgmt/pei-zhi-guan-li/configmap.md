@@ -6,17 +6,17 @@
 
 ### 创建 ConfigMap
 
-1. 登录TKEStack，切换到【业务管理】控制台，选择左侧导航栏中的【应用管理】。
-2. 选择需要创建ConfigMap的【业务】下相应的【命名空间】，展开【配置管理】列表，进入ConfigMap管理页面。 
-3. 单击【新建】，进入 “新建ConfigMap” 页面。如下图所示：
+* 登录TKEStack，切换到【业务管理】控制台，选择左侧导航栏中的【应用管理】。
+* 选择需要创建ConfigMap的【业务】下相应的【命名空间】，展开【配置管理】列表，进入ConfigMap管理页面。 
+* 单击【新建】，进入 “新建ConfigMap” 页面。如下图所示：
 
-   ![&#x65B0;&#x5EFA;ConfigMap](../../../../.gitbook/assets/new-config-map.png)
+![&#x65B0;&#x5EFA;ConfigMap](../../../../.gitbook/assets/new-config-map.png)
 
-4. 根据实际需求，设置 ConfigMap 参数。关键参数信息如下：
-   * 名称：自定义。
-   * 命名空间：根据实际需求进行选择命名空间类型
-   * 定义变量名和变量值。
-5. 单击【创建ConfigMap】，完成创建。
+* 根据实际需求，设置 ConfigMap 参数。关键参数信息如下：
+  * 名称：自定义。
+  * 命名空间：根据实际需求进行选择命名空间类型
+  * 定义变量名和变量值。
+* 单击【创建ConfigMap】，完成创建。
 
 ### 更新 ConfigMap
 
