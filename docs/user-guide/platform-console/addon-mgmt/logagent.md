@@ -6,7 +6,7 @@
 
 TKESTack 通过 logagent 提供的集群内日志采集功能，支持将集群内服务或集群节点特定路径文件的日志发送至 Kafka、Elasticsearch 等消费端，支持采集容器标准输出日志，容器内文件日志以及主机内文件日志。更提供事件持久化、审计等功能，实时记录集群事件及操作日志记录，帮助运维人员存储和分析集群内部资源生命周期、资源调度、异常告警等情况。
 
-![](../../../.gitbook/assets/image%20%2821%29.png)
+![](../../../.gitbook/assets/image%20%2823%29.png)
 
 > TKEStack 老版本日志使用 LogCollector 扩展组件。LogAgent 用于替换 LogCollector，新版本统一用 LogAgent 完成日志采集功能。
 
@@ -29,7 +29,7 @@ TKESTack 通过 logagent 提供的集群内日志采集功能，支持将集群�
 
 > 注意：日志采集对接外部 Kafka 或 Elasticsearch，该功能需要额外开启，位置在集群 [基本信息](https://github.com/tkestack/tke/blob/master/hack/platform/cluster.md#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF) 下面，点击开启“日志采集”服务。
 
-![](../../../.gitbook/assets/image%20%2826%29.png)
+![](../../../.gitbook/assets/image%20%2828%29.png)
 
 #### 业务管理侧
 
@@ -37,11 +37,11 @@ TKESTack 通过 logagent 提供的集群内日志采集功能，支持将集群�
 * 切换至【业务管理】控制台，选择 【运维中心】-&gt;【日志采集】
 * 选择相应【业务】和【命名空间】，单击【新建】按钮，如下图所示： 
 
-![](../../../.gitbook/assets/image%20%286%29.png)
+![](../../../.gitbook/assets/image%20%287%29.png)
 
 * 在“新建日志采集”页面填写日志采集信息，如下图所示： 
 
-![](../../../.gitbook/assets/image%20%2845%29.png)
+![](../../../.gitbook/assets/image%20%2847%29.png)
 
 * **收集规则名称：** 输入规则名，1～63字符，只能包含小写字母、数字及分隔符\("-"\)，且必须以小写字母开头，数字或小写字母结尾
 * **业务：** 选择所属业务（业务管理侧才会出现）
@@ -86,9 +86,9 @@ LogAgent 除了支持日志规则的创建，也支持指定容器运行后的�
 
 > 前提：需要在创建负载时挂载数据卷，并指定日志目录
 
-![](../../../.gitbook/assets/image%20%28124%29.png)
+![](../../../.gitbook/assets/image%20%28134%29.png)
 
 创建负载以后，在容器内的`/data/logdir`目录下的所有文件可以展示并下载，例如我们在容器的`/data/logdir`下新建一个名为`a.log`的文件，如果有内容的话，也可以在这里展示与下载：
 
-![](../../../.gitbook/assets/image%20%2830%29.png)
+![](../../../.gitbook/assets/image%20%2832%29.png)
 

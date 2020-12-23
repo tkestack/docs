@@ -76,7 +76,7 @@ TKEStack 集群审计是基于 [Kubernetes Audit](https://kubernetes.io/docs/tas
 1. 登录 TKEStack
 2. 切换至【平台管理】控制台，选择 【运维中心】-&gt;【审计记录】，查看审计列表：
 
-![](../../../.gitbook/assets/image%20%2819%29.png)
+![](../../../.gitbook/assets/image%20%2821%29.png)
 
 ## 参考
 

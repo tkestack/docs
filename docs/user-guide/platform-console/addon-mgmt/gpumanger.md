@@ -40,7 +40,7 @@ GPU-Manager 包含如下功能:
 
 集群部署阶段选择 vGPU，平台会为集群部署 GPU-Manager ，如下图新建独立集群所示，Global 集群的也是如此安装。
 
-![](../../../.gitbook/assets/image%20%28109%29.png)
+![](../../../.gitbook/assets/image%20%28117%29.png)
 
 ### 在节点安装 GPU 驱动
 
@@ -48,7 +48,7 @@ GPU-Manager 包含如下功能:
 
 > 注意：如果集群部署阶段节点没有勾选 GPU，需要自行在有 GPU 的节点上安装 GPU 驱动
 
-![](../../../.gitbook/assets/image%20%2874%29.png)
+![](../../../.gitbook/assets/image%20%2877%29.png)
 
 ### 工作负载使用 GPU
 
@@ -61,7 +61,7 @@ GPU-Manager 包含如下功能:
 > 1. 卡数只能填写 0.1 到 1 之间的两位小数或者是所有自然数，例如：0、0.3、0.56、0.7、0.9、1、6、34，不支持 1.5、2.7、3.54
 > 2. 显存只能填写自然数 n，负载使用的显存为 n\*256MiB
 
-![](../../../.gitbook/assets/image%20%28102%29.png)
+![](../../../.gitbook/assets/image%20%28109%29.png)
 
 #### 通过 YAML 使用
 
@@ -124,7 +124,7 @@ spec:
 
 可以通过集群多个页面的监控按钮里查看到 GPU 的相关监控数据，下图以 集群管理 页对集群的监控为例：
 
-![](../../../.gitbook/assets/image%20%2879%29.png)
+![](../../../.gitbook/assets/image%20%2884%29.png)
 
 ### 通过后台手动查询
 
@@ -137,7 +137,7 @@ curl http://127.0.0.1:5678/metric
 
 结果示例：
 
-![](../../../.gitbook/assets/image%20%2846%29.png)
+![](../../../.gitbook/assets/image%20%2848%29.png)
 
 GPUManager 项目请参考：[GPUManager Repository](https://github.com/tkestack/gpu-manager)
 
