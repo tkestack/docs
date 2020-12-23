@@ -1,0 +1,2138 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>GPUManager 介绍 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="csioperator.html" />
+    
+    
+    <link rel="prev" href="logagent.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../installation/">
+            
+                <a href="../../../installation/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    部署指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../installation/installation-architecture.html">
+            
+                <a href="../../../installation/installation-architecture.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    产品部署架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../installation/environment-requirement.html">
+            
+                <a href="../../../installation/environment-requirement.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    部署环境要求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../../installation/installation-steps.html">
+            
+                <a href="../../../installation/installation-steps.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    安装步骤
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../quick-start/">
+            
+                <a href="../../../quick-start/">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../quick-start/quick-starts.html">
+            
+                <a href="../../../quick-start/quick-starts.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../../quick-start/example/">
+            
+                <a href="../../../quick-start/example/">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    入门示例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../../quick-start/example/nginx-example.html">
+            
+                <a href="../../../quick-start/example/nginx-example.html">
+            
+                    
+                        <b>1.3.2.1.</b>
+                    
+                    创建Nginx服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../../quick-start/example/helloword-example.html">
+            
+                <a href="../../../quick-start/example/helloword-example.html">
+            
+                    
+                        <b>1.3.2.2.</b>
+                    
+                    编写HelloWorld程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../../quick-start/example/docker-image-example.html">
+            
+                <a href="../../../quick-start/example/docker-image-example.html">
+            
+                    
+                        <b>1.3.2.3.</b>
+                    
+                    如何构建Docker镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    产品使用指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../console-switch.html">
+            
+                <a href="../../console-switch.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    切换控制台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    平台管理控制台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../overview.html">
+            
+                <a href="../overview.html">
+            
+                    
+                        <b>1.4.2.1.</b>
+                    
+                    概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../cluster-mgmt.html">
+            
+                <a href="../cluster-mgmt.html">
+            
+                    
+                        <b>1.4.2.2.</b>
+                    
+                    集群管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../business-mgmt.html">
+            
+                <a href="../business-mgmt.html">
+            
+                    
+                        <b>1.4.2.3.</b>
+                    
+                    业务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.4.2.4.</b>
+                    
+                    扩展组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.4.1" data-path="tappcontroller.html">
+            
+                <a href="tappcontroller.html">
+            
+                    
+                        <b>1.4.2.4.1.</b>
+                    
+                    TApp 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.2" data-path="cronhpa.html">
+            
+                <a href="cronhpa.html">
+            
+                    
+                        <b>1.4.2.4.2.</b>
+                    
+                    CronHPA 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.3" data-path="prometheus.html">
+            
+                <a href="prometheus.html">
+            
+                    
+                        <b>1.4.2.4.3.</b>
+                    
+                    监控组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.4" data-path="logagent.html">
+            
+                <a href="logagent.html">
+            
+                    
+                        <b>1.4.2.4.4.</b>
+                    
+                    LogAgent 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2.4.5" data-path="gpumanger.html">
+            
+                <a href="gpumanger.html">
+            
+                    
+                        <b>1.4.2.4.5.</b>
+                    
+                    GPUManager 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.6" data-path="csioperator.html">
+            
+                <a href="csioperator.html">
+            
+                    
+                        <b>1.4.2.4.6.</b>
+                    
+                    CSIOperator 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../registry-mgmt/">
+            
+                <a href="../registry-mgmt/">
+            
+                    
+                        <b>1.4.2.5.</b>
+                    
+                    组织资源
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.5.1" data-path="../registry-mgmt/registry.html">
+            
+                <a href="../registry-mgmt/registry.html">
+            
+                    
+                        <b>1.4.2.5.1.</b>
+                    
+                    镜像仓库管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.2" data-path="../registry-mgmt/helm-repo.html">
+            
+                <a href="../registry-mgmt/helm-repo.html">
+            
+                    
+                        <b>1.4.2.5.2.</b>
+                    
+                    Helm模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.3" data-path="../registry-mgmt/apikey.html">
+            
+                <a href="../registry-mgmt/apikey.html">
+            
+                    
+                        <b>1.4.2.5.3.</b>
+                    
+                    访问凭证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../access-mgmt/">
+            
+                <a href="../access-mgmt/">
+            
+                    
+                        <b>1.4.2.6.</b>
+                    
+                    访问管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.6.1" data-path="../access-mgmt/policy.html">
+            
+                <a href="../access-mgmt/policy.html">
+            
+                    
+                        <b>1.4.2.6.1.</b>
+                    
+                    策略管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6.2" data-path="../access-mgmt/user.html">
+            
+                <a href="../access-mgmt/user.html">
+            
+                    
+                        <b>1.4.2.6.2.</b>
+                    
+                    用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../monitor-alert/">
+            
+                <a href="../monitor-alert/">
+            
+                    
+                        <b>1.4.2.7.</b>
+                    
+                    监控&告警
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.7.1" data-path="../monitor-alert/alertmetrics.html">
+            
+                <a href="../monitor-alert/alertmetrics.html">
+            
+                    
+                        <b>1.4.2.7.1.</b>
+                    
+                    告警记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7.2" data-path="../monitor-alert/notification.html">
+            
+                <a href="../monitor-alert/notification.html">
+            
+                    
+                        <b>1.4.2.7.2.</b>
+                    
+                    通知设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7.3" data-path="../monitor-alert/alertsetting.html">
+            
+                <a href="../monitor-alert/alertsetting.html">
+            
+                    
+                        <b>1.4.2.7.3.</b>
+                    
+                    告警设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="../operation-mgmt/">
+            
+                <a href="../operation-mgmt/">
+            
+                    
+                        <b>1.4.2.8.</b>
+                    
+                    运维中心
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.8.1" data-path="../operation-mgmt/helm.html">
+            
+                <a href="../operation-mgmt/helm.html">
+            
+                    
+                        <b>1.4.2.8.1.</b>
+                    
+                    Helm应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8.2" data-path="../operation-mgmt/log-collect.html">
+            
+                <a href="../operation-mgmt/log-collect.html">
+            
+                    
+                        <b>1.4.2.8.2.</b>
+                    
+                    日志采集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8.3" data-path="../operation-mgmt/audit.html">
+            
+                <a href="../operation-mgmt/audit.html">
+            
+                    
+                        <b>1.4.2.8.3.</b>
+                    
+                    审计记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8.4" data-path="../operation-mgmt/persistentevent.html">
+            
+                <a href="../operation-mgmt/persistentevent.html">
+            
+                    
+                        <b>1.4.2.8.4.</b>
+                    
+                    事件持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../business-console/">
+            
+                <a href="../../business-console/">
+            
+                    
+                        <b>1.4.3.</b>
+                    
+                    业务管理控制台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../business-console/workload-mgmt/">
+            
+                <a href="../../business-console/workload-mgmt/">
+            
+                    
+                        <b>1.4.3.1.</b>
+                    
+                    应用管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1.1" data-path="../../business-console/workload-mgmt/namespace.html">
+            
+                <a href="../../business-console/workload-mgmt/namespace.html">
+            
+                    
+                        <b>1.4.3.1.1.</b>
+                    
+                    命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.2" data-path="../../business-console/workload-mgmt/workload/">
+            
+                <a href="../../business-console/workload-mgmt/workload/">
+            
+                    
+                        <b>1.4.3.1.2.</b>
+                    
+                    工作负载
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1.2.1" data-path="../../business-console/workload-mgmt/workload/development.html">
+            
+                <a href="../../business-console/workload-mgmt/workload/development.html">
+            
+                    
+                        <b>1.4.3.1.2.1.</b>
+                    
+                    Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.2.2" data-path="../../business-console/workload-mgmt/workload/statefulset.html">
+            
+                <a href="../../business-console/workload-mgmt/workload/statefulset.html">
+            
+                    
+                        <b>1.4.3.1.2.2.</b>
+                    
+                    StatefulSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.2.3" data-path="../../business-console/workload-mgmt/workload/daomonset.html">
+            
+                <a href="../../business-console/workload-mgmt/workload/daomonset.html">
+            
+                    
+                        <b>1.4.3.1.2.3.</b>
+                    
+                    DaomonSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.2.4" data-path="../../business-console/workload-mgmt/workload/job.html">
+            
+                <a href="../../business-console/workload-mgmt/workload/job.html">
+            
+                    
+                        <b>1.4.3.1.2.4.</b>
+                    
+                    Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.2.5" data-path="../../business-console/workload-mgmt/workload/cronjob.html">
+            
+                <a href="../../business-console/workload-mgmt/workload/cronjob.html">
+            
+                    
+                        <b>1.4.3.1.2.5.</b>
+                    
+                    CronJob
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.2.6" data-path="../../business-console/workload-mgmt/workload/tapp.html">
+            
+                <a href="../../business-console/workload-mgmt/workload/tapp.html">
+            
+                    
+                        <b>1.4.3.1.2.6.</b>
+                    
+                    TApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.2.7" data-path="../../business-console/workload-mgmt/workload/request-limits.html">
+            
+                <a href="../../business-console/workload-mgmt/workload/request-limits.html">
+            
+                    
+                        <b>1.4.3.1.2.7.</b>
+                    
+                    工作负载的请求与限制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.3" data-path="../../business-console/workload-mgmt/fu-wu/">
+            
+                <a href="../../business-console/workload-mgmt/fu-wu/">
+            
+                    
+                        <b>1.4.3.1.3.</b>
+                    
+                    服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1.3.1" data-path="../../business-console/workload-mgmt/fu-wu/service.html">
+            
+                <a href="../../business-console/workload-mgmt/fu-wu/service.html">
+            
+                    
+                        <b>1.4.3.1.3.1.</b>
+                    
+                    Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.3.2" data-path="../../business-console/workload-mgmt/fu-wu/ingress.html">
+            
+                <a href="../../business-console/workload-mgmt/fu-wu/ingress.html">
+            
+                    
+                        <b>1.4.3.1.3.2.</b>
+                    
+                    Ingress
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.4" data-path="../../business-console/workload-mgmt/pei-zhi-guan-li/">
+            
+                <a href="../../business-console/workload-mgmt/pei-zhi-guan-li/">
+            
+                    
+                        <b>1.4.3.1.4.</b>
+                    
+                    配置管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1.4.1" data-path="../../business-console/workload-mgmt/pei-zhi-guan-li/configmap.html">
+            
+                <a href="../../business-console/workload-mgmt/pei-zhi-guan-li/configmap.html">
+            
+                    
+                        <b>1.4.3.1.4.1.</b>
+                    
+                    ConfigMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.4.2" data-path="../../business-console/workload-mgmt/pei-zhi-guan-li/secret.html">
+            
+                <a href="../../business-console/workload-mgmt/pei-zhi-guan-li/secret.html">
+            
+                    
+                        <b>1.4.3.1.4.2.</b>
+                    
+                    Sercet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.5" data-path="../../business-console/workload-mgmt/cun-chu/">
+            
+                <a href="../../business-console/workload-mgmt/cun-chu/">
+            
+                    
+                        <b>1.4.3.1.5.</b>
+                    
+                    存储
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1.5.1" data-path="../../business-console/workload-mgmt/cun-chu/pv-he-pvc.html">
+            
+                <a href="../../business-console/workload-mgmt/cun-chu/pv-he-pvc.html">
+            
+                    
+                        <b>1.4.3.1.5.1.</b>
+                    
+                    PV和PVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.5.2" data-path="../../business-console/workload-mgmt/cun-chu/storageclass.html">
+            
+                <a href="../../business-console/workload-mgmt/cun-chu/storageclass.html">
+            
+                    
+                        <b>1.4.3.1.5.2.</b>
+                    
+                    StorageClass
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.6" data-path="../../business-console/workload-mgmt/shi-jian.html">
+            
+                <a href="../../business-console/workload-mgmt/shi-jian.html">
+            
+                    
+                        <b>1.4.3.1.6.</b>
+                    
+                    事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.7" data-path="../../business-console/workload-mgmt/ri-zhi.html">
+            
+                <a href="../../business-console/workload-mgmt/ri-zhi.html">
+            
+                    
+                        <b>1.4.3.1.7.</b>
+                    
+                    日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../business-console/business-mgmt.html">
+            
+                <a href="../../business-console/business-mgmt.html">
+            
+                    
+                        <b>1.4.3.2.</b>
+                    
+                    业务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../../business-console/registry-mgmt/">
+            
+                <a href="../../business-console/registry-mgmt/">
+            
+                    
+                        <b>1.4.3.3.</b>
+                    
+                    组织资源
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.3.1" data-path="../../business-console/registry-mgmt/repo-mgmt.html">
+            
+                <a href="../../business-console/registry-mgmt/repo-mgmt.html">
+            
+                    
+                        <b>1.4.3.3.1.</b>
+                    
+                    镜像仓库管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3.2" data-path="../../business-console/registry-mgmt/helm-repo.html">
+            
+                <a href="../../business-console/registry-mgmt/helm-repo.html">
+            
+                    
+                        <b>1.4.3.3.2.</b>
+                    
+                    Helm模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3.3" data-path="../../business-console/registry-mgmt/apikey-mgmt.html">
+            
+                <a href="../../business-console/registry-mgmt/apikey-mgmt.html">
+            
+                    
+                        <b>1.4.3.3.3.</b>
+                    
+                    访问凭证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../../business-console/monitor-alert/">
+            
+                <a href="../../business-console/monitor-alert/">
+            
+                    
+                        <b>1.4.3.4.</b>
+                    
+                    监控与告警
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.4.1" data-path="../../business-console/monitor-alert/alerts.html">
+            
+                <a href="../../business-console/monitor-alert/alerts.html">
+            
+                    
+                        <b>1.4.3.4.1.</b>
+                    
+                    设置告警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.2" data-path="../../business-console/monitor-alert/notifier.html">
+            
+                <a href="../../business-console/monitor-alert/notifier.html">
+            
+                    
+                        <b>1.4.3.4.2.</b>
+                    
+                    通知设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="../../business-console/operation-mgmt/">
+            
+                <a href="../../business-console/operation-mgmt/">
+            
+                    
+                        <b>1.4.3.5.</b>
+                    
+                    运维中心
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.5.1" data-path="../../business-console/operation-mgmt/helm.html">
+            
+                <a href="../../business-console/operation-mgmt/helm.html">
+            
+                    
+                        <b>1.4.3.5.1.</b>
+                    
+                    Helm应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5.2" data-path="../../business-console/operation-mgmt/log-collection.html">
+            
+                <a href="../../business-console/operation-mgmt/log-collection.html">
+            
+                    
+                        <b>1.4.3.5.2.</b>
+                    
+                    日志采集
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../../key-features/">
+            
+                <a href="../../../key-features/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    特色功能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../key-features/tapp.html">
+            
+                <a href="../../../key-features/tapp.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    TAPP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../../key-features/galaxy.html">
+            
+                <a href="../../../key-features/galaxy.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    Galaxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../../key-features/cronhpa.html">
+            
+                <a href="../../../key-features/cronhpa.html">
+            
+                    
+                        <b>1.5.3.</b>
+                    
+                    CronHPA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../../key-features/gpumanager.html">
+            
+                <a href="../../../key-features/gpumanager.html">
+            
+                    
+                        <b>1.5.4.</b>
+                    
+                    GPU-Manager说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../../key-features/lbcf.html">
+            
+                <a href="../../../key-features/lbcf.html">
+            
+                    
+                        <b>1.5.5.</b>
+                    
+                    LBCF说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../../best-practice/">
+            
+                <a href="../../../best-practice/">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    最佳实践
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../../best-practice/k8s-upgrade.html">
+            
+                <a href="../../../best-practice/k8s-upgrade.html">
+            
+                    
+                        <b>1.6.1.</b>
+                    
+                    K8S 版本升级说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../../best-practice/custom-k8s-version-upgrade.html">
+            
+                <a href="../../../best-practice/custom-k8s-version-upgrade.html">
+            
+                    
+                        <b>1.6.2.</b>
+                    
+                    自定义k8s版本升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../../best-practice/private-environment-install.html">
+            
+                <a href="../../../best-practice/private-environment-install.html">
+            
+                    
+                        <b>1.6.3.</b>
+                    
+                    wx 私有化部署最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../../best-practice/storage-practice.html">
+            
+                <a href="../../../best-practice/storage-practice.html">
+            
+                    
+                        <b>1.6.4.</b>
+                    
+                    使用存储的实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../../best-practice/jenkins-cicd.html">
+            
+                <a href="../../../best-practice/jenkins-cicd.html">
+            
+                    
+                        <b>1.6.5.</b>
+                    
+                    基于 Jenkins 的 CI/CD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../../develop/">
+            
+                <a href="../../../develop/">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    开发指引
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../../develop/api.html">
+            
+                <a href="../../../develop/api.html">
+            
+                    
+                        <b>1.7.1.</b>
+                    
+                    API 使用指引
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../../faq/">
+            
+                <a href="../../../faq/">
+            
+                    
+                        <b>1.8.</b>
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../../faq/installation/">
+            
+                <a href="../../../faq/installation/">
+            
+                    
+                        <b>1.8.1.</b>
+                    
+                    部署类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../../../faq/installation/frequently-answer.html">
+            
+                <a href="../../../faq/installation/frequently-answer.html">
+            
+                    
+                        <b>1.8.1.1.</b>
+                    
+                    常见报错解决方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="../../../faq/installation/resource-plan.html">
+            
+                <a href="../../../faq/installation/resource-plan.html">
+            
+                    
+                        <b>1.8.1.2.</b>
+                    
+                    如何规划部署资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../../faq/platforms/">
+            
+                <a href="../../../faq/platforms/">
+            
+                    
+                        <b>1.8.2.</b>
+                    
+                    平台类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="../../../faq/platforms/metricsinfo.html">
+            
+                <a href="../../../faq/platforms/metricsinfo.html">
+            
+                    
+                        <b>1.8.2.1.</b>
+                    
+                    监控告警指标列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.2" data-path="../../../faq/platforms/platform-questions.html">
+            
+                <a href="../../../faq/platforms/platform-questions.html">
+            
+                    
+                        <b>1.8.2.2.</b>
+                    
+                    平台使用常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../../faq/permission/">
+            
+                <a href="../../../faq/permission/">
+            
+                    
+                        <b>1.8.3.</b>
+                    
+                    授权类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.3.1" data-path="../../../faq/permission/ldap-oidc.html">
+            
+                <a href="../../../faq/permission/ldap-oidc.html">
+            
+                    
+                        <b>1.8.3.1.</b>
+                    
+                    如何接入LDAP&OIDC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.2" data-path="../../../faq/permission/business-platform.html">
+            
+                <a href="../../../faq/permission/business-platform.html">
+            
+                    
+                        <b>1.8.3.2.</b>
+                    
+                    业务管理、平台管理的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.3" data-path="../../../faq/permission/custom-policy.html">
+            
+                <a href="../../../faq/permission/custom-policy.html">
+            
+                    
+                        <b>1.8.3.3.</b>
+                    
+                    如何设置自定义策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.4" data-path="../../../faq/permission/dockerlogin-error.html">
+            
+                <a href="../../../faq/permission/dockerlogin-error.html">
+            
+                    
+                        <b>1.8.3.4.</b>
+                    
+                    Docker login 权限错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../../faq/events/">
+            
+                <a href="../../../faq/events/">
+            
+                    
+                        <b>1.8.4.</b>
+                    
+                    事件类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.4.1" data-path="../../../faq/events/frequently-event.html">
+            
+                <a href="../../../faq/events/frequently-event.html">
+            
+                    
+                        <b>1.8.4.1.</b>
+                    
+                    常见错误事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../../release/">
+            
+                <a href="../../../release/">
+            
+                    
+                        <b>1.9.</b>
+                    
+                    Release Notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../../release/release1.5.html">
+            
+                <a href="../../../release/release1.5.html">
+            
+                    
+                        <b>1.9.1.</b>
+                    
+                    1.5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../../release/release1.4.html">
+            
+                <a href="../../../release/release1.4.html">
+            
+                    
+                        <b>1.9.2.</b>
+                    
+                    1.4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../../release/release1.3.html">
+            
+                <a href="../../../release/release1.3.html">
+            
+                    
+                        <b>1.9.3.</b>
+                    
+                    1.3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >GPUManager 介绍</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="gpumanager-&#x4ECB;&#x7ECD;">GPUManager &#x4ECB;&#x7ECD;</h1>
+<h2 id="gpumanager-&#x4ECB;&#x7ECD;">GPUManager &#x4ECB;&#x7ECD;</h2>
+<p><a href="https://github.com/tkestack/gpu-manager" target="_blank">GPUManager</a> &#x63D0;&#x4F9B;&#x4E00;&#x4E2A; All-in-One &#x7684; GPU &#x7BA1;&#x7406;&#x5668;, &#x57FA;&#x4E8E; Kubernets Device Plugin &#x63D2;&#x4EF6;&#x7CFB;&#x7EDF;&#x5B9E;&#x73B0;&#xFF0C;&#x8BE5;&#x7BA1;&#x7406;&#x5668;&#x63D0;&#x4F9B;&#x4E86;&#x5206;&#x914D;&#x5E76;&#x5171;&#x4EAB; GPU&#xFF0C;GPU &#x6307;&#x6807;&#x67E5;&#x8BE2;&#xFF0C;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x524D;&#x7684; GPU &#x76F8;&#x5173;&#x8BBE;&#x5907;&#x51C6;&#x5907;&#x7B49;&#x529F;&#x80FD;&#xFF0C;&#x652F;&#x6301;&#x7528;&#x6237;&#x5728; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x4F7F;&#x7528; GPU &#x8BBE;&#x5907;&#x3002;</p>
+<p>GPU-Manager &#x5305;&#x542B;&#x5982;&#x4E0B;&#x529F;&#x80FD;:</p>
+<ul>
+<li><strong>&#x62D3;&#x6251;&#x5206;&#x914D;</strong>&#xFF1A;&#x63D0;&#x4F9B;&#x57FA;&#x4E8E; GPU &#x62D3;&#x6251;&#x5206;&#x914D;&#x529F;&#x80FD;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x5206;&#x914D;&#x8D85;&#x8FC7;1&#x5F20; GPU &#x5361;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x62D3;&#x6251;&#x8FDE;&#x63A5;&#x6700;&#x5FEB;&#x7684;&#x65B9;&#x5F0F;&#x5206;&#x914D;GPU&#x8BBE;&#x5907;</li>
+<li><strong>GPU &#x5171;&#x4EAB;</strong>&#xFF1A;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x63D0;&#x4EA4;&#x5C0F;&#x4E8E;1&#x5F20;&#x5361;&#x8D44;&#x6E90;&#x7684;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B; QoS &#x4FDD;&#x8BC1;</li>
+<li><a href=""><strong>&#x5E94;&#x7528; GPU &#x6307;&#x6807;&#x7684;&#x67E5;&#x8BE2;</strong></a>&#xFF1A;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x4E3B;&#x673A;&#x7684;&#x7AEF;&#x53E3;(&#x9ED8;&#x8BA4;&#x4E3A;5678)&#x7684;<code>/metrics</code> &#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A; Prometheus &#x63D0;&#x4F9B; GPU &#x6307;&#x6807;&#x7684;&#x6536;&#x96C6;&#x529F;&#x80FD;&#xFF0C;<code>/usage</code> &#x8DEF;&#x5F84;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x53EF;&#x8BFB;&#x6027;&#x7684;&#x5BB9;&#x5668;&#x72B6;&#x51B5;&#x67E5;&#x8BE2;</li>
+</ul>
+<h3 id="gpu-manager-&#x4F7F;&#x7528;&#x573A;&#x666F;">GPU-Manager &#x4F7F;&#x7528;&#x573A;&#x666F;</h3>
+<p>&#x5728; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x8FD0;&#x884C; GPU &#x5E94;&#x7528;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x89E3;&#x51B3; AI &#x8BAD;&#x7EC3;&#x7B49;&#x573A;&#x666F;&#x4E2D;&#x7533;&#x8BF7;&#x72EC;&#x7ACB;&#x5361;&#x9020;&#x6210;&#x8D44;&#x6E90;&#x6D6A;&#x8D39;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x8BA9;&#x8BA1;&#x7B97;&#x8D44;&#x6E90;&#x5F97;&#x5230;&#x5145;&#x5206;&#x5229;&#x7528;&#x3002;</p>
+<h3 id="gpu-manager-&#x9650;&#x5236;&#x6761;&#x4EF6;">GPU-Manager &#x9650;&#x5236;&#x6761;&#x4EF6;</h3>
+<ol>
+<li>&#x8BE5;&#x7EC4;&#x4EF6;&#x57FA;&#x4E8E; Kubernetes DevicePlugin &#x5B9E;&#x73B0;&#xFF0C;&#x53EA;&#x80FD;&#x8FD0;&#x884C;&#x5728;&#x652F;&#x6301; DevicePlugin &#x7684; kubernetes&#x7248;&#x672C;&#xFF08;Kubernetes 1.10 &#x4E4B;&#x4E0A;&#x7684;&#x7248;&#x672C;&#xFF09;</li>
+<li>&#x4F7F;&#x7528; GPU-Manager &#x8981;&#x6C42;&#x96C6;&#x7FA4;&#x5185;&#x5305;&#x542B; GPU &#x673A;&#x578B;&#x8282;&#x70B9;</li>
+<li><p>TKEStack &#x7684; GPU-Manager &#x5C06;&#x6BCF;&#x5F20; GPU &#x5361;&#x89C6;&#x4E3A;&#x4E00;&#x4E2A;&#x6709;100&#x4E2A;&#x5355;&#x4F4D;&#x7684;&#x8D44;&#x6E90;</p>
+<blockquote>
+<p>&#x7279;&#x522B;&#x6CE8;&#x610F;&#xFF1A;</p>
+<ol>
+<li>&#x5F53;&#x524D;&#x4EC5;&#x652F;&#x6301; 0-1 &#x7684;&#x5C0F;&#x6570;&#x5F20;&#x5361;&#xFF0C;&#x5982; 20&#x3001;35&#x3001;50&#xFF1B;&#x4EE5;&#x53CA;&#x6B63;&#x6574;&#x6570;&#x5F20;&#x5361;&#xFF0C;&#x5982;200&#x3001;500&#x7B49;&#xFF1B;&#x4E0D;&#x652F;&#x6301;&#x7C7B;&#x4F3C;150&#x3001;250&#x7684;&#x8D44;&#x6E90;&#x8BF7;&#x6C42;</li>
+<li>&#x663E;&#x5B58;&#x8D44;&#x6E90;&#x662F;&#x4EE5; 256MiB &#x4E3A;&#x6700;&#x5C0F;&#x7684;&#x4E00;&#x4E2A;&#x5355;&#x4F4D;&#x7684;&#x5206;&#x914D;&#x663E;&#x5B58;</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<h3 id="&#x90E8;&#x7F72;&#x5728;&#x96C6;&#x7FA4;&#x5185;-kubernetes-&#x5BF9;&#x8C61;">&#x90E8;&#x7F72;&#x5728;&#x96C6;&#x7FA4;&#x5185; kubernetes &#x5BF9;&#x8C61;</h3>
+<p>&#x5728;&#x96C6;&#x7FA4;&#x5185;&#x90E8;&#x7F72; GPU-Manager&#xFF0C;&#x5C06;&#x5728;&#x96C6;&#x7FA4;&#x5185;&#x90E8;&#x7F72;&#x4EE5;&#x4E0B; kubernetes &#x5BF9;&#x8C61;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">kubernetes &#x5BF9;&#x8C61;&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x5EFA;&#x8BAE;&#x9884;&#x7559;&#x8D44;&#x6E90;</th>
+<th style="text-align:left">&#x6240;&#x5C5E; Namespaces</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">gpu-manager-daemonset</td>
+<td style="text-align:left">DaemonSet</td>
+<td style="text-align:left">&#x6BCF;&#x8282;&#x70B9;1&#x6838; CPU, 1Gi&#x5185;&#x5B58;</td>
+<td style="text-align:left">kube-system</td>
+</tr>
+<tr>
+<td style="text-align:left">gpu-quota-admission</td>
+<td style="text-align:left">Deployment</td>
+<td style="text-align:left">1&#x6838; CPU, 1Gi&#x5185;&#x5B58;</td>
+<td style="text-align:left">kube-system</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gpu-manager-&#x4F7F;&#x7528;&#x65B9;&#x6CD5;">GPU-Manager &#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h2>
+<h3 id="&#x5B89;&#x88C5;-gpu-manager">&#x5B89;&#x88C5; GPU-Manager</h3>
+<p>&#x96C6;&#x7FA4;&#x90E8;&#x7F72;&#x9636;&#x6BB5;&#x9009;&#x62E9; vGPU&#xFF0C;&#x5E73;&#x53F0;&#x4F1A;&#x4E3A;&#x96C6;&#x7FA4;&#x90E8;&#x7F72; GPU-Manager &#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x65B0;&#x5EFA;&#x72EC;&#x7ACB;&#x96C6;&#x7FA4;&#x6240;&#x793A;&#xFF0C;Global &#x96C6;&#x7FA4;&#x7684;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#x5B89;&#x88C5;&#x3002;</p>
+<p><a href="../../../.gitbook/assets/image%20%28117%29.png" data-lightbox="a45d0e9d-5b5a-442b-bafa-09f85047ea41" data-title=""><img src="../../../.gitbook/assets/image%20%28117%29.png" alt=""></a></p>
+<h3 id="&#x5728;&#x8282;&#x70B9;&#x5B89;&#x88C5;-gpu-&#x9A71;&#x52A8;">&#x5728;&#x8282;&#x70B9;&#x5B89;&#x88C5; GPU &#x9A71;&#x52A8;</h3>
+<p>&#x96C6;&#x7FA4;&#x90E8;&#x7F72;&#x9636;&#x6BB5;&#x6DFB;&#x52A0; GPU &#x8282;&#x70B9;&#x65F6;&#x6709;&#x52FE;&#x9009; GPU &#x9009;&#x9879;&#xFF0C;&#x5E73;&#x53F0;&#x4F1A;&#x81EA;&#x52A8;&#x4E3A;&#x8282;&#x70B9;&#x5B89;&#x88C5; GPU &#x9A71;&#x52A8;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x96C6;&#x7FA4;&#x90E8;&#x7F72;&#x9636;&#x6BB5;&#x8282;&#x70B9;&#x6CA1;&#x6709;&#x52FE;&#x9009; GPU&#xFF0C;&#x9700;&#x8981;&#x81EA;&#x884C;&#x5728;&#x6709; GPU &#x7684;&#x8282;&#x70B9;&#x4E0A;&#x5B89;&#x88C5; GPU &#x9A71;&#x52A8;</p>
+</blockquote>
+<p><a href="../../../.gitbook/assets/image%20%2877%29.png" data-lightbox="ca12d0ab-de0d-4126-888f-c1dcc480cebf" data-title=""><img src="../../../.gitbook/assets/image%20%2877%29.png" alt=""></a></p>
+<h3 id="&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#x4F7F;&#x7528;-gpu">&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#x4F7F;&#x7528; GPU</h3>
+<h4 id="&#x901A;&#x8FC7;&#x63A7;&#x5236;&#x53F0;&#x4F7F;&#x7528;">&#x901A;&#x8FC7;&#x63A7;&#x5236;&#x53F0;&#x4F7F;&#x7528;</h4>
+<p>&#x5728;&#x5B89;&#x88C5;&#x4E86; GPU-Manager &#x7684;&#x96C6;&#x7FA4;&#x4E2D;&#xFF0C;&#x521B;&#x5EFA;&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#x65F6;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E; GPU &#x9650;&#x5236;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ol>
+<li>&#x5361;&#x6570;&#x53EA;&#x80FD;&#x586B;&#x5199; 0.1 &#x5230; 1 &#x4E4B;&#x95F4;&#x7684;&#x4E24;&#x4F4D;&#x5C0F;&#x6570;&#x6216;&#x8005;&#x662F;&#x6240;&#x6709;&#x81EA;&#x7136;&#x6570;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;0&#x3001;0.3&#x3001;0.56&#x3001;0.7&#x3001;0.9&#x3001;1&#x3001;6&#x3001;34&#xFF0C;&#x4E0D;&#x652F;&#x6301; 1.5&#x3001;2.7&#x3001;3.54</li>
+<li>&#x663E;&#x5B58;&#x53EA;&#x80FD;&#x586B;&#x5199;&#x81EA;&#x7136;&#x6570; n&#xFF0C;&#x8D1F;&#x8F7D;&#x4F7F;&#x7528;&#x7684;&#x663E;&#x5B58;&#x4E3A; n*256MiB</li>
+</ol>
+</blockquote>
+<p><a href="../../../.gitbook/assets/image%20%28109%29.png" data-lightbox="febb1841-f752-4e0d-9205-358aca0e20c0" data-title=""><img src="../../../.gitbook/assets/image%20%28109%29.png" alt=""></a></p>
+<h4 id="&#x901A;&#x8FC7;-yaml-&#x4F7F;&#x7528;">&#x901A;&#x8FC7; YAML &#x4F7F;&#x7528;</h4>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528; YAML &#x521B;&#x5EFA;&#x4F7F;&#x7528; GPU &#x7684;&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#xFF0C;&#x63D0;&#x4EA4;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x5728; YAML &#x4E3A;&#x5BB9;&#x5668;&#x8BBE;&#x7F6E; GPU &#x7684;&#x4F7F;&#x7528;&#x8D44;&#x6E90;&#x3002;</p>
+<ul>
+<li>CPU &#x8D44;&#x6E90;&#x9700;&#x8981;&#x5728; resource &#x4E0A;&#x586B;&#x5199;<code>tencent.com/vcuda-core</code></li>
+<li>&#x663E;&#x5B58;&#x8D44;&#x6E90;&#x9700;&#x8981;&#x5728; resource &#x4E0A;&#x586B;&#x5199;<code>tencent.com/vcuda-memory</code></li>
+</ul>
+<p>&#x4F8B;1&#xFF1A;&#x4F7F;&#x7528;1&#x5F20;&#x5361;&#x7684; Pod</p>
+<pre><code class="lang-text">apiVersion: v1
+
+kind: Pod
+
+...
+
+spec:
+
+  containers:
+
+    - name: gpu
+
+      resources:
+        limits: 
+          tencent.com/vcuda-core: 100
+        requests:
+          tencent.com/vcuda-core: 100
+</code></pre>
+<p>&#x4F8B;2&#xFF0C;&#x4F7F;&#x7528; 0.3 &#x5F20;&#x5361;&#x3001;5GiB &#x663E;&#x5B58;&#x7684;&#x5E94;&#x7528;&#xFF08;5GiB = 20*256MB&#xFF09;</p>
+<pre><code class="lang-text">apiVersion: v1
+
+kind: Pod
+
+...
+
+spec:
+
+  containers:
+
+  - name: gpu
+
+    resources:
+      limits:
+        tencent.com/vcuda-core: 30
+        tencent.com/vcuda-memory: 20
+      requests:
+        tencent.com/vcuda-core: 30
+        tencent.com/vcuda-memory: 20
+</code></pre>
+<h2 id="gpu-&#x76D1;&#x63A7;&#x6570;&#x636E;&#x67E5;&#x8BE2;">GPU &#x76D1;&#x63A7;&#x6570;&#x636E;&#x67E5;&#x8BE2;</h2>
+<h3 id="&#x901A;&#x8FC7;&#x63A7;&#x5236;&#x53F0;&#x67E5;&#x8BE2;">&#x901A;&#x8FC7;&#x63A7;&#x5236;&#x53F0;&#x67E5;&#x8BE2;</h3>
+<blockquote>
+<p>&#x524D;&#x63D0;&#xFF1A;&#x5728;&#x96C6;&#x7FA4;&#x7684;<a href="https://github.com/tkestack/tke/blob/master/docs/guide/zh-CN/products/platform/cluster.md#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF" target="_blank">&#x3010;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x3011;</a>&#x9875;&#x91CC;&#x6253;&#x5F00;&#x201C;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x201D;</p>
+</blockquote>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x96C6;&#x7FA4;&#x591A;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x76D1;&#x63A7;&#x6309;&#x94AE;&#x91CC;&#x67E5;&#x770B;&#x5230; GPU &#x7684;&#x76F8;&#x5173;&#x76D1;&#x63A7;&#x6570;&#x636E;&#xFF0C;&#x4E0B;&#x56FE;&#x4EE5; &#x96C6;&#x7FA4;&#x7BA1;&#x7406; &#x9875;&#x5BF9;&#x96C6;&#x7FA4;&#x7684;&#x76D1;&#x63A7;&#x4E3A;&#x4F8B;&#xFF1A;</p>
+<p><a href="../../../.gitbook/assets/image%20%2884%29.png" data-lightbox="662e70c3-67d9-4b7f-a374-42374896a7d6" data-title=""><img src="../../../.gitbook/assets/image%20%2884%29.png" alt=""></a></p>
+<h3 id="&#x901A;&#x8FC7;&#x540E;&#x53F0;&#x624B;&#x52A8;&#x67E5;&#x8BE2;">&#x901A;&#x8FC7;&#x540E;&#x53F0;&#x624B;&#x52A8;&#x67E5;&#x8BE2;</h3>
+<p>&#x624B;&#x52A8;&#x83B7;&#x53D6; GPU &#x76D1;&#x63A7;&#x6570;&#x636E;&#x65B9;&#x5F0F;&#xFF08;&#x9700;&#x8981;&#x5148;&#x5B89;&#x88C5; <a href="http://www.dest-unreach.org/socat/" target="_blank">socat</a>&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-text">kubectl port-forward svc/gpu-manager-metric -n kube-system 5678:5678 &amp;
+curl http://127.0.0.1:5678/metric
+</code></pre>
+<p>&#x7ED3;&#x679C;&#x793A;&#x4F8B;&#xFF1A;</p>
+<p><a href="../../../.gitbook/assets/image%20%2848%29.png" data-lightbox="d4e402a1-a46f-4cde-84c0-d7594289ffd4" data-title=""><img src="../../../.gitbook/assets/image%20%2848%29.png" alt=""></a></p>
+<p>GPUManager &#x9879;&#x76EE;&#x8BF7;&#x53C2;&#x8003;&#xFF1A;<a href="https://github.com/tkestack/gpu-manager" target="_blank">GPUManager Repository</a></p>
+<footer class="page-footer"><span class="copyright">TKEStack 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-12-23 16:37:59
+</span></footer><script>document.addEventListener("DOMContentLoaded", function() {lightbox.option({"resizeDuration":200,"wrapAround":true});})</script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="logagent.html" class="navigation navigation-prev " aria-label="Previous page: LogAgent 介绍">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="csioperator.html" class="navigation navigation-next " aria-label="Next page: CSIOperator 介绍">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"GPUManager 介绍","level":"1.4.2.4.5","depth":4,"next":{"title":"CSIOperator 介绍","level":"1.4.2.4.6","depth":4,"path":"user-guide/platform-console/addon-mgmt/csioperator.md","ref":"user-guide/platform-console/addon-mgmt/csioperator.md","articles":[]},"previous":{"title":"LogAgent 介绍","level":"1.4.2.4.4","depth":4,"path":"user-guide/platform-console/addon-mgmt/logagent.md","ref":"user-guide/platform-console/addon-mgmt/logagent.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","hide-element","expandable-chapters-small","code","-lunr","-search","search-pro","tbfed-pagefooter","-sharing","sharing-plus","insert-logo","lightbox","github"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"TKEStack 2020","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/tkestack/tke"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"options":{"resizeDuration":200,"wrapAround":true},"sameUuid":false},"back-to-top-button":{},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":false,"facebook":false,"weibo":false,"twitter":false,"pocket":false,"google":false,"qzone":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"https://avatars0.githubusercontent.com/u/57258287?s=200&v=4"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"user-guide/platform-console/addon-mgmt/gpumanger.md","mtime":"2020-12-23T08:37:59.491Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-23T08:41:24.897Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
