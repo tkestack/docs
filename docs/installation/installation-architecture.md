@@ -2,7 +2,7 @@
 
 ## 总体架构
 
-TKEStack 产品架构如下图所示： ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/TKEStackHighLevelArchitecture@2x.png)
+TKEStack 产品架构如下图所示： 
 
 ![](../.gitbook/assets/tkestackhighlevelarchitecture-2x.png)
 

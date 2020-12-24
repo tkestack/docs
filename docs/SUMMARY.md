@@ -61,7 +61,7 @@
         * [PV和PVC](user-guide/business-console/workload-mgmt/cun-chu/pv-he-pvc.md)
         * [StorageClass](user-guide/business-console/workload-mgmt/cun-chu/storageclass.md)
       * [事件](user-guide/business-console/workload-mgmt/shi-jian.md)
-      * [日志](user-guide/business-console/workload-mgmt/ri-zhi.md)
+      * [日志](user-guide/business-console/workload-mgmt/log.md)
     * [业务管理](user-guide/business-console/business-mgmt.md)
     * [组织资源](user-guide/business-console/registry-mgmt/README.md)
       * [镜像仓库管理](user-guide/business-console/registry-mgmt/repo-mgmt.md)

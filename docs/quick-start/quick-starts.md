@@ -136,7 +136,7 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
 > 注意：因为当前登录的是 admin 用户，【业务管理】控制台只包含在[创建业务](quick-starts.md#创建业务)中成员包含 admin 的业务，如果切换到【业务管理】控制台没有看见任何业务，请确认【平台管理】中【业务管理】中的相关业务的成员有没有当前用户，如没有，请添加当前用户。
 
 1. 点击左侧导航栏中的【应用管理】，如果当前用户被分配了多个业务，可通过下图中标签 3 的选择框选择合适的业务。
-2. 点击【工作负载】，点击下图标签 4 的【Deployment】，此时进入“Deployment”页面，可通过下图中的标签 5 选择 Deployment 的【命名空间】： ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/deployment.png)
+2. 点击【工作负载】，点击下图标签 4 的【Deployment】，此时进入“Deployment”页面，可通过下图中的标签 5 选择 Deployment 的【命名空间】： 
 
 ![](../.gitbook/assets/deployment.png)
 
@@ -208,15 +208,11 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
   * **Headless Service**：不创建用于集群内访问的 ClusterIP，访问 Service 名称时返回后端 Pods IP 地址，用于适配自有的服务发现机制。解析域名时返回相应 Pod IP 而不是 Cluster IP
 * **端口映射**：输入负载要暴露的端口并指定通信协议类型（**容器和服务端口建议都使用 80**）
 * **Session Affinity:** 点击【显示高级设置】出现，会话保持，设置会话保持后，会根据请求 IP 把请求转发给这个 IP 之前访问过的 Pod。默认 None，按需使用
-* 单击【创建 Workload】，完成创建。如下图所示：
-
-  ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/workload.png)
+* 单击【创建 Workload】，完成创建。
 
 ​ 当“运行/期望 Pod 数量”相等时，即表示 Deployment 下的所有 Pod 已创建完成。
 
-1. 如果在第 5 步中有创建 Service，则可以再【服务】下的【Service】看到与刚刚创建的 Deployment 同名的 Service
-
-   ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/business-sv)
+* 如果在第 5 步中有创建 Service，则可以再【服务】下的【Service】看到与刚刚创建的 Deployment 同名的 Service
 
 ### 删除资源
 
@@ -225,12 +221,12 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
 #### 删除 Deployment
 
 1. 登录 TKEStack，切换到【业务管理】控制台，选择左侧导航栏中的【应用管理】。
-2. 展开【工作负载】下拉项，进入 “Deployment” 管理页面，选择需要删除【Deployment】的业务下相应的【命名空间】，点击要删除的 Deployment 最右边的【更多】，点击【删除】。如下图所示： ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/deletedeployment.png)
+2. 展开【工作负载】下拉项，进入 “Deployment” 管理页面，选择需要删除【Deployment】的业务下相应的【命名空间】，点击要删除的 Deployment 最右边的【更多】，点击【删除】。如下图所示： 
 3. 在弹出框中单击【确定】，即可删除 Deployment。
 
 #### 删除 Service
 
 1. 登录 TKEStack，切换到【业务管理】控制台，选择左侧导航栏中的【应用管理】。
-2. 展开【服务】下拉项，进入 “Service” 管理页面，选择需要删除【Service】的业务下相应的【命名空间】，点击要删除的 Service 最右边的【删除】。如下图所示： ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/deleteservice.png)
+2. 展开【服务】下拉项，进入 “Service” 管理页面，选择需要删除【Service】的业务下相应的【命名空间】，点击要删除的 Service 最右边的【删除】。如下图所示： 
 3. 在弹出框中单击【确定】，即可删除 Service。
 

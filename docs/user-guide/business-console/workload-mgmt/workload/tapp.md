@@ -120,5 +120,5 @@ Kubernetes现有应用类型（如：Deployment、StatefulSet等）无法满足�
 
   > 注意：此页面同时可完成指定Pod监控和删除
 
-查询[TApp](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/docs/zh/features/tapp.md)可查看更多相关信息
+查询[TApp](../../../../key-features/tapp.md)可查看更多相关信息
 

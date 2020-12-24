@@ -9,7 +9,7 @@
 
 ![](../../../.gitbook/assets/image%20%28122%29.png)
 
-您可以参考 [日志采集](https://github.com/tkestack/tke/blob/master/docs/guide/zh-CN/products/business-control-pannel/operation/logcollect.md) 将日志导入外部存储，实现日志的高级管理。
+您可以参考 [日志采集](../operation-mgmt/log-collection.md) 将日志导入外部存储，实现日志的高级管理。
 
 ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/docs/zh/images/事件.png)
 
