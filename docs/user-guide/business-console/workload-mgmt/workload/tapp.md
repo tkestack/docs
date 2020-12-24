@@ -17,7 +17,7 @@ Kubernetes现有应用类型（如：Deployment、StatefulSet等）无法满足�
 * 登录TKEStack，切换到【业务管理】控制台，选择左侧导航栏中的【应用管理】。
 * 选择需要创建TApp的【业务】下相应的【命名空间】，展开【工作负载】下拉项，进入【TApp】管理页面。如下图所示：
 
-![](../../../../.gitbook/assets/tapp-1.png)
+![](../../../../images/tapp-1.png)
 
 * 单击【新建】，进入 “新建Workload” 页面。根据实际需求，设置 TApp 参数。关键参数信息如下，其中必填项为**工作负载名**、**实例内容器的名称和镜像**：
 
@@ -78,7 +78,7 @@ Kubernetes现有应用类型（如：Deployment、StatefulSet等）无法满足�
 
   当“运行/期望Pod数量”相等时，即表示 TApp 下的所有 Pod 已创建完成。
 
-![](../../../../.gitbook/assets/tapp-2.png)
+![](../../../../images/tapp-2.png)
 
 ### 更新 TApp
 
@@ -87,11 +87,11 @@ Kubernetes现有应用类型（如：Deployment、StatefulSet等）无法满足�
 * 登录TKEStack，切换到【业务管理】控制台，选择左侧导航栏中的【应用管理】。 
 * 选择需要更新的【业务】下相应的【命名空间】，展开【工作负载】列表，进入【TApp】管理页面。在需要更新 YAML 的 TApp 行中，单击【更多】&gt;【编辑YAML】，进入“更新 TApp” 页面。如下图所示：
 
-![](../../../../.gitbook/assets/tapp-3.png)
+![](../../../../images/tapp-3.png)
 
 * 在 “更新TApp” 页面，编辑 YAML，单击【完成】，即可更新 YAML。如下图所示：
 
-![&#x66F4;&#x65B0;YAML](../../../../.gitbook/assets/tapp-4.png)
+![&#x66F4;&#x65B0;YAML](../../../../images/tapp-4.png)
 
 ### 调整 Pod 数量
 
@@ -99,7 +99,7 @@ Kubernetes现有应用类型（如：Deployment、StatefulSet等）无法满足�
 * 选择要变更的业务下相应的命名空间，展开工作负载列表，进入 TApp 管理页面。
 * 点击 TApp 列表操作栏的【更新实例数量】按钮。如下图所示：
 
-![](../../../../.gitbook/assets/tapp-5.png)
+![](../../../../images/tapp-5.png)
 
 * 根据实际需求调整 Pod 数量，如3，单击页面下方的【更新实例数目】即可完成调整。
 
@@ -110,11 +110,11 @@ Kubernetes现有应用类型（如：Deployment、StatefulSet等）无法满足�
 
  
 
-![](../../../../.gitbook/assets/tapp-6.png)
+![](../../../../images/tapp-6.png)
 
 * 如下图标签1所示，可选指定需要灰度升级的pod，然后点击下图中标签2 的【灰度升级】即可升级指定pod。
 
-![](../../../../.gitbook/assets/tapp-7.png)
+![](../../../../images/tapp-7.png)
 
 * 在弹出的 “回滚资源” 提示框中，单击【确定】即可完成回滚。
 

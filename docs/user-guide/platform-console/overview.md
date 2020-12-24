@@ -9,5 +9,5 @@
 3. 快速入口
 4. 实用提示
 
-![](../../.gitbook/assets/overview.png)
+![](../../images/overview.png)
 

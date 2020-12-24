@@ -9,7 +9,7 @@ Deployment 声明了 Pod 的模板和控制 Pod 的运行策略，适用于部�
 * 登录TKEStack，切换到【业务管理】控制台，选择左侧导航栏中的【应用管理】。
 * 选择需要创建Deployment的【业务】下相应的【命名空间】，展开【工作负载】下拉项，进入【Deployment】管理页面。如下图所示：
 
-![](../../../../.gitbook/assets/image%20%2843%29.png)
+![](../../../../images/image%20%2843%29.png)
 
 * 单击【新建】，进入 “新建Workload” 页面。根据实际需求，设置 Deployment 参数。关键参数信息如下，其中必填项为**工作负载名**、**实例内容器的名称和镜像**：
   * **工作负载名**：输入自定义名称。
@@ -25,7 +25,7 @@ Deployment 声明了 Pod 的模板和控制 Pod 的运行策略，适用于部�
   * **PVC**：用户在业务namespace下创建的[PVC](../cun-chu/pv-he-pvc.md)
   * **实例内容器**：根据实际需求，为 Deployment 的一个 Pod 设置一个或多个不同的容器。
 
-![](../../../../.gitbook/assets/image%20%28136%29.png)
+![](../../../../images/image%20%28136%29.png)
 
 * **名称**：自定义
 * **镜像**：根据实际需求进行选择
@@ -45,7 +45,7 @@ Deployment 声明了 Pod 的模板和控制 Pod 的运行策略，适用于部�
     * **Never**：只使用本地镜像，若本地没有该镜像将报异常
 * **实例数量**：根据实际需求选择调节方式，设置实例数量。
 
-![](../../../../.gitbook/assets/image%20%2846%29.png)
+![](../../../../images/image%20%2846%29.png)
 
 * **手动调节**：直接设定实例个数
 * **自动调节**：根据设定的触发条件自动调节实例个数，目前支持根据CPU、内存利用率和利用量出入带宽等调节实例个数
@@ -60,7 +60,7 @@ Deployment 声明了 Pod 的模板和控制 Pod 的运行策略，适用于部�
   * **Host（主机网络）**：Kubernetes 原生 Host 网络方案
 * **Service**：勾选【启用】按钮，配置负载端口访问
 
-![](../../../../.gitbook/assets/image%20%2866%29.png)
+![](../../../../images/image%20%2866%29.png)
 
 * **服务访问方式**：选择是【仅在集群内部访问】该负载还是集群外部通过【主机端口访问】该负载
   * **仅在集群内访问**：使用 Service 的 ClusterIP 模式，自动分配 Service 网段中的 IP，用于集群内访问。数据库类等服务如 MySQL 可以选择集群内访问，以保证服务网络隔离
@@ -72,7 +72,7 @@ Deployment 声明了 Pod 的模板和控制 Pod 的运行策略，适用于部�
 
   当“运行/期望Pod数量”相等时，即表示 Deployment 下的所有 Pod 已创建完成。
 
-![](../../../../.gitbook/assets/workLoad.png)
+![](../../../../images/workLoad.png)
 
 ### 更新 Deployment
 
@@ -81,22 +81,22 @@ Deployment 声明了 Pod 的模板和控制 Pod 的运行策略，适用于部�
 * 登录TKEStack，切换到【业务管理】控制台，选择左侧导航栏中的【应用管理】。 
 * 选择需要更新的【业务】下相应的【命名空间】，展开【工作负载】列表，进入【Deployment】管理页面。如下图所示：
 
-![](../../../../.gitbook/assets/deployment.png)
+![](../../../../images/deployment.png)
 
 * 在需要更新 YAML 的 Deployment 行中，单击【更多】&gt;【编辑YAML】，进入“更新 Deployment” 页面。如下图所示：
 
-![](../../../../.gitbook/assets/updateYaml.png)
+![](../../../../images/updateYaml.png)
 
 * 在 “更新Deployment” 页面，编辑 YAML，单击【完成】，即可更新 YAML。如下图所示：
 
-![&#x66F4;&#x65B0;YAML](../../../../.gitbook/assets/editYaml.png)
+![&#x66F4;&#x65B0;YAML](../../../../images/editYaml.png)
 
 ### 回滚 Deployment
 
 * 登录 TKEStack，切换到【业务管理】控制台，选择左侧导航栏中的【应用管理】。
 * 选择要变更的业务下相应的【命名空间】，展开【工作负载】列表，进入【 Deployment】 管理页面，点击进入要回滚的 Deployment 详情页面，单击【修订历史】。如下图所示：
 
-![](../../../../.gitbook/assets/podManagement.png)
+![](../../../../images/podManagement.png)
 
 * 选择合适版本进行回顾。
 * 在弹出的 “回滚资源” 提示框中，单击【确定】即可完成回滚。
@@ -107,7 +107,7 @@ Deployment 声明了 Pod 的模板和控制 Pod 的运行策略，适用于部�
 * 选择要变更的业务下相应的命名空间，展开工作负载列表，进入 Deployment 管理页面。
 * 点击 Deployment 列表操作栏的【更新实例数量】按钮。如下图所示：
 
-![](../../../../.gitbook/assets/updateNum.png)
+![](../../../../images/updateNum.png)
 
 * 根据实际需求调整 Pod 数量，单击【更新实例数目】即可完成调整。
 
@@ -117,7 +117,7 @@ Deployment 声明了 Pod 的模板和控制 Pod 的运行策略，适用于部�
 2. 选择要变更的业务下相应的【命名空间】，点击进入 【Deployment】 管理页面。
 3. 单击【监控】按钮，在弹出的工作负载监控页面选择工作负载查看监控信息。如下图所示：
 
-![](../../../../.gitbook/assets/workloaddata.png)
+![](../../../../images/workloaddata.png)
 
 ## Kubectl 操作 Deployment 指引
 

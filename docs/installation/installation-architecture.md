@@ -4,7 +4,7 @@
 
 TKEStack 产品架构如下图所示： 
 
-![](../.gitbook/assets/tkestackhighlevelarchitecture-2x.png)
+![](../images/tkestackhighlevelarchitecture-2x.png)
 
 ## 架构说明
 

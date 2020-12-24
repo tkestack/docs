@@ -6,17 +6,17 @@
 
 > 注意：只有当【平台管理】控制台中创建的业务的成员包含当前登录的用户，当前用户才会出现并可以切换至【业务管理】控制台，如下图所示。
 
-![](../.gitbook/assets/qie-huan-qian-ti-.png)
+![](../images/qie-huan-qian-ti-.png)
 
 ## 操作步骤
 
 1. 登录 TKEStack，默认显示【平台管理】控制台,鼠标移动到【平台管理】旁，会出现切换提示,如下图：
 
-![](../.gitbook/assets/qie-huan-.png)
+![](../images/qie-huan-.png)
 
 1. 如果当前显示的是【业务管理】控制台，鼠标移动到【业务管理】旁，会出现切换提示，如下图：
 
-![](../.gitbook/assets/qie-huan-1.png)
+![](../images/qie-huan-1.png)
 
 1. 点击【 切换图标】 即可实现【平台管理】和【业务管理】控制台切换。
 

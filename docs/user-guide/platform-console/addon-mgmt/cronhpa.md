@@ -44,7 +44,7 @@ CronHPA 定义了一个新的 CRD，cron-hpa-controller 是该 CRD 对应的 Con
 * 切换至【平台管理】控制台，选择【扩展组件】页面
 * 选择需要安装组件的集群，点击【新建】按钮，如下图所示： 
 
-![](../../../.gitbook/assets/image%20%28128%29.png)
+![](../../../images/image%20%28128%29.png)
 
 * 在弹出的扩展组件列表里，滑动列表窗口找到 CronHPA 组件
 * 单击【完成】
@@ -55,7 +55,7 @@ TKEStack 已经支持在页面多处位置为负载配置 CronHPA
 
 * 新建负载页（负载包括Deployment、StatefulSet、TApp）这里新建负载时将会同时新建与负载同名的 CronHPA 对象：
 
-![](../../../.gitbook/assets/image%20%2897%29.png)
+![](../../../images/image%20%2897%29.png)
 
 每条触发策略由两条字段组成
 
@@ -64,7 +64,7 @@ TKEStack 已经支持在页面多处位置为负载配置 CronHPA
 
 * 自动伸缩的 CronHPA 列表页。此处可以查看/修改/新建 CronHPA：
 
-![](../../../.gitbook/assets/image%20%2815%29.png)
+![](../../../images/image%20%2815%29.png)
 
 ### 通过 YAML 使用 CronHPA
 

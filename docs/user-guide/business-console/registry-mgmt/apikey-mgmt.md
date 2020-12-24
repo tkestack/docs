@@ -13,9 +13,9 @@
 
 1. 单击【确认】按钮
 
-![](../../../.gitbook/assets/xin-jian-fang-wen-ping-zheng-resource.png)
+![](../../../images/xin-jian-fang-wen-ping-zheng-resource.png)
 
-![](../../../.gitbook/assets/xin-jian-fang-wen-ping-zheng-resource1.png)
+![](../../../images/xin-jian-fang-wen-ping-zheng-resource1.png)
 
 ## 停用/启用/删除访问凭证
 
@@ -26,5 +26,5 @@
 
 3. 单击【确认】按钮
 
-![](../../../.gitbook/assets/access-card.png)
+![](../../../images/access-card.png)
 

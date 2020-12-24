@@ -4,7 +4,7 @@
 
 ## APIServer 的 Real 和 Advertise
 
-![](../../.gitbook/assets/image%20%28108%29.png)
+![](../../images/image%20%28108%29.png)
 
 **Real**：表示 Master 节点 APIServer
 
@@ -16,7 +16,7 @@
 
 ## field is immuable
 
-![](../../.gitbook/assets/image%20%2880%29.png)
+![](../../images/image%20%2880%29.png)
 
 参考：表示已有同名对象，例如已有同名 Service，需要手动删除 Service，或者换个名字
 
@@ -24,11 +24,11 @@
 
 在部署负载时，有时会出现下图中的事件，表示节点被 Taint
 
-![](../../.gitbook/assets/image%20%2852%29.png)
+![](../../images/image%20%2852%29.png)
 
 原因：通过 TKEStack 部署的集群里 Master 节点默认带污点（taint），是为了防止业务 Pod 运行在 Master 节点上，此时如果平台有问题的话，业务也会挂掉。但在测试环境中，节点有限的情况下，可以适当删除节点的 taint，但在控制台上没办法删掉，只能在命令行删除
 
-![](../../.gitbook/assets/image%20%28126%29.png)
+![](../../images/image%20%28126%29.png)
 
 ## node\(s\) had tiant
 
@@ -55,7 +55,7 @@ kubectl get pod -n tke \| grep tke-registry
 
 因为当前用户不是该业务的成员，需要为该业务添加成员用户
 
-![](../../.gitbook/assets/image%20%2812%29.png)
+![](../../images/image%20%2812%29.png)
 
 
 
@@ -63,7 +63,7 @@ kubectl get pod -n tke \| grep tke-registry
 
 业务下的每个命名空间只能选取一个集群，因为是在这个集群下面新建的这个命名空间
 
-![](../../.gitbook/assets/image%20%2898%29.png)
+![](../../images/image%20%2898%29.png)
 
 ## 数据卷 以主机路径为例
 
@@ -71,7 +71,7 @@ kubectl get pod -n tke \| grep tke-registry
 
 > 注意：主机路径指的是 Pod 所在主机的路径
 
-![](../../.gitbook/assets/image%20%28124%29.png)
+![](../../images/image%20%28124%29.png)
 
 下图2和3中的 testv 相当于一个标签，用于指定不同的挂载类型，本例为主机路径
 
@@ -79,7 +79,7 @@ kubectl get pod -n tke \| grep tke-registry
 
 最后一个框为路径`/hahaha`下面的路径,可不填
 
-![](../../.gitbook/assets/image%20%28113%29.png)
+![](../../images/image%20%28113%29.png)
 
 使用数据卷的效果：主机上的主机路径和容器上的`hahaha`文件夹中的内容完全一致
 

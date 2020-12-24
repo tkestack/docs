@@ -98,7 +98,7 @@
 
    显示结果如下，则说明 hello-node 镜像已成功构建，记录其 IMAGE ID。如下图所示：
 
-   ![](../../.gitbook/assets/helloworld-3.png)
+   ![](../../images/helloworld-3.png)
 
 #### 上传该镜像到镜像仓库
 
@@ -117,11 +117,11 @@ sudo docker push default.registry.tke.com/【命名空间】/helloworld:v1
 > * 请将命令中的 【IMAGEID】 替换为 你自己创建镜像的ID，示例中的ID如上图158204134510。
 > * 请将命令中的 【命名空间】 替换为 已创建的命名空间。
 >
-> 显示以下结果，则说明镜像上传成功。 ![](../../.gitbook/assets/helloworld-4.png)
+> 显示以下结果，则说明镜像上传成功。 ![](../../images/helloworld-4.png)
 
 #### 在镜像仓库命名空间中进行确认
 
-![](../../.gitbook/assets/helloworld-6.png)
+![](../../images/helloworld-6.png)
 
 ### 通过该镜像创建 Hello World 服务
 
@@ -129,13 +129,13 @@ sudo docker push default.registry.tke.com/【命名空间】/helloworld:v1
 2. 单击左侧导航栏中【集群管理】，进入“集群管理”页面。
 3. 单击需要创建服务的集群 ID，进入工作负载 “Deployment” 详情页，选择【新建】。如下图所示：
 
-   ![](../../.gitbook/assets/helloworld-5.png)
+   ![](../../images/helloworld-5.png)
 
 4. 在“新建Workload”页面，仅输入以下红框内容即可：
 
-   ![](../../.gitbook/assets/helloworld-8.png)
+   ![](../../images/helloworld-8.png)
 
-   ![](../../.gitbook/assets/helloworld-7.png)![](../../.gitbook/assets/helloworld-10.png)
+   ![](../../images/helloworld-7.png)![](../../images/helloworld-10.png)
 
    > 注意：
    >
@@ -150,7 +150,7 @@ sudo docker push default.registry.tke.com/【命名空间】/helloworld:v1
 
 #### 通过主机节点端口访问 Hello World 服务
 
-1. 选择【服务】&gt;【Service】，在“Service”管理页面，看到与名为helloworld的Deployment同名的 helloworld Service已经运行，如下图所示：![](../../.gitbook/assets/helloworld-11.png)
+1. 选择【服务】&gt;【Service】，在“Service”管理页面，看到与名为helloworld的Deployment同名的 helloworld Service已经运行，如下图所示：![](../../images/helloworld-11.png)
 2. 在本地主机的浏览器地址栏输入`集群任意节点IP:30000 端口`，例如`10.0.0.1:30000`即可访问服务。如果服务创建成功，访问服务时页面会返回`Hello World！`
 
    > 注意：如果本地主机在集群内网中，输入节点的内网IP地址即可；如果本地主机不在集群内网中，需要输入节点的外网IP地址
