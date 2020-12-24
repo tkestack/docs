@@ -22,7 +22,7 @@
 1. 登录TKEStack，切换到【业务管理】控制台，选择左侧导航栏中的【应用管理】。
 2. 选择需要创建CronJob的业务下相应的【命名空间】，展开【工作负载】下拉项，进入【CronJob】管理页面。如下图所示：
 
-   ![](../../../../.gitbook/assets/CronJobNew.png)
+   ![](../../../../images/CronJobNew.png)
 
 3. 单击【创建】按钮，进入 新建Workload页面。
 4. 根据实际需求，设置 CronJob 参数。关键参数信息如下：

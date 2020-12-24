@@ -15,7 +15,7 @@ DaemonSet 主要用于部署常驻集群内的后台程序，例如节点的日�
 * 登录TKEStack，切换到【业务管理】控制台，选择左侧导航栏中的【应用管理】。
 * 选择需要创建DaemonSet的【业务】下相应的【命名空间】，展开【工作负载】下拉项，进入【DaemonSet】管理页面。如下图所示：
 
-![](../../../../.gitbook/assets/DaemonSet.png)
+![](../../../../images/DaemonSet.png)
 
 * 单击【新建】，进入 “新建Workload” 页面。
 

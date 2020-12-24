@@ -14,7 +14,7 @@ TKEStack 是一款面向私有化环境的开源容器编排引擎。在本教�
 
 平台安装之后，可在【平台管理】控制台的【集群管理】中看到 global 集群。如下图所示：
 
-![](../.gitbook/assets/cluster%20%282%29%20%282%29%20%289%29.png)
+![](../images/cluster%20%282%29%20%282%29%20%289%29.png)
 
 TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现**多集群的管理**。
 
@@ -26,13 +26,13 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
 2. 切换至【平台管理】控制台。
 3. 在“集群管理”页面中，单击【新建独立集群】。如下图所示：
 
-![](../.gitbook/assets/createCluster.png)
+![](../images/createCluster.png)
 
 1. 在“新建独立集群”页面，填写集群的基本信息。新建的集群需满足[installation requirements](../installation/environment-requirement.md)的需求，在满足需求之后，TKEStack 的集群添加非常便利。如下图所示,只需填写【集群名称】、【目标机器】、【密码】，其他保持默认即可添加新的集群。
 
 > 注意：若【保存】按钮是灰色，单击附近空白处即可变蓝
 
-![](../.gitbook/assets/ClusterInfo.png)
+![](../images/ClusterInfo.png)
 
 1. 集群名称**：** 支持**中文**，小于 60 字符即可
 2. Kubernetes 版本**：** 选择合适的 kubernetes 版本，各版本特性对比请查看 [Supported Versions of the Kubernetes Documentation](https://kubernetes.io/docs/home/supported-doc-versions/)。（**建议使用默认值**）
@@ -67,11 +67,11 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
 2. 切换至【平台管理】控制台。
 3. 在“集群管理”页面，单击【导入集群】。如下图所示：
 
-![](../.gitbook/assets/importCluster-1.png)
+![](../images/importCluster-1.png)
 
 1. 在“导入集群”页面，填写被导入的集群信息。如下图所示：
 
-![](../.gitbook/assets/importCluster-2.png)
+![](../images/importCluster-2.png)
 
 1. 名称： 被导入集群的名称，最长 60 字符
 2. API Server：
@@ -88,11 +88,11 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
 1. 登录 TKEStack。
 2. 在【平台管理】控制台的【业务管理】中，单击 【新建业务】。如下图所示：
 
-![](../.gitbook/assets/createbusiness.png)
+![](../images/createbusiness.png)
 
 1. 在“新建业务”页面，填写业务信息。如下图所示： 
 
-![](../.gitbook/assets/createbusiness.png)
+![](../images/createbusiness.png)
 
 1. 业务名称：不能超过 63 个字符，这里以`my-business`为例
 2. 业务成员： [【访问管理】](../user-guide/platform-console/access-mgmt/)中【用户管理】中的用户，这里以`admin`例，即这该用户可以访问这个业务。
@@ -109,21 +109,21 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
 1. 登录 TKEStack。
 2. 在【平台管理】控制台的【业务管理】中，单击【业务 id】。如下图所示：
 
-![](../.gitbook/assets/businessid.png)
+![](../images/businessid.png)
 
 1. 单击【Namespace 列表】。如下图标签 1 所示：
 
 > 该页面可以更改业务名称、成员、以及业务下集群资源的限制。
 
-![](../.gitbook/assets/businessns%20%281%29.png)
+![](../images/businessns%20%281%29.png)
 
 1. 单击【新建 Namespace】。如下图所示： 
 
-![](../.gitbook/assets/newns.png)
+![](../images/newns.png)
 
 1. 在“新建 Namespace”页面中，填写相关信息。如下图所示： 
 
-![](../.gitbook/assets/my-ns.png)
+![](../images/my-ns.png)
 
 1. 名称：不能超过 63 个字符，这里以`new-ns`为例
 2. 集群：`my-business`业务中的集群，这里以`global`集群为例
@@ -136,13 +136,13 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
 > 注意：因为当前登录的是 admin 用户，【业务管理】控制台只包含在[创建业务](quick-starts.md#创建业务)中成员包含 admin 的业务，如果切换到【业务管理】控制台没有看见任何业务，请确认【平台管理】中【业务管理】中的相关业务的成员有没有当前用户，如没有，请添加当前用户。
 
 1. 点击左侧导航栏中的【应用管理】，如果当前用户被分配了多个业务，可通过下图中标签 3 的选择框选择合适的业务。
-2. 点击【工作负载】，点击下图标签 4 的【Deployment】，此时进入“Deployment”页面，可通过下图中的标签 5 选择 Deployment 的【命名空间】： ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/deployment.png)
+2. 点击【工作负载】，点击下图标签 4 的【Deployment】，此时进入“Deployment”页面，可通过下图中的标签 5 选择 Deployment 的【命名空间】： 
 
-![](../.gitbook/assets/deployment.png)
+![](../images/deployment.png)
 
 1. 单击上图标签 6【新建】，进入“新建 Workload ”页面。根据实际需求，设置 Deployment 参数。这里参数很多，其中必填信息已用红框标识：
 
-![](../.gitbook/assets/createdeployment-1.png)
+![](../images/createdeployment-1.png)
 
 1. 工作负载名：输入自定义名称，这里以`my-dep`为例
 2. 描述：给工作负载添加描述，可不填
@@ -174,16 +174,16 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
          * **IfNotPresent**：默认使用本地镜像，若本地无该镜像则远程拉取该镜像
          * **Never**：只使用本地镜像，若本地没有该镜像将报异常
 
-![](../.gitbook/assets/businessns%20%281%29%20%281%29.png)
+![](../images/businessns%20%281%29%20%281%29.png)
 
-![](../.gitbook/assets/createdeployment-4.png)
+![](../images/createdeployment-4.png)
 
 * **实例数量**：根据实际需求选择调节方式，设置实例数量。
   * **手动调节**：直接设定实例个数
   * **自动调节**：根据设定的触发条件自动调节实例个数，目前支持根据 CPU、内存利用率和利用量出入带宽等调节实例个数
 * **显示高级设置**
 
-![](../.gitbook/assets/createdeployment-5.png)
+![](../images/createdeployment-5.png)
 
 * **imagePullSecrets**：镜像拉取密钥，用于拉取用户的私有镜像，使用私有镜像首先需要新建 Secret
 * **节点调度策略**：根据配置的调度规则，将 Pod 调度到预期的节点。
@@ -208,15 +208,11 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
   * **Headless Service**：不创建用于集群内访问的 ClusterIP，访问 Service 名称时返回后端 Pods IP 地址，用于适配自有的服务发现机制。解析域名时返回相应 Pod IP 而不是 Cluster IP
 * **端口映射**：输入负载要暴露的端口并指定通信协议类型（**容器和服务端口建议都使用 80**）
 * **Session Affinity:** 点击【显示高级设置】出现，会话保持，设置会话保持后，会根据请求 IP 把请求转发给这个 IP 之前访问过的 Pod。默认 None，按需使用
-* 单击【创建 Workload】，完成创建。如下图所示：
-
-  ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/workload.png)
+* 单击【创建 Workload】，完成创建。
 
 ​ 当“运行/期望 Pod 数量”相等时，即表示 Deployment 下的所有 Pod 已创建完成。
 
-1. 如果在第 5 步中有创建 Service，则可以再【服务】下的【Service】看到与刚刚创建的 Deployment 同名的 Service
-
-   ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/business-sv)
+* 如果在第 5 步中有创建 Service，则可以再【服务】下的【Service】看到与刚刚创建的 Deployment 同名的 Service
 
 ### 删除资源
 
@@ -225,12 +221,12 @@ TKEStack 还可以另外**新建独立集群**以及**导入已有集群**实现
 #### 删除 Deployment
 
 1. 登录 TKEStack，切换到【业务管理】控制台，选择左侧导航栏中的【应用管理】。
-2. 展开【工作负载】下拉项，进入 “Deployment” 管理页面，选择需要删除【Deployment】的业务下相应的【命名空间】，点击要删除的 Deployment 最右边的【更多】，点击【删除】。如下图所示： ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/deletedeployment.png)
+2. 展开【工作负载】下拉项，进入 “Deployment” 管理页面，选择需要删除【Deployment】的业务下相应的【命名空间】，点击要删除的 Deployment 最右边的【更多】，点击【删除】。如下图所示： 
 3. 在弹出框中单击【确定】，即可删除 Deployment。
 
 #### 删除 Service
 
 1. 登录 TKEStack，切换到【业务管理】控制台，选择左侧导航栏中的【应用管理】。
-2. 展开【服务】下拉项，进入 “Service” 管理页面，选择需要删除【Service】的业务下相应的【命名空间】，点击要删除的 Service 最右边的【删除】。如下图所示： ![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/images/deleteservice.png)
+2. 展开【服务】下拉项，进入 “Service” 管理页面，选择需要删除【Service】的业务下相应的【命名空间】，点击要删除的 Service 最右边的【删除】。如下图所示： 
 3. 在弹出框中单击【确定】，即可删除 Service。
 

@@ -9,7 +9,7 @@ StatefulSet 主要用于管理**有状态**的应用，创建的 Pod 拥有根�
 * 登录TKEStack，切换到【业务管理】控制台，选择左侧导航栏中的【应用管理】。
 * 选择需要创建StatefulSet的【业务】下相应的【命名空间】，展开【工作负载】下拉项，进入【StatefulSet】管理页面。如下图所示：
 
-![](../../../../.gitbook/assets/StatefulSet.png)
+![](../../../../images/StatefulSet.png)
 
 * 单击【新建】，进入 “新建Workload” 页面。根据实际需求，设置 StatefulSet 参数。
 * 关键参数信息如下，其中必填项为**工作负载名**、**实例内容器的名称和镜像**：

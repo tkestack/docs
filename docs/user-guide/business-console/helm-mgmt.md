@@ -25,7 +25,7 @@
 
 1. 单击【完成】按钮。
 
-![](../../.gitbook/assets/xin-jian-helm.png)
+![](../../images/xin-jian-helm.png)
 
-![](../../.gitbook/assets/xin-jian-helm-ying-yong-.png)
+![](../../images/xin-jian-helm-ying-yong-.png)
 

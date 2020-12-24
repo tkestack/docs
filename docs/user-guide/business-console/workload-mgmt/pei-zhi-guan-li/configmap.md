@@ -10,7 +10,7 @@
 * 选择需要创建ConfigMap的【业务】下相应的【命名空间】，展开【配置管理】列表，进入ConfigMap管理页面。 
 * 单击【新建】，进入 “新建ConfigMap” 页面。如下图所示：
 
-![&#x65B0;&#x5EFA;ConfigMap](../../../../.gitbook/assets/new-config-map.png)
+![&#x65B0;&#x5EFA;ConfigMap](../../../../images/new-config-map.png)
 
 * 根据实际需求，设置 ConfigMap 参数。关键参数信息如下：
   * 名称：自定义。

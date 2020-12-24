@@ -13,23 +13,23 @@
 
 1. 登录TKEStack 控制台 。
 
-![](../../.gitbook/assets/nginx-0.png)
+![](../../images/nginx-0.png)
 
 1. 单击左侧导航栏中【集群管理】，进入“集群管理”页面，单击需要创建服务的集群 ID。
 
-![](../../.gitbook/assets/nginx-1.png)
+![](../../images/nginx-1.png)
 
 1. 进入【工作负载】的【 Deployment 】中，选择【新建】。如下图所示： 
 
-![](../../.gitbook/assets/nginx-2%20%281%29%20%281%29%20%282%29.png)
+![](../../images/nginx-2%20%281%29%20%281%29%20%282%29.png)
 
 1. 在“新建Workload”页面，只需输入下图中红框的参数即可。
 
-![](../../.gitbook/assets/nginx-2%20%281%29%20%281%29.png)
+![](../../images/nginx-2%20%281%29%20%281%29.png)
 
-![](../../.gitbook/assets/nginx-3.png)
+![](../../images/nginx-3.png)
 
-![](../../.gitbook/assets/nginx-4.png)
+![](../../images/nginx-4.png)
 
 > 注意：服务所在集群的安全组需要放通节点网络及容器网络，同时需要放通30000 - 32768端口，否则可能会出现容器服务无法使用问题。
 
@@ -37,11 +37,11 @@
 
 > 注意：当运行/期望Pod数量一致时，负载完成创建。
 
-![](../../.gitbook/assets/nginx-5.png)
+![](../../images/nginx-5.png)
 
 1. 如果在第5步中有创建Service，则可以在【服务】下的【Service】看到与刚刚创建的Deployment同名的Service
 
-![](../../.gitbook/assets/nginx-6.png)
+![](../../images/nginx-6.png)
 
 ### 访问 Nginx 服务
 

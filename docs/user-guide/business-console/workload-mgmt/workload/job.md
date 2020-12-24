@@ -12,7 +12,7 @@ Job 控制器会创建 1-N 个 Pod，这些 Pod 按照运行规则运行，直�
 2. 选择需要创建 Job 的【业务】下相应的【命名空间】，展开【工作负载】下拉项，进入【 Job】 管理页面。
 3. 单击【新建】，进入 “新建Workload” 页面。如下图所示：
 
-   ![&#x65B0;&#x5EFA;Workload](../../../../.gitbook/assets/NewJob.png)
+   ![&#x65B0;&#x5EFA;Workload](../../../../images/NewJob.png)
 
 4. 根据实际需求，设置 Job 参数。关键参数信息如下：
    * **工作负载名**：输入自定义名称。

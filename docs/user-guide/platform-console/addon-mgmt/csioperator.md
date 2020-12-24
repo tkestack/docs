@@ -29,7 +29,7 @@ CSIOperator 用于支持集群方便的使用存储资源，当前支持的存�
 * 切换至 【平台管理】控制台，选择 【扩展组件】 页面
 * 选择需要安装组件的集群，点击【新建】按钮。如下图所示： 
 
-![](../../../.gitbook/assets/image%20%2860%29.png)
+![](../../../images/image%20%2860%29.png)
 
 * 在弹出的扩展组件列表里，滑动列表窗口找到 CSIOperator
 * 单击【完成】进行安装
@@ -41,7 +41,7 @@ CSIOperator 用于支持集群方便的使用存储资源，当前支持的存�
 * 点击安装了 CSIOperator 组件的【集群ID】，进入要管理的集群，如下图2所示：
 * 点击【YAML创建资源】，如下图3所示：
 
-![](../../../.gitbook/assets/image%20%28127%29.png)
+![](../../../images/image%20%28127%29.png)
 
 * 文件中指定各自存储插件镜像的名称，这里以`tencentcbs`的 YAML 为例：（前提：需要拥有腾讯云账号）
 
@@ -63,11 +63,11 @@ CSIOperator 用于支持集群方便的使用存储资源，当前支持的存�
 
 * 创建完 CSIOperator 的 CRD 对象，同时会为每个存储插件创建默认的 StorageClass 对象（tencentcbs 的 StorageClass 对象名为 cbs-basic-prepaid），如下图：
 
-![](../../../.gitbook/assets/image%20%28140%29.png)
+![](../../../images/image%20%28140%29.png)
 
 其 YAML 如下：
 
-![](../../../.gitbook/assets/image%20%28123%29.png)
+![](../../../images/image%20%28123%29.png)
 
 * tencentcbs 的 provisioner 名称指定为：`com.tencent.cloud.csi.cbs`
 * tencentcfs 的 provisioner 名称指定为：`com.tencent.cloud.csi.cfs`，tencentcfs 仍在测试中，目前仅支持 tencentcbs

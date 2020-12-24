@@ -4,9 +4,9 @@
 
 **在这里可以管理你的 Kubernetes 集群**
 
-![img](../../.gitbook/assets/1588923397_72_w857_h868.png)
+![img](../../images/1588923397_72_w857_h868.png)
 
-平台安装之后，可在【平台管理】控制台的【集群管理】中看到 global 集群，如下图所示： ![Global&#x96C6;&#x7FA4;](../../.gitbook/assets/cluster%20%282%29%20%282%29%20%285%29.png)
+平台安装之后，可在【平台管理】控制台的【集群管理】中看到 global 集群，如下图所示： ![Global&#x96C6;&#x7FA4;](../../images/cluster%20%282%29%20%282%29%20%285%29.png)
 
 TKEStack还可以另外**新建独立集群**以及**导入已有集群**实现**多集群的管理**
 
@@ -18,13 +18,13 @@ TKEStack还可以另外**新建独立集群**以及**导入已有集群**实现*
 2. 切换至【平台管理】控制台
 3. 在“集群管理”页面中，单击【新建独立集群】，如下图所示：
 
-   ![&#x65B0;&#x5EFA;&#x72EC;&#x7ACB;&#x96C6;&#x7FA4;](../../.gitbook/assets/createCluster.png)
+   ![&#x65B0;&#x5EFA;&#x72EC;&#x7ACB;&#x96C6;&#x7FA4;](../../images/createCluster.png)
 
 4. 在“新建独立集群”页面，填写集群的基本信息。新建的集群节点需满足[部署环境要求](https://github.com/ruyingzhe/docs/tree/7f24a45c0f07eac673325093def1526590391c03/docs/installation/installation-requirement.md)，在满足需求之后，TKEStack的集群添加非常便利。如下图所示,只需填写【集群名称】、【目标机器】、【SSH端口】（默认22）、【密码】，其他保持默认即可添加新的集群。
 
    > 注意：若【保存】按钮是灰色，单击页面空白处即可变蓝
 
-   ![&#x96C6;&#x7FA4;&#x57FA;&#x672C;&#x4FE1;&#x606F;0.png](../../.gitbook/assets/ClusterInfo.png)
+   ![&#x96C6;&#x7FA4;&#x57FA;&#x672C;&#x4FE1;&#x606F;0.png](../../images/ClusterInfo.png)
 
    * **集群名称：** 支持**中文**，小于60字符即可
    * **Kubernetes版本：** 选择合适的kubernetes版本，各版本特性对比请查看 [Supported Versions of the Kubernetes Documentation](https://kubernetes.io/docs/home/supported-doc-versions/)（**建议使用默认值**）
@@ -71,8 +71,8 @@ TKEStack还可以另外**新建独立集群**以及**导入已有集群**实现*
 
 1. 登录 TKEStack
 2. 切换至【平台管理】控制台
-3. 在“集群管理”页面，单击【导入集群】，如下图所示： ![&#x5BFC;&#x5165;&#x96C6;&#x7FA4;](../../.gitbook/assets/importCluster-1.png)
-4. 在“导入集群”页面，填写被导入的集群信息，如下图所示： ![&#x5BFC;&#x5165;&#x96C6;&#x7FA4;&#x4FE1;&#x606F;](../../.gitbook/assets/importCluster-2.png)
+3. 在“集群管理”页面，单击【导入集群】，如下图所示： ![&#x5BFC;&#x5165;&#x96C6;&#x7FA4;](../../images/importCluster-1.png)
+4. 在“导入集群”页面，填写被导入的集群信息，如下图所示： ![&#x5BFC;&#x5165;&#x96C6;&#x7FA4;&#x4FE1;&#x606F;](../../images/importCluster-2.png)
    * **名称**： 被导入集群的名称，最长60字符
    * **API Server**： 被导入集群的 API Server 的域名或 IP 地址
    * **CertFile**： 输入被导入集群的 CertFile 文件内容
@@ -85,7 +85,7 @@ TKEStack还可以另外**新建独立集群**以及**导入已有集群**实现*
 
 1. 首先需要在 TKE 控制台所要导入的集群“基本信息”页里开启内/外网访问
 
-   ![image-20200930154323734](https://github.com/ruyingzhe/docs/tree/7f24a45c0f07eac673325093def1526590391c03/docs/.gitbook/assets/image-20200930154323734.png)
+   ![image-20200930154323734](https://github.com/ruyingzhe/docs/tree/7f24a45c0f07eac673325093def1526590391c03/docs/images/image-20200930154323734.png)
 
 2. **APIServer 地址**：即上图中的访问地址，也可以根据上图中 kubeconfig 文件里的“server”字段内容填写。
 3. **CertFile**：集群证书，kubeconfig 中“certificate-authority-data”字段内容。
@@ -160,11 +160,11 @@ TKEStack还可以另外**新建独立集群**以及**导入已有集群**实现*
 2. 切换至【平台管理】控制台
 3. 在“集群管理”页面中，点击要操作的集群ID，如下图“global”所示：
 
-   ![Global&#x96C6;&#x7FA4;](../../.gitbook/assets/cluster%20%282%29%20%282%29%20%282%29.png)
+   ![Global&#x96C6;&#x7FA4;](../../images/cluster%20%282%29%20%282%29%20%282%29.png)
 
 4. 点击【基本信息】，可查看集群基础信息
 
-   ![](../../.gitbook/assets/basicinformation.png)
+   ![](../../images/basicinformation.png)
 
    1. **基本信息**
       1. **集群名称**：用户自定义，可以通过第3步“集群列表页”中 “ID/名称” 下的笔型图案修改
@@ -190,11 +190,11 @@ TKEStack还可以另外**新建独立集群**以及**导入已有集群**实现*
 2. 切换至【平台管理】控制台
 3. 在“集群管理”页面中，点击要操作的集群ID，如下图“global”所示：
 
-   ![Global&#x96C6;&#x7FA4;](../../.gitbook/assets/cluster%20%282%29%20%282%29%20%286%29.png)
+   ![Global&#x96C6;&#x7FA4;](../../images/cluster%20%282%29%20%282%29%20%286%29.png)
 
 4. 点击【节点管理】中的【节点】，可查看当前集群的“节点列表”
 
-   ![](../../.gitbook/assets/nodes.png)
+   ![](../../images/nodes.png)
 
 5. 点击蓝色【添加节点】按钮可增加当前集群的 Worker 节点
    1. 目标机器：建议内网地址，要求添加的节点和当前集群的其他机器在同一内网。注意：如果节点密码一样，这里可以通过英文的分号“;”分隔多个 IP 地址实现快速添加多个节点
@@ -216,7 +216,7 @@ TKEStack还可以另外**新建独立集群**以及**导入已有集群**实现*
 
 对节点的可以的操作如下图所示：
 
-![](../../.gitbook/assets/nodecaozuo.png)
+![](../../images/nodecaozuo.png)
 
 1. **移出**：仅针对 worker 节点，将节点移出集群
 2. **驱逐**：节点驱逐后，将会把节点内的所有 Pod（不包含 DaemonSet 管理的 Pod）从节点中驱逐到集群内其他节点，并将节点设置为封锁状态
@@ -231,7 +231,7 @@ TKEStack还可以另外**新建独立集群**以及**导入已有集群**实现*
 
 点击其中一个节点名，例如上图中的【172.19.0.154】，可以看到该节点更多的信息，具体包括：
 
-![](../../.gitbook/assets/nodespod.png)
+![](../../images/nodespod.png)
 
 1. **Pod 管理**：可查看当前节点下的 pod
    1. 销毁重建：销毁该 pod，重新新建该 pod
