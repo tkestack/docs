@@ -11,5 +11,3 @@
 
 您可以参考 [日志采集](../operation-mgmt/log-collection.md) 将日志导入外部存储，实现日志的高级管理。
 
-![](https://github.com/PatrickLai7528/docs/tree/367ed6036bfdb372201d6e1790cdfffbf16b6ac6/docs/zh/images/事件.png)
-
